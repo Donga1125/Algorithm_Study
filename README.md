@@ -25,7 +25,7 @@ Baekjoon을 통해 문제풀이를 진행합니다.
    ex) algo: 카드 구매하기
    ex) test: 카카오 2022
 
-##⏰ Curriculum
+## ⏰ Curriculum
 ### 기초 (1/2)
 <br/>
 
