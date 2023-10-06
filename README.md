@@ -17,8 +17,15 @@ Baekjoon을 통해 문제풀이를 진행합니다.
 - 불참 시 전날에 공유 필수, 지각 시 벌금 5천원 납부
   (상대 불참 시 혼자서 진행)
 
+## 📤 Convention Rule
+- PR | [날짜] 이름 
+   ex) [day01] 정동아
 
-## Curriculum
+- Commit | 커밋내용: 문제이름
+   ex) algo: 카드 구매하기
+   ex) test: 카카오 2022
+
+##⏰ Curriculum
 ### 기초 (1/2)
 <br/>
 
