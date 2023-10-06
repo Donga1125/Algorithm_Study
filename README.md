@@ -26,7 +26,8 @@ ex) [day01] 정동아
 
 **Commit** | `커밋내용: 문제이름`
 
-ex) algo: 카드 구매하기 /
+ex) algo: 카드 구매하기 
+
 ex) test: 카카오 2022
 
 ## ⏰ Curriculum
@@ -35,7 +36,7 @@ ex) test: 카카오 2022
 
 <table>
 <tr>
-        <td align="center">**날짜**</td>
+        <td align="center"> **날짜** </td>
         <td align="center">**알고리즘**</td>
         <td align="center">**풀이**</td>
         <td align="center">**문제**</td>
