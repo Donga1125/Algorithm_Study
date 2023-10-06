@@ -169,7 +169,7 @@ ex) test: 카카오 2022
 </tr>
 
 <tr>
-        <td align="center">day05</td>
+        <td align="center">day15</td>
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="">바로가기</a></td>
         <td align="center" width="350px"><a href=""> </a>, <a href=""> </a>, <a href=""> </a>, <a href=""> </a>, <a href=""> </a></td>
