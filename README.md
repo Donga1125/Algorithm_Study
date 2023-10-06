@@ -27,7 +27,6 @@ ex) [day01] 정동아
 **Commit** | `커밋내용: 문제이름`
 
 ex) algo: 카드 구매하기
-
 ex) test: 카카오 2022
 
 ## ⏰ Curriculum
