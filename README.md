@@ -36,11 +36,11 @@ ex) test: 카카오 2022
 
 <table>
 <tr>
-        <td align="center"> **날짜** </td>
-        <td align="center">**알고리즘**</td>
-        <td align="center">**풀이**</td>
-        <td align="center">**문제**</td>
-        <td align="center">**상태**</td>
+        <td align="center">날짜</td>
+        <td align="center">알고리즘</td>
+        <td align="center">풀이</td>
+        <td align="center">문제</td>
+        <td align="center">상태</td>
 </tr>
 
 <tr>
