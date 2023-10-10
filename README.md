@@ -47,7 +47,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day01">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/10828"> 스택 </a>, <a href="https://www.acmicpc.net/problem/9093"> 단어 뒤집기 </a>, <a href="https://www.acmicpc.net/problem/9012"> 괄호 </a>, <a href="https://www.acmicpc.net/problem/1874"> 스택 수열 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">완료</td>
 </tr>
 
 <tr>
