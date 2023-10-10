@@ -17,51 +17,37 @@ public class 단어뒤집기 {
      */
 
 
-    public static void main(String[] args) throws IOException {
-//        Scanner sc = new Scanner(System.in);
-//
-//        int T = sc.nextInt(); //테스트케이스의 개수. 만약 2면 2문장이 나올꺼라는뜻
-//        List<String[]> list = new ArrayList<>();
-//
-//        for(int i=0; i<=T; i++){
-//            String str = sc.nextLine(); //라인을 받아와서
-//            String[] arr = str.split(" "); //공백을 기준으로 나눠준다.
-//
-//            list.add(arr);
-//        }
-//
-//        for(int i=0; i<=T;i++){
-//
-//            String[] arr = list.get(i);
-//
-//            for(int j=0; j<arr.length; j++){
-//                StringBuffer sb = new StringBuffer(arr[j]);
-//                String reverse = sb.reverse().toString();
-//
-//                arr[j] = reverse +" ";
-//            }
-//            Arrays.stream(arr).forEach(System.out::print);
-//
-//            if(i < arr.length) {
-//                System.out.print("\n");
-//            }
-//        }
-//
-//        sc.close();
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(sc.next()); //테스트케이스의 개수. 만약 2면 2문장이 나올꺼라는뜻
+        sc.nextLine();
+        List<String[]> list = new ArrayList<>();
 
-        int n = Integer.parseInt(br.readLine());
+        for(int i=0; i<T; i++){
+            String str = sc.nextLine(); //라인을 받아와서
+            String[] arr = str.split(" "); //공백을 기준으로 나눠준다.
 
-        for(int i=0; i<n ;i++){
-            String[] words = br.readLine().split(" ");
-
-            for(String word : words){
-                StringBuilder sb = new StringBuilder(word);
-                System.out.println(sb.reverse().toString() + " ");
-            }
-            System.out.println();
+            list.add(arr);
         }
-        br.close();
+
+        for(int i=0; i<T;i++){
+
+            String[] arr = list.get(i);
+
+            for(int j=0; j<arr.length; j++){
+                StringBuffer sb = new StringBuffer(arr[j]);
+                String reverse = sb.reverse().toString();
+
+                arr[j] = reverse +" ";
+            }
+            Arrays.stream(arr).forEach(System.out::print);
+
+            if(i < arr.length) {
+                System.out.print("\n");
+            }
+        }
+
+        sc.close();
     }
 }
