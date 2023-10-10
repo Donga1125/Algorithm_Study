@@ -71,7 +71,7 @@ ex) test: 카카오 2022
         <td align="center">day04</td>
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%88%201/day04">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1935"> 후위 표기식2 </a>, <a href="https://www.acmicpc.net/problem/1918"> 후위 표기식 </a>, <a href="https://www.acmicpc.net/problem/10808"> 알파벳 개수 </a> <a href="https://www.acmicpc.net/problem/10809"> 알파벳 찾기 </a> </td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1935"> 후위 표기식2 </a>, <a href="https://www.acmicpc.net/problem/1918"> 후위 표기식 </a>, <a href="https://www.acmicpc.net/problem/10808"> 알파벳 개수 </a>, <a href="https://www.acmicpc.net/problem/10809"> 알파벳 찾기 </a> </td>
         <td align="center" width="70px"></td>
 </tr>
 
@@ -98,7 +98,7 @@ ex) test: 카카오 2022
         <td align="center">day07</td>
         <td align="center" width="300px">수학 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%88%201/day07">바로가기</a></td>
-        <td align="center" width="350px"> , <a href="https://www.acmicpc.net/problem/1978"> 소수 찾기 </a>
+        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/1978"> 소수 찾기 </a>, 
           <a href="https://www.acmicpc.net/problem/1929"> 소수 구하기 </a>, <a href="https://www.acmicpc.net/problem/6588"> 골드바흐의 추측 </a>, <a href="https://www.acmicpc.net/problem/10872"> 팩토리얼 </a></td>
         <td align="center" width="70px"></td>
 </tr>
@@ -107,7 +107,7 @@ ex) test: 카카오 2022
         <td align="center">day08</td>
         <td align="center" width="300px">수학 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%88%201/day08">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1676"> 팩토리얼 0의 개수 </a>, <a href="https://www.acmicpc.net/problem/2004"> 조합 0의 개수 </a> 
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1676"> 팩토리얼 0의 개수 </a>, <a href="https://www.acmicpc.net/problem/2004"> 조합 0의 개수 </a> ,
           <a href="https://www.acmicpc.net/problem/9613"> GCD 합 </a>, <a href="https://www.acmicpc.net/problem/17087"> 숨바꼭질 6 </a></td>
         <td align="center" width="70px"></td>
 </tr>
@@ -143,7 +143,7 @@ ex) test: 카카오 2022
         <td align="center">day12</td>
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%88%201/day10">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/11052"> 카드 구매하기 </a> <a href="https://www.acmicpc.net/problem/16194"> 카드 구매하기 2 </a>, <a href="https://www.acmicpc.net/problem/15990"> 1,2,3 더하기 5</a>, <a href="https://www.acmicpc.net/problem/10844"> 쉬운 계단 수 </a></td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/11052"> 카드 구매하기 </a>, <a href="https://www.acmicpc.net/problem/16194"> 카드 구매하기 2 </a>, <a href="https://www.acmicpc.net/problem/15990"> 1,2,3 더하기 5</a>, <a href="https://www.acmicpc.net/problem/10844"> 쉬운 계단 수 </a></td>
         <td align="center" width="70px"></td>
 </tr>
 
@@ -183,7 +183,7 @@ ex) test: 카카오 2022
         <td align="center">day17</td>
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%88%201/day14">바로가기</a></td>
-        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a> <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>, <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
+        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a>, <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>, <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
         <td align="center" width="70px"></td>
 </tr>
 
