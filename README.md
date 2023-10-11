@@ -55,7 +55,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day02">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1406"> 에디터 </a>, <a href="https://www.acmicpc.net/problem/10845"> 큐 </a>, <a href="https://www.acmicpc.net/problem/1158"> 조세퍼스 문제 </a>, <a href="https://www.acmicpc.net/problem/10866"> 덱 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">완료</td>
 </tr>
 
 <tr>
