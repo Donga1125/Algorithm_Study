@@ -70,7 +70,6 @@ public class 덱 {
     private static int pop_front() {
         if(deque.isEmpty()) return -1;
         return deque.removeFirst();
-        deque.stream().forEach(System.out::println);
     }
 
     private static void push_front(int X) {
