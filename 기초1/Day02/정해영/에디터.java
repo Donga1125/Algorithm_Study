@@ -26,7 +26,7 @@ public class 에디터 {
 
         //처음에 커서가 문장의 맨뒤에 있어야 하므로 커서를 맨뒤로 이동시킨다.
         while (iterator.hasNext()){
-            iterator.next();
+                iterator.next();
         }
 
         for (int i = 0; i < M; i++) { //명령어 개수만큼 반복
