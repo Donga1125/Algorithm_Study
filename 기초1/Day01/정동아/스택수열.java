@@ -8,7 +8,7 @@ import java.util.Stack;
 public class 스택수열 {
     //1부터 n까지의 수를 스택에 넣었다가 뽑아서 하나의 수열을 만드는 문데
     //push 숫자는 오름차순
-    //push, pop 수를 체크 
+    //push, pop 수를 체크
     static boolean result = false;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader((System.in)));
