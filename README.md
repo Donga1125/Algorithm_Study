@@ -63,7 +63,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day03">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/17413"> 단어 뒤집기 2 </a>, <a href="https://www.acmicpc.net/problem/10799"> 쇠막대기 </a>, <a href="https://www.acmicpc.net/problem/17298"> 오큰수 </a>, <a href="https://www.acmicpc.net/problem/17299"> 오동큰수 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">완료</td>
 </tr>
 
 <tr>
@@ -71,7 +71,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day04">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1935"> 후위 표기식2 </a>, <a href="https://www.acmicpc.net/problem/1918"> 후위 표기식 </a>, <a href="https://www.acmicpc.net/problem/10808"> 알파벳 개수 </a>, <a href="https://www.acmicpc.net/problem/10809"> 알파벳 찾기 </a> </td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">완료</td>
 </tr>
 
 <tr>
