@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class 오동큰수 {
+public class 오등큰수 {
         public static void main(String[] args) throws IOException{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             StringBuffer sb = new StringBuffer();
