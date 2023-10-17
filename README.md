@@ -47,7 +47,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day01">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/10828"> 스택 </a>, <a href="https://www.acmicpc.net/problem/9093"> 단어 뒤집기 </a>, <a href="https://www.acmicpc.net/problem/9012"> 괄호 </a>, <a href="https://www.acmicpc.net/problem/1874"> 스택 수열 </a></td>
-        <td align="center" width="70px">완료</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -55,7 +55,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day02">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1406"> 에디터 </a>, <a href="https://www.acmicpc.net/problem/10845"> 큐 </a>, <a href="https://www.acmicpc.net/problem/1158"> 조세퍼스 문제 </a>, <a href="https://www.acmicpc.net/problem/10866"> 덱 </a></td>
-        <td align="center" width="70px">완료</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -63,7 +63,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day03">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/17413"> 단어 뒤집기 2 </a>, <a href="https://www.acmicpc.net/problem/10799"> 쇠막대기 </a>, <a href="https://www.acmicpc.net/problem/17298"> 오큰수 </a>, <a href="https://www.acmicpc.net/problem/17299"> 오동큰수 </a></td>
-        <td align="center" width="70px">완료</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -71,7 +71,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">자료구조 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day04">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1935"> 후위 표기식2 </a>, <a href="https://www.acmicpc.net/problem/1918"> 후위 표기식 </a>, <a href="https://www.acmicpc.net/problem/10808"> 알파벳 개수 </a>, <a href="https://www.acmicpc.net/problem/10809"> 알파벳 찾기 </a> </td>
-        <td align="center" width="70px">완료</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -81,7 +81,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px">
            <a href="https://www.acmicpc.net/problem/10820"> 문자열 분석 </a>, <a href="https://www.acmicpc.net/problem/2743"> 단어 길이 재기 </a>, <a href="https://www.acmicpc.net/problem/11655"> ROT13 </a>, <a href="https://www.acmicpc.net/problem/10824"> 네 수 </a>     
          </td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -90,7 +90,7 @@ ex) test: 카카오 2022
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day06">바로가기</a></td>
         <td align="center" width="350px">
            <a href="https://www.acmicpc.net/problem/11656"> 접미사 배열 </a>, <a href="https://www.acmicpc.net/problem/10430"> 나머지 </a>, <a href="https://www.acmicpc.net/problem/2609"> 최대공약수와 최소공배수 </a>, <a href="https://www.acmicpc.net/problem/1934"> 최소공배수 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
