@@ -8,15 +8,19 @@ public class 문자열분석 {
     //소문자, 대문자, 숫자, 공백의 개수를 공백으로 구분해 출력
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 
-        String input = br.readLine(); //문자 넣어줌
+        while (true) {// 입력이 종료되면 루프를 종료하기위해 사용
+            String input = br.readLine();
+            if (input == null || input.isEmpty()) {
+                break;
+            }
 
-        while (input != null){ //작성이 종료되면 while루프를 종료하기 위해서
-            int small = 0;  //소문자 개수
-            int capital = 0;   //대문자 개수
-            int number = 0;  //숫자 개수
-            int space = 0;  //공백 개수
+            int small = 0;
+            int capital = 0;
+            int number = 0;
+            int space = 0;
+
             for (int i = 0; i < input.length(); i++) {
                 char c = input.charAt(i);
                 if (c == ' ') space++;
@@ -24,11 +28,12 @@ public class 문자열분석 {
                 if (Character.isLowerCase(c)) small++;
                 if (Character.isDigit(c)) number++;
             }
-            sb.append(small + " " + capital + " " + number + " " + space + "\n");
+
+            sb.append(small).append(" ").append(capital).append(" ").append(number).append(" ").append(space).append("\n");
         }
         System.out.print(sb);
-
-        }
-
     }
+}
+
+
 
