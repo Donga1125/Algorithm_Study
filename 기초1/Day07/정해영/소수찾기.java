@@ -23,7 +23,7 @@ public class 소수찾기 {
         }
 
         for (int i=0; i<N; i++){
-            if(foundSosu(arr[i])==true){
+            if(foundSosu(arr[i])){
                 count ++;
             }
         }
