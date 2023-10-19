@@ -99,7 +99,7 @@ ex) test: 카카오 2022
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day07">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/1978"> 소수 찾기 </a>, 
           <a href="https://www.acmicpc.net/problem/1929"> 소수 구하기 </a>, <a href="https://www.acmicpc.net/problem/6588"> 골드바흐의 추측 </a>, <a href="https://www.acmicpc.net/problem/10872"> 팩토리얼 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -108,7 +108,7 @@ ex) test: 카카오 2022
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day08">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1676"> 팩토리얼 0의 개수 </a>, <a href="https://www.acmicpc.net/problem/2004"> 조합 0의 개수 </a> ,
           <a href="https://www.acmicpc.net/problem/9613"> GCD 합 </a>, <a href="https://www.acmicpc.net/problem/17087"> 숨바꼭질 6 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
