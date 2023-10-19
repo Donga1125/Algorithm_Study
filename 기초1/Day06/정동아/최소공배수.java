@@ -28,6 +28,6 @@ public class 최소공배수 {
             return a;
         }
         // GCD(a, b) = GCD(b, r)이므로 (r = a % b)
-        return gdc(b,a%b);
+        return gdc(b,a%b); //디버깅
     }
 }
