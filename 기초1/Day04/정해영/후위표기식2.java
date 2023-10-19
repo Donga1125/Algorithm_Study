@@ -30,7 +30,7 @@ public class 후위표기식2 {
 
         for (int i = 0; i < str.length(); i++) {
             if ('A' <= str.charAt(i) && str.charAt(i) <= 'Z') {
-                stack.push(arr[str.charAt(i) - 'A']);  // 핵심 코드
+                stack.push(arr[str.charAt(i) - 'A']); // 핵심 코드
             } else {
                 if (!stack.isEmpty()) {
                     double a = stack.pop();
