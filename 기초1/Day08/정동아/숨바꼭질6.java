@@ -20,7 +20,7 @@ public class 숨바꼭질6 {
         }
         int d = numArray[0];
         for (int i = 0; i < n; i++) {
-            d = gcd(d, numArray[i]); //구한 거리들의 최대 공약수를 구해준다. 
+            d = gcd(d, numArray[i]); //구한 거리들의 최대 공약수를 구해준다.
         }
 
         System.out.println(d);
