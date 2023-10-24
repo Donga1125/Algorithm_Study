@@ -133,7 +133,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">다이나믹 프로그래밍 이론</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day11"></a></td>
         <td align="center" width="350px"><a href="https://togll.tistory.com/291"> 정해영 블로그 </a>, <a href="https://velog.io/@ehddk0133/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94-day11"> 정동아 블로그 </a>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
