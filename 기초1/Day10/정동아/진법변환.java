@@ -15,7 +15,7 @@ public class 진법변환 {
         String n = st.nextToken();
         int b =  Integer.parseInt(st.nextToken());
 
-        int tmp = 1;
+        int tmp = 1; //36^0
         int sum = 0;
 
         for (int i = n.length()-1; i>=0; i--){ //맨오른쪽부터 계산하기위함
@@ -26,9 +26,9 @@ public class 진법변환 {
             }else {
                 sum += (c - '0') *tmp;
             }
-            tmp*=b;
+            tmp*=b; ///36^1
         }
 
-        System.out.println(sum); //뒤집어서 출력
+        System.out.println(sum);
     }
 }
