@@ -141,14 +141,14 @@ ex) test: 카카오 2022
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day11">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/1463"> 1로 만들기 </a>, <a href="https://www.acmicpc.net/problem/11726"> 2×n 타일링 </a>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day13</td>
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day11">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11727"> 2×n 타일링 2 </a>, <a href="https://www.acmicpc.net/problem/9095"> 1, 2, 3 더하기 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -156,7 +156,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day12">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/11052"> 카드 구매하기 </a>, <a href="https://www.acmicpc.net/problem/16194"> 카드 구매하기 2 </a>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day15</td>
