@@ -27,7 +27,7 @@ public class BaseConversion {
             sum += N * Math.pow(A,i); //Math.pow는 특정값의 제곱을 구해준다.
         }
 
-        //10진법 -> A진법으로 변환
+        //10진법 ->B진법으로 변환
         while (sum != 0){
             stack.push(sum % B);
             sum /= B;
