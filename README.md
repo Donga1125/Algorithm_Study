@@ -163,7 +163,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day12">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15990"> 1,2,3 더하기 5</a>, <a href="https://www.acmicpc.net/problem/10844"> 쉬운 계단 수 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -171,7 +171,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">다이나믹 프로그래밍 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day13">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2193"> 이친수 </a>, <a href="https://www.acmicpc.net/problem/11053"> 가장 긴 증가하는 부분 수열 </a>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day17</td>
