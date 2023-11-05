@@ -11,11 +11,15 @@ Baekjoon을 통해 문제풀이를 진행합니다.
 |-----| ----------------------------------- |
 | 정해영 | [@hae02y](https://github.com/hae02y) |
 | 정동아 | [@Donga1125](https://github.com/Donga1125) |
+| 임한준 | [@hae02y](https://github.com/ernest45) |
+| 이재우 | [@Donga1125](https://github.com/leesaewoo) |
+
 
 ## 📝 Rule
 - 매일 09 ~ 12시 화면 공유하여 스터디 진행 (주말 및 공휴일은 진행 X)
 - 커리큘럼에 따라 문제 풀이 후 PR 생성
 - 당일 올린 PR에 문제 풀이 방식,상대의 코드를 보고 궁금한 내용 등을 질문
+- 문제 풀이가 끝나면 마지막 확인한 인원이 Merge 진행
 - 불참 시 전날에 공유 필수, 지각 시 벌금 5천원 납부
 
 ## 📤 Convention Rule
@@ -129,7 +133,7 @@ ex) test: 카카오 2022
  
 <tr>
         <td align="center">Day11</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 이론</td>
+        <td align="center" width="300px">DP 이론</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day11"></a></td>
         <td align="center" width="350px"><a href="https://togll.tistory.com/291"> 정해영 블로그 </a>, <a href="https://velog.io/@ehddk0133/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94-day11"> 정동아 블로그 </a>
         <td align="center" width="70px">✅</td>
@@ -137,14 +141,14 @@ ex) test: 카카오 2022
 
 <tr>
         <td align="center">Day12</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
+        <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day11">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/1463"> 1로 만들기 </a>, <a href="https://www.acmicpc.net/problem/11726"> 2×n 타일링 </a>
         <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day13</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
+        <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day11">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11727"> 2×n 타일링 2 </a>, <a href="https://www.acmicpc.net/problem/9095"> 1, 2, 3 더하기 </a></td>
         <td align="center" width="70px">✅</td>
@@ -152,14 +156,14 @@ ex) test: 카카오 2022
 
 <tr>
         <td align="center">Day14</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
+        <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day12">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/11052"> 카드 구매하기 </a>, <a href="https://www.acmicpc.net/problem/16194"> 카드 구매하기 2 </a>
         <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day15</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
+        <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day12">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15990"> 1,2,3 더하기 5</a>, <a href="https://www.acmicpc.net/problem/10844"> 쉬운 계단 수 </a></td>
         <td align="center" width="70px">✅</td>
@@ -167,102 +171,208 @@ ex) test: 카카오 2022
 
 <tr>
         <td align="center">Day16</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
+        <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day13">바로가기</a></td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2193"> 이친수 </a>, <a href="https://www.acmicpc.net/problem/11053"> 가장 긴 증가하는 부분 수열 </a>
         <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day17</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
+        <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day13">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/14002"> 가장 긴 증가하는 부분 수열 4 </a>, <a href="https://www.acmicpc.net/problem/1912"> 연속 합 </a></td>
         <td align="center" width="70px"></td>
 </tr>
 
-<tr>
-        <td align="center">Day18</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day14">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1699"> 제곱수의 합 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a>
-        <td align="center" width="70px"></td>
-</tr>
-<tr>
-        <td align="center">Day19</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day14">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15988"> 1,2,3 더하기 3</a>, <a href="https://www.acmicpc.net/problem/1149"> RGB거리 </a></td>
-        <td align="center" width="70px"></td>
-</tr>
-
-<tr>
-        <td align="center">Day20</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day15">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
-        <td align="center" width="70px"></td>
-</tr>
-<tr>
-        <td align="center">Day21</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day15">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/9465"> 스티커 </a>, <a href="https://www.acmicpc.net/problem/2156"> 포도주 시식 </a></td>
-        <td align="center" width="70px"></td>
-</tr>
-
-<tr>
-        <td align="center">Day22</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day16">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1932"> 정수 삼각형 </a>, <a href="https://www.acmicpc.net/problem/11055"> 가장 큰 증가 부분 수열 </a>
-        <td align="center" width="70px"></td>
-</tr>
-
-<tr>
-        <td align="center">Day23</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day16">바로가기</a></td>
-        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11722"> 가장 긴 감소하는 부분 수열 </a>, <a href="https://www.acmicpc.net/problem/11054"> 가장 긴 바이토닉 부분 수열 </a> </td>  
-        <td align="center" width="70px"></td>
-</tr>
-
-<tr>
-        <td align="center">Day24</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day17">바로가기</a></td>
-        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a>, <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>
-        <td align="center" width="70px"></td>
-</tr>
-<tr>
-        <td align="center">Day25</td>
-        <td align="center" width="300px">다이나믹 프로그래밍 1</td>
-        <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day17">바로가기</a></td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
-        <td align="center" width="70px"></td>
-</tr>
-
-
 </table>
+</br>
 
-### 기초 (2/2)
-<br/>
+
+### 팀원 추가 (문제 풀이 후 체크 표시 해주세요!✅)
 
 <table>
 <tr>
         <td align="center">날짜</td>
         <td align="center">알고리즘</td>
-        <td align="center">풀이</td>
         <td align="center">문제</td>
-        <td align="center">상태</td>
+        <td align="center">동아</td>
+        <td align="center">해영</td>
+        <td align="center">한준</td>
+        <td align="center">재우</td>
 </tr>
 
 <tr>
-        <td align="center">Day15</td>
-        <td align="center" width="300px">자료구조 1</td>
-        <td align="center" width="110px"><a href="">바로가기</a></td>
-        <td align="center" width="350px"><a href=""> </a>, <a href=""> </a>, <a href=""> </a>, <a href=""> </a>, <a href=""> </a></td>
+        <td align="center">Day18</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1699"> 제곱수의 합 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+
+</tr>
+<tr>
+        <td align="center">Day19</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15988"> 1,2,3 더하기 3</a>, <a href="https://www.acmicpc.net/problem/1149"> RGB거리 </a></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day20</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+<tr>
+        <td align="center">Day21</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/9465"> 스티커 </a>, <a href="https://www.acmicpc.net/problem/2156"> 포도주 시식 </a></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day22</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1932"> 정수 삼각형 </a>, <a href="https://www.acmicpc.net/problem/11055"> 가장 큰 증가 부분 수열 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day23</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11722"> 가장 긴 감소하는 부분 수열 </a>, <a href="https://www.acmicpc.net/problem/11054"> 가장 긴 바이토닉 부분 수열 </a> </td>  
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day24</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a>, <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+<tr>
+        <td align="center">Day25</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
 </tr>
 </table>
+
+
+</br>
+<!-- 
+### 기초 (2/2)
+
+<table>
+<tr>
+        <td align="center">날짜</td>
+        <td align="center">알고리즘</td>
+        <td align="center">문제</td>
+        <td align="center">동아</td>
+        <td align="center">해영</td>
+        <td align="center">한준</td>
+        <td align="center">재우</td>
+</tr>
+
+<tr>
+        <td align="center">Day26</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1699"> 제곱수의 합 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+
+</tr>
+<tr>
+        <td align="center">Day27</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15988"> 1,2,3 더하기 3</a>, <a href="https://www.acmicpc.net/problem/1149"> RGB거리 </a></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day28</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+<tr>
+        <td align="center">Day29</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/9465"> 스티커 </a>, <a href="https://www.acmicpc.net/problem/2156"> 포도주 시식 </a></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day30</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1932"> 정수 삼각형 </a>, <a href="https://www.acmicpc.net/problem/11055"> 가장 큰 증가 부분 수열 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day31</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11722"> 가장 긴 감소하는 부분 수열 </a>, <a href="https://www.acmicpc.net/problem/11054"> 가장 긴 바이토닉 부분 수열 </a> </td>  
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+
+<tr>
+        <td align="center">Day32</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a>, <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+<tr>
+        <td align="center">Day33</td>
+        <td align="center" width="200px">DP 1</td>
+        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+</tr>
+</table> -->
 
 <br/><br/>
