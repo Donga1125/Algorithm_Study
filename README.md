@@ -11,8 +11,8 @@ Baekjoon을 통해 문제풀이를 진행합니다.
 |-----| ----------------------------------- |
 | 정해영 | [@hae02y](https://github.com/hae02y) |
 | 정동아 | [@Donga1125](https://github.com/Donga1125) |
-| 임한준 | [@hae02y](https://github.com/ernest45) |
-| 이재우 | [@Donga1125](https://github.com/leesaewoo) |
+| 임한준 | [@ernest45](https://github.com/ernest45) |
+| 이재우 | [@leesaewoo](https://github.com/leesaewoo) |
 
 
 ## 📝 Rule
