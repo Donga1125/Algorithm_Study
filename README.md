@@ -181,7 +181,7 @@ ex) test: 카카오 2022
         <td align="center" width="300px">DP 1</td>
         <td align="center" width="110px"><a href="https://github.com/Donga1125/Algorithm_Study/tree/main/%EA%B8%B0%EC%B4%881/Day13">바로가기</a></td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/14002"> 가장 긴 증가하는 부분 수열 4 </a>, <a href="https://www.acmicpc.net/problem/1912"> 연속 합 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 </table>
@@ -205,7 +205,7 @@ ex) test: 카카오 2022
         <td align="center">Day18</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1699"> 제곱수의 합 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
