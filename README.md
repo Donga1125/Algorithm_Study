@@ -206,9 +206,9 @@ ex) test: 카카오 2022
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1699"> 제곱수의 합 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 
 </tr>
 <tr>
