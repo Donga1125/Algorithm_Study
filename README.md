@@ -216,9 +216,9 @@ ex) test: 카카오 2022
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15988"> 1,2,3 더하기 3</a>, <a href="https://www.acmicpc.net/problem/1149"> RGB거리 </a></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -226,18 +226,18 @@ ex) test: 카카오 2022
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day21</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/9465"> 스티커 </a>, <a href="https://www.acmicpc.net/problem/2156"> 포도주 시식 </a></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
