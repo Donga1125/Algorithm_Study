@@ -215,7 +215,7 @@ ex) test: 카카오 2022
         <td align="center">Day19</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15988"> 1,2,3 더하기 3</a>, <a href="https://www.acmicpc.net/problem/1149"> RGB거리 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
