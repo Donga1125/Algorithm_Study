@@ -4,14 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 일이삼더하기3 {
+public class 문제123더하기3 {
 
     public static void main(String[] args) throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int testCase = Integer.parseInt(bufferedReader.readLine());
-
+        //arr[n]은 정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를 저장하는 배열
         long[] arr = new long[1000001];
         arr[1] = 1;
         arr[2] = 2;
