@@ -272,7 +272,7 @@ ex) test: 카카오 2022
 <tr>
         <td align="center">Day25</td>
         <td align="center" width="200px">DP 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
+        <td align="center" width="350px">  <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a> </td>  
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
