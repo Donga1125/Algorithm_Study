@@ -235,7 +235,7 @@ ex) test: 카카오 2022
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/9465"> 스티커 </a>, <a href="https://www.acmicpc.net/problem/2156"> 포도주 시식 </a></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
 </tr>
@@ -244,9 +244,9 @@ ex) test: 카카오 2022
         <td align="center">Day22</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1932"> 정수 삼각형 </a>, <a href="https://www.acmicpc.net/problem/11055"> 가장 큰 증가 부분 수열 </a>
-        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
 </tr>
 
@@ -254,20 +254,20 @@ ex) test: 카카오 2022
         <td align="center">Day23</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11722"> 가장 긴 감소하는 부분 수열 </a>, <a href="https://www.acmicpc.net/problem/11054"> 가장 긴 바이토닉 부분 수열 </a> </td>  
-        <td align="center" width="70px">✅</td>
-        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
 </tr>
 
 <tr>
         <td align="center">Day24</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a>, <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>
-        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px">✅</td>
-        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
+        <td align="center" width="70px"></td>
 </tr>
 <tr>
         <td align="center">Day25</td>
@@ -275,7 +275,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px">  <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a> </td>  
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
 </tr>
 </table>
