@@ -301,7 +301,7 @@ ex) test: 카카오 2022
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2309"> 일곱 난쟁이 </a>, <a href="https://www.acmicpc.net/problem/3085"> 사탕 게임 </a>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
 
