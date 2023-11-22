@@ -310,7 +310,7 @@ ex) test: 카카오 2022
         <td align="center">Day27</td>
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1476"> 날짜 계산</a>, <a href="https://www.acmicpc.net/problem/1107"> 리모컨 </a></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
