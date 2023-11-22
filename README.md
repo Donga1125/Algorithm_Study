@@ -246,7 +246,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1932"> 정수 삼각형 </a>, <a href="https://www.acmicpc.net/problem/11055"> 가장 큰 증가 부분 수열 </a>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 
@@ -266,7 +266,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/13398"> 연속합 2</a>, <a href="https://www.acmicpc.net/problem/2133"> 타일 채우기 </a>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px">  <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a> </td>  
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 </table>
@@ -302,7 +302,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2309"> 일곱 난쟁이 </a>, <a href="https://www.acmicpc.net/problem/3085"> 사탕 게임 </a>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 
 </tr>
@@ -312,7 +312,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1476"> 날짜 계산</a>, <a href="https://www.acmicpc.net/problem/1107"> 리모컨 </a></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 
@@ -322,7 +322,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 <tr>
