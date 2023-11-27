@@ -247,7 +247,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
 </tr>
 
 <tr>
@@ -257,7 +257,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
 </tr>
 
 <tr>
@@ -267,7 +267,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">🚫</td>
 </tr>
 <tr>
         <td align="center">Day25</td>
