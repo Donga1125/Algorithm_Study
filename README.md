@@ -276,7 +276,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 </table>
 
@@ -303,7 +303,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 
 </tr>
 <tr>
@@ -313,7 +313,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
@@ -323,7 +323,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
 </tr>
 <tr>
         <td align="center">Day29</td>
@@ -332,7 +332,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
 </tr>
 
 <tr>
@@ -342,7 +342,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
