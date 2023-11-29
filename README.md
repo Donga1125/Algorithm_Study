@@ -337,7 +337,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/14500"> 테트로미노 </a>, <a href="https://www.acmicpc.net/problem/6064"> 카잉 달력 </a></td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">❌</td>
 </tr>
 
@@ -347,7 +347,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1748"> 수 이어쓰기 1 </a>, <a href="https://www.acmicpc.net/problem/9095"> 1,2,3 더하기 </a>
         <td align="center" width="70px">🚫</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
 </tr>
 
@@ -357,7 +357,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15649"> N과 M (1) </a>, <a href="https://www.acmicpc.net/problem/15650"> N과 M (2) </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 
@@ -367,7 +367,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15651"> N과 M (3) </a>, <a href="https://www.acmicpc.net/problem/15652"> N과 M (4) </a>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
         <td align="center" width="70px"></td>
 </tr>
 <tr>
@@ -376,7 +376,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15654"> N과 M (5) </a>, <a href="https://www.acmicpc.net/problem/15655"> N과 M (6) </a> </td>  
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr>
 <tr>
