@@ -262,7 +262,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11722"> 가장 긴 감소하는 부분 수열 </a>, <a href="https://www.acmicpc.net/problem/11054"> 가장 긴 바이토닉 부분 수열 </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
         <td align="center" width="70px">❌</td>
 </tr>
 
@@ -337,7 +337,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/14500"> 테트로미노 </a>, <a href="https://www.acmicpc.net/problem/6064"> 카잉 달력 </a></td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">❌</td>
 </tr>
 
@@ -347,7 +347,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1748"> 수 이어쓰기 1 </a>, <a href="https://www.acmicpc.net/problem/9095"> 1,2,3 더하기 </a>
         <td align="center" width="70px">🚫</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
 </tr>
 
@@ -357,7 +357,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15649"> N과 M (1) </a>, <a href="https://www.acmicpc.net/problem/15650"> N과 M (2) </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
 </tr>
 
@@ -367,7 +367,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15651"> N과 M (3) </a>, <a href="https://www.acmicpc.net/problem/15652"> N과 M (4) </a>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px"❌></td>
         <td align="center" width="70px">✅</td>
 </tr>
 <tr>
@@ -385,7 +385,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15656"> N과 M (7) </a>, <a href="https://www.acmicpc.net/problem/15657"> N과 M (8) </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">🕘</td>
         <td align="center" width="70px"></td>
 </tr><tr>
         <td align="center">Day35</td>
