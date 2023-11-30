@@ -1,4 +1,4 @@
-package 기초2.Day34;
+package 기초2.Day34.임한준;
 
 import java.io.BufferedReader;
 import java.io.IOException;
