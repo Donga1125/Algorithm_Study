@@ -374,7 +374,7 @@ ex) test: 카카오 2022
         <td align="center">Day33</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15654"> N과 M (5) </a>, <a href="https://www.acmicpc.net/problem/15655"> N과 M (6) </a> </td>  
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
@@ -383,7 +383,7 @@ ex) test: 카카오 2022
         <td align="center">Day34</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15656"> N과 M (7) </a>, <a href="https://www.acmicpc.net/problem/15657"> N과 M (8) </a> </td>  
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
