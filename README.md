@@ -367,7 +367,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15651"> N과 M (3) </a>, <a href="https://www.acmicpc.net/problem/15652"> N과 M (4) </a>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"❌></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
 </tr>
 <tr>
@@ -376,7 +376,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15654"> N과 M (5) </a>, <a href="https://www.acmicpc.net/problem/15655"> N과 M (6) </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
         <td align="center" width="70px">✅</td>
 </tr>
 <tr>
@@ -393,7 +393,7 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15663"> N과 M (9) </a>, <a href="https://www.acmicpc.net/problem/15664"> N과 M (10) </a> </td>  
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
 </tr><tr>
         <td align="center">Day36</td>
