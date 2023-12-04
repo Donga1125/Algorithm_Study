@@ -384,22 +384,22 @@ ex) test: 카카오 2022
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15656"> N과 M (7) </a>, <a href="https://www.acmicpc.net/problem/15657"> N과 M (8) </a> </td>  
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px">❌</td>
+        <td align="center" width="70px">🚫</td>
         <td align="center" width="70px">🕘</td>
         <td align="center" width="70px"></td>
 </tr><tr>
         <td align="center">Day35</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15663"> N과 M (9) </a>, <a href="https://www.acmicpc.net/problem/15664"> N과 M (10) </a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">🚫</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
 </tr><tr>
         <td align="center">Day36</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15665"> N과 M (11) </a>, <a href="https://www.acmicpc.net/problem/15666"> N과 M (12) </a> </td>  
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
