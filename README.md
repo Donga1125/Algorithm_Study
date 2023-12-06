@@ -1,5 +1,6 @@
 # Algorithm_Study
 <br/>
+23.10.10 ~ 23.12.05 <br/>
 매일 꾸준히 공부하여 JAVA 알고리즘을 공부하기 위한 스터디입니다.
 
 Baekjoon을 통해 문제풀이를 진행합니다.
@@ -195,6 +196,7 @@ ex) test: 카카오 2022
 
 
 ### 팀원 추가 (문제 풀이 후 체크 표시 해주세요!✅)
+23.11.06 이재우, 임한준 님 합류
 
 <table>
 <tr>
@@ -400,165 +402,6 @@ ex) test: 카카오 2022
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15665"> N과 M (11) </a>, <a href="https://www.acmicpc.net/problem/15666"> N과 M (12) </a> </td>  
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day37</td>
-        <td align="center" width="200px">브루트 포스 - 순열</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/10972"> 다음 순열 </a>, <a href="https://www.acmicpc.net/problem/10973"> 이전 순열 </a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day38</td>
-        <td align="center" width="200px">브루트 포스 - 순열</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/10974"> 모든 순열 </a>, <a href="https://www.acmicpc.net/problem/10819"> 차이를 최대로 </a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day39</td>
-        <td align="center" width="200px">브루트 포스 - 순열</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/10971"> 외판원 순회 2</a>, <a href="https://www.acmicpc.net/problem/6603"> 로또 </a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day40</td>
-        <td align="center" width="200px"> 브루트 포스 - 재귀</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1759">암호 만들기</a>, <a href="https://www.acmicpc.net/problem/14501"> 퇴사 </a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day41</td>
-        <td align="center" width="200px"> 브루트 포스 - 재귀</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/14889"> 스타트와 링크</a>, <a href="https://www.acmicpc.net/problem/15661">링크와 스타트</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day42</td>
-        <td align="center" width="200px"> 브루트 포스 - 재귀</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2529"> 부등호</a>, <a href="https://www.acmicpc.net/problem/1248">Guess</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day43</td>
-        <td align="center" width="200px"> 브루트 포스 - 비트마스크</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/11723"> 집합</a>, <a href="https://www.acmicpc.net/problem/1182">부분수열의 합</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day44</td>
-        <td align="center" width="200px"> 브루트 포스 - 비트마스크, 그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/14391"> 종이조각</a>, <a href="https://www.acmicpc.net/problem/13023">ABCDE</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day45</td>
-        <td align="center" width="200px"> 그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1260">DFS와 BFS</a>, <a href="https://www.acmicpc.net/problem/11724">연결 요소의 개수</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day46</td>
-        <td align="center" width="200px"> 그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1707"> 이분 그래프</a>, <a href="https://www.acmicpc.net/problem/2667">단지번호 붙이기</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day47</td>
-        <td align="center" width="200px"> 그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/4963"> 섬의 개수</a>, <a href="https://www.acmicpc.net/problem/2178">미로 탐색</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day48</td>
-        <td align="center" width="200px">그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/7576"> 토마토</a>, <a href="https://www.acmicpc.net/problem/7562">나이트의 이동</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-</tr><tr>
-        <td align="center">Day49</td>
-        <td align="center" width="200px"> 그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/16929"> Two Dots</a>, <a href="https://www.acmicpc.net/problem/16947">서울 지하철 2호선</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day50</td>
-        <td align="center" width="200px">그래프 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/16940"> BFS 스페셜 저지</a>, <a href="https://www.acmicpc.net/problem/16964">DFS 스페셜 저지</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day51</td>
-        <td align="center" width="200px">그래프 1, BFS</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2146"> 다리 만들기</a>, <a href="https://www.acmicpc.net/problem/1697">숨바꼭질</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day52</td>
-        <td align="center" width="200px"> BFS</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/13913"> 숨바꼭질 4</a>, <a href="https://www.acmicpc.net/problem/14226">이모티콘</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day53</td>
-        <td align="center" width="200px"> BFS</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/13549"> 숨바꼭질 3</a>, <a href="https://www.acmicpc.net/problem/1261">알고스팟</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day54</td>
-        <td align="center" width="200px">트리 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1991"> 트리 순회</a>, <a href="https://www.acmicpc.net/problem/2250">트리의 높이와 너비</a> </td>  
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-
-</tr><tr>
-        <td align="center">Day55</td>
-        <td align="center" width="200px">트리 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/11725"> 트리의 부모 찾기</a>, <a href="https://www.acmicpc.net/problem/1167">트리의 지름</a> , <a href="https://www.acmicpc.net/problem/1967">트리의 지름</a></td>  
-        <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
