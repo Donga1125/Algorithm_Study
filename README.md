@@ -378,8 +378,6 @@ ex) test: 카카오 2022
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15654"> N과 M (5) </a>, <a href="https://www.acmicpc.net/problem/15655"> N과 M (6) </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">❌</td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
         <td align="center" width="70px">❌</td>
         <td align="center" width="70px">✅</td>
 </tr>
