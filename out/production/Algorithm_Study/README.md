@@ -231,7 +231,7 @@ ex) test: 카카오 2022
         <td align="center">Day20</td>
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
@@ -241,7 +241,7 @@ ex) test: 카카오 2022
         <td align="center" width="200px">DP 1</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/9465"> 스티커 </a>, <a href="https://www.acmicpc.net/problem/2156"> 포도주 시식 </a></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
 </tr>
@@ -253,7 +253,7 @@ ex) test: 카카오 2022
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
 </tr>
 
 <tr>
@@ -262,8 +262,8 @@ ex) test: 카카오 2022
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/11722"> 가장 긴 감소하는 부분 수열 </a>, <a href="https://www.acmicpc.net/problem/11054"> 가장 긴 바이토닉 부분 수열 </a> </td>  
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">❌</td>
+        <td align="center" width="70px">❌</td>
 </tr>
 
 <tr>
@@ -273,16 +273,16 @@ ex) test: 카카오 2022
         <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">🚫</td>
 </tr>
 <tr>
         <td align="center">Day25</td>
         <td align="center" width="200px">DP 1</td>
-        <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a>, <a href="https://www.acmicpc.net/problem/2225"> 합분해 </a> </td>  
-        <td align="center" width="70px"></td>
+        <td align="center" width="350px">  <a href="https://www.acmicpc.net/problem/17404"> RGB거리 2 </a> </td>  
+        <td align="center" width="70px">❌</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px">✅</td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 </table>
 
@@ -306,86 +306,86 @@ ex) test: 카카오 2022
         <td align="center">Day26</td>
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/2309"> 일곱 난쟁이 </a>, <a href="https://www.acmicpc.net/problem/3085"> 사탕 게임 </a>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">❌</td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 
 </tr>
 <tr>
         <td align="center">Day27</td>
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1476"> 날짜 계산</a>, <a href="https://www.acmicpc.net/problem/1107"> 리모컨 </a></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
         <td align="center">Day28</td>
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1309"> 동물원 </a>, <a href="https://www.acmicpc.net/problem/11057"> 오르막 수 </a>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">❌</td>
 </tr>
 <tr>
         <td align="center">Day29</td>
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/14500"> 테트로미노 </a>, <a href="https://www.acmicpc.net/problem/6064"> 카잉 달력 </a></td>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">❌</td>
 </tr>
 
 <tr>
         <td align="center">Day30</td>
         <td align="center" width="200px">브루트 포스</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/1748"> 수 이어쓰기 1 </a>, <a href="https://www.acmicpc.net/problem/9095"> 1,2,3 더하기 </a>
+        <td align="center" width="70px">🚫</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
         <td align="center">Day31</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15649"> N과 M (1) </a>, <a href="https://www.acmicpc.net/problem/15650"> N과 M (2) </a> </td>  
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
+        <td align="center" width="70px">✅</td>
 </tr>
 
 <tr>
         <td align="center">Day32</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"><a href="https://www.acmicpc.net/problem/15651"> N과 M (3) </a>, <a href="https://www.acmicpc.net/problem/15652"> N과 M (4) </a>
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px"❌></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day33</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15654"> N과 M (5) </a>, <a href="https://www.acmicpc.net/problem/15655"> N과 M (6) </a> </td>  
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">✅</td>
 </tr>
 <tr>
         <td align="center">Day34</td>
         <td align="center" width="200px">브루트 포스 (N과 M)</td>
         <td align="center" width="350px"> <a href="https://www.acmicpc.net/problem/15656"> N과 M (7) </a>, <a href="https://www.acmicpc.net/problem/15657"> N과 M (8) </a> </td>  
+        <td align="center" width="70px">✅</td>
         <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
-        <td align="center" width="70px"></td>
+        <td align="center" width="70px">🕘</td>
         <td align="center" width="70px"></td>
 </tr><tr>
         <td align="center">Day35</td>

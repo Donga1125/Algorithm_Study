@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class N과M8 {
+public class
+N과M8 {
 
     /**
      문제 15657
