@@ -6,9 +6,8 @@ import java.util.Arrays;
 // 1명 이상 100,000명 이 comp의 길이가 part의 길이보다 1 작다.(1명만 완주 못함)
 // 참가 이름은 1개 이 20개 이하의 소문자로 구성
 // 참가자 중 동명이인이 존재 가 (즉 동명이인인 홍길동이 완주를 못하면 1번길동인지 2번길동인지 상관 x 길동 한명만 빠지면 됨)
- class Solution {
+ class SolutionSorting {
     public String solution(String[] participant, String[] completion) {
-        String answer = "";
         // sorting & loop 방법
         // 1. 두 배열을 정렬
         Arrays.sort(participant);
@@ -34,7 +33,7 @@ import java.util.Arrays;
     public static void main(String[] args) {
         String[] part = {"leo", "kiki", "eden"};
         String[] comp = {"eden", "kiki"};
-        Solution sol = new Solution();
+        SolutionSorting sol = new SolutionSorting();
         System.out.println(sol.solution(part, comp));
     }
 
