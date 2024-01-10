@@ -1,4 +1,4 @@
-package 기초.전화번호목록;
+package 알고리즘.전화번호목록;
 
 import java.util.HashMap;
 

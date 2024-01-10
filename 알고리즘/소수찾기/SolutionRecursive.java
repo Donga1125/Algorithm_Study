@@ -1,6 +1,5 @@
-package 기초.소수찾기;
+package 알고리즘.소수찾기;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 

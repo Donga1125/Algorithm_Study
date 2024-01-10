@@ -1,4 +1,4 @@
-package 기초.완주하지못한선수;
+package 알고리즘.완주하지못한선수;
 
 import java.util.HashMap;
 import java.util.Iterator;
