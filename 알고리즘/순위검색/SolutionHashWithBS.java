@@ -45,7 +45,7 @@ public class SolutionHashWithBS { //Hash + Binary Search
         int i = 0;
         for (String q : query) {
             String[] data = q.split(" and ");
-            int target = Integer.parseInt(data[3].split(" ")[1]); // 뒤에 점수를 가지고 오고싶기에 짜르고 1번이 점수임
+            int target = Integer.parseInt(data[3].split(" ")[1]); // 뒤에 점수를 가지고 오고 싶기에 짜르고 1번이 점수임
             data[3] = data[3].split(" ")[0];
             String key = String.join(" ", data);
 
