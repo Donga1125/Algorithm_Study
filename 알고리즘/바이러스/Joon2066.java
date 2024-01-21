@@ -19,8 +19,8 @@ public class Joon2066 {
         answer++; // dfs를 호출 했다는 건 연결되었다고 가정할꺼기 때문에 들어오면 ++ 해주
 
         for (int i = 1; i <= n; i++) {
-            if (visited[i] == false && graph[idx][i]) {//방문한 적이 없고 && 그 인덱스1번째에 i번쨰가 연결되어 있으면 호출(i는바뀌니까)
-            }
+            if (visited[i] == false && graph[idx][i]) //방문한 적이 없고 && 그 인덱스1번째에 i번쨰가 연결되어 있으면 호출(i는바뀌니까)
+
             dfs(i);
 
         }
