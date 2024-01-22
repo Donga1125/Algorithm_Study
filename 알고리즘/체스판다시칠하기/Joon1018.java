@@ -50,7 +50,7 @@ public class Joon1018 {
         }
         // 1. 체스판 짜르기
         int sol = Integer.MAX_VALUE;
-        for (int i = 0; i <= row - 8; i++) {
+        for (int i = 0; i <= row - 8; i++) { // 시작 지점만 넘기고 있다. 그 이후 getSolution 함수에서 만들어주구나
             for (int j = 0; j <= col - 8; j++) {
                 // 2. 현 체스판 최소비용 구하기
                 int curSol = getSolution(i, j, board);
