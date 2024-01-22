@@ -53,7 +53,7 @@ public class Joon1018 {
         for (int i = 0; i <= row - 8; i++) {
             for (int j = 0; j <= col - 8; j++) {
                 // 2. 현 체스판 최소비용 구하기
-                int curSol = getSolution(i,j, board);
+                int curSol = getSolution(i, j, board);
 
                 // 3. 전체 최적의 값 비교하여 갱신하기
                 if(sol > curSol)
