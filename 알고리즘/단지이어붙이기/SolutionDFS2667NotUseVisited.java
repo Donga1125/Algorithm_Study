@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class SolutionDFS2667 {
+public class SolutionDFS2667NotUseVisited {
 
     static int n;
     final static int MAX = 25 + 10; // max로 최대값 선언 넉넉하게 원래 25에서 10 더한 값
@@ -17,14 +17,15 @@ public class SolutionDFS2667 {
     static int[] dirX = {0, 0, 1, -1};
 
     public static void dfs(int y , int x) {
-        visited[y][x] = true;
+        //visited[y][x] = true;
+        connect[y][x] = false;
         countPerDanji++;
 
         for (int i = 0; i < 4; i++) {
            // connect[dirY][dirX] dirY를 숫자로 바꿔주자
             int newY = y + dirY[i]; // y번째에서 dir[i]번째로 움직인 새로운 좌표 값 (4개의 방향 다 확인
             int newX = x + dirX[i];
-            if (!visited[newY][newX] && connect[newY][newX]) // 탐색 시에도 새로운 위치 값이 탐색되기 전과 커넥션되어 있다면 dfs호출
+            if (connect[newY][newX]) // 탐색 시에도 새로운 위치 값이 탐색되기 전과 커넥션되어 있다면 dfs호출
              dfs(newY, newX);
         }
     }
@@ -53,7 +54,7 @@ public class SolutionDFS2667 {
         // 각 단지가 이어진 아파트가 몇개인지 ? 세어줘야하네
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                if (!visited[i][j] && connect[i][j]) {
+                if (connect[i][j]) {
                     countPerDanji = 0; // 새로운 단지가 시작될 때의 dfs인데 이땐 다시 0으로 초기화해서 다시 세야한다.
                     dfs(i, j);
                     countList.add(countPerDanji); // 하나씩 담길 거다
