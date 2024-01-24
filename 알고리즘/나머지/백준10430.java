@@ -17,9 +17,9 @@ import java.util.StringTokenizer;
 //첫째 줄에 (A+B)%C, 둘째 줄에 ((A%C) + (B%C))%C, 셋째 줄에 (A×B)%C, 넷째 줄에 ((A%C) × (B%C))%C를 출력한다.
 public class 백준10430 {
 
-    static int a;
-    static int b;
-    static int c;
+    static int A;
+    static int B;
+    static int C;
 
 
 
@@ -29,14 +29,14 @@ public class 백준10430 {
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        a = Integer.parseInt(st.nextToken());
-        b = Integer.parseInt(st.nextToken());
-        c = Integer.parseInt(st.nextToken());
+        A = Integer.parseInt(st.nextToken());
+        B = Integer.parseInt(st.nextToken());
+        C = Integer.parseInt(st.nextToken());
 
-        int answer1 = ((a + b) % c);
-        int answer2 = ((a % b) + (b % c)) % c;
-        int answer3 = ((a * b) % c);
-        int answer4 = ((a % b) * (b % c)) % c;
+        int answer1 = (A + B) % C;
+        int answer2 = ((A % C) + (B % C)) % C;
+        int answer3 = ((A * B) % C);
+        int answer4 = ((A % C) * (B % C)) % C;
 
 
         bw.write(String.valueOf(answer1));
