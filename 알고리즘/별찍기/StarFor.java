@@ -45,6 +45,18 @@ public class StarFor {
 
 
             System.out.println();
+
+        }
+
+        System.out.println("------------다시");
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 5; i < j ; j--) {
+                System.out.print("*");
+
+            }
+            System.out.println();
         }
     }
+    
 }

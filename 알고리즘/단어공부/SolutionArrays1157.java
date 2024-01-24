@@ -32,7 +32,7 @@ public class SolutionArrays1157 {
 //        str = str.toUpperCase();
 
         for (int i = 0; i < str.length(); i++) {
-            int idx = str.charAt(i) - 'A'; // 이 개념은 i가 A라면 0, B라면 1 즉 i번째의 인덱스를 가지고 있게 된다.
+            int idx = str.charAt(i) - 'A'; // 이 개념은 i가 A라면 0, B라면 1 즉 i번째의 인덱스를 가지고 있게 된다. 아스키코드숫자 참고
             ++count[idx]; // i번째 idx 값을 늘려준다. A를 예로 들면, A는 1이 추가되는 거
 
             if (maxValue < count[idx]) {
