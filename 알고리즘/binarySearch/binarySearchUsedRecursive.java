@@ -1,6 +1,6 @@
 package 알고리즘.binarySearch;
 
-public class binarySearchUsedRecursive {
+public class binarySearchUsedRecursive { // 어렵다
 
     private int answer = -1;
 
