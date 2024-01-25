@@ -28,7 +28,7 @@ public class binarySearchUsedIterator {
     public static void main(String[] args) {
         binarySearchUsedIterator bs = new binarySearchUsedIterator();
         int[] arr = {0, 1, 3, 5, 6, 7, 9, 11, 23, 24, 27, 28, 32, 33, 36, 38, 40, 44, 51, 55, 60};
-        int target = 10;
+        int target = 33;
         System.out.println(bs.bs(arr, target));
 
     }
