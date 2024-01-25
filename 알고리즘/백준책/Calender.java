@@ -22,6 +22,7 @@ public class Calender {
         map.put(1, "수");
         map.put(2, "목");
         map.put(3, "금");
+        map.put(4, "토");
 
 
     }
