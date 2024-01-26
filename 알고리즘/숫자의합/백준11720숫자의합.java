@@ -21,6 +21,9 @@ public class 백준11720숫자의합 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         // 개 어이없네 String 값으로 들어온다고 생각했는데 걍 54,321 이 들어오는 거다;// 상관없다 String으로 받아도 됨
+        // n이 100개가 주어지면 밑에 숫자는 100자리의 숫자를 담게 되는데, int나 long으로는 받을 수 없다.. 그래서 결국엔
+        // String으로 받는 게 맞다... 내가 했던 게 결과적으론 맞다!
+        //
 
         int answer = 0;
 
