@@ -37,7 +37,7 @@ public class 백1546평균 {
         for (int i = 0; i < n; i++) { // 스코어 배열에 점수들 담아주기
             score[i] = Integer.parseInt(st.nextToken());
         }
-        System.out.println(Arrays.toString(score));
+
 
         Arrays.sort(score);
         double answer = 0;
