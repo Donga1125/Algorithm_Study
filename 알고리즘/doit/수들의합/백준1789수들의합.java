@@ -20,21 +20,23 @@ public class 백준1789수들의합 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        long N = sc.nextLong();
-        int sum = 1, count = 1;
+        long N = sc.nextLong();  //N만 long으로 해주고 sum은 안해줘서 틀림
+        long sum = 0, count = 0, num = 1;
 
         while (sum <= N) {
-
-            if (sum == N) {
-                break;}
-            count++;
-            sum = sum + count;
-
-
-
+            // 1 = 1 + 2;
+            //3
+            // 1 = 2;
+            sum =  sum + num;
+            if (sum > N) {
+                break;
             }
-
+            count++;
+            num++;
+            }
+        System.out.println(count);
         }
+
 
 
     }
