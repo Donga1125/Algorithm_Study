@@ -13,8 +13,8 @@ public class 가장긴증가하는부분수열4 {
     public static void main(String[] args) throws IOException {
         sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        int arr[] = new int[n + 1];
-        int dp[] = new int[n + 1];
+        int[] arr = new int[n + 1];
+        int[] dp = new int[n + 1];
         // 값의 범위의 최솟값이 1이기 때문에
         int result = 0;
 

@@ -1,4 +1,4 @@
-package 기초2.Day34.임한준;
+package 기초2.Day35.임한준;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,15 +6,13 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class
-N과M8 {
+public class N과M10 {
 
     /**
-     문제 15657
-     N개의 자연수와 자연수 M이 주어졌을 때, 아래 조건을 만족하는 길이가 M인 수열을 모두 구하는 프로그램을 작성하시오. N개의 자연수는 모두 다른 수이다.
+     문제 15664
+     N개의 자연수와 자연수 M이 주어졌을 때, 아래 조건을 만족하는 길이가 M인 수열을 모두 구하는 프로그램을 작성하시오.
 
      N개의 자연수 중에서 M개를 고른 수열
-     같은 수를 여러 번 골라도 된다.
      고른 수열은 비내림차순이어야 한다.
      길이가 K인 수열 A가 A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK를 만족하면, 비내림차순이라고 한다.
      입력
@@ -28,11 +26,16 @@ N과M8 {
      수열은 사전 순으로 증가하는 순서로 출력해야 한다.
      */
 
-    static int n, m;
-    static int[] ans;
+    // 파라미터로 하나으 ㅣ값을 더 넘겨서 확인 ?
+
+    static int n , m;
     static int[] arr;
+    static int[] ans;
+
+    static boolean[] visited;
 
     static StringBuilder sb = new StringBuilder();
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -41,32 +44,40 @@ N과M8 {
         m = Integer.parseInt(st.nextToken());
 
         arr = new int[n];
-        ans = new int[m];
+        ans = new int[n];
+        visited = new boolean[n];
 
         st = new StringTokenizer(br.readLine());
-
-        for (int i = 0; i < n; i++){
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());}
 
         Arrays.sort(arr);
-        dfs(0, 0);
-    }
-    protected static void dfs(int depth, int index){
 
+        dfs(0,0);
+        System.out.println(sb.toString());
+
+        }
+
+    protected static void dfs(int depth, int idx) {
         if (depth == m) {
             for (int i = 0; i < m; i++) {
-
-                sb.append(ans[i] + " ");}
-
+                sb.append(ans[i] + " ");
+            }
             sb.append("\n");
 
-            return; }
+            return;
+        }
+        int before = 0;
+        for (int i = idx; i < n; i++) {
+            if (!visited[i]) {
+                    visited[i] = true;
+                    ans[depth] = arr[i];
+                    before = arr[i];
+                    dfs(depth + 1, i);
+                    visited[i] = false;
 
 
-        for (int i = index; i < n; i++){
-            ans[depth] = arr[i];
-            dfs(depth + 1, i);
+            }
         }
     }
 }
