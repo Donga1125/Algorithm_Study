@@ -34,12 +34,16 @@ package 알고리즘.doit.DNA비밀번호;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class 백준12891DNA비밀번호 {
     // 순서 비교를 어떻게 할까 하다가 그냥 임의로 내가 정렬하면 될 거 같은데 ?acgt를 내가 숫자로 생각해서 0123이 포함되기만 하면?
     // 아 근데 이렇게 복잡하게 푸는 게 맞을까..
+
+    static int dnaArr[];
+    static int CheckArr[];
+    static int checkSecret;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -48,22 +52,85 @@ public class 백준12891DNA비밀번호 {
         int S = Integer.parseInt(st.nextToken());
         int P = Integer.parseInt(st.nextToken());
         int answer = 0;
+        dnaArr = new int[4];
+        CheckArr = new int[4];
+        checkSecret = 0; // 4개가 되면 count++ 해주면 된다.
+
 
 //        String password = br.readLine(); 스트링으로 안 받고 배열로 chatr 받아라고 하네
-        String password = br.readLine();
-        for (int i = 0; i < password.length(); i++) {
-            if (password.charAt(i) =='A') ;
 
-
-        }
+        char A[] = br.readLine().toCharArray();
 
         st = new StringTokenizer(br.readLine());
-        int dna[] = new int[4];
-        HashMap<String, Integer> map = new HashMap<>();
+//        HashMap<String, Integer> map = new HashMap<>();
 
         for (int i = 0; i < 4; i++) { // 맵으로 관리도 생각해봤는데 일단 패스
-            dna[i] = Integer.parseInt(st.nextToken());
+            dnaArr[i] = Integer.parseInt(st.nextToken()); // 실제 배열
+            if (dnaArr[i] == 0) { // 2 0 0 1
+                checkSecret++; // 0이라는건 checkSecret이 4가 되면 리턴하니까 4를 만들어주기 위해 하나 걍 올리기
+            }
+        }
 
+        for (int i = 0; i < P; i++) { // 부분문자열 세팅
+            add(A[i]); // 할 처리가 많아서 함수로 만들고
+        }
+
+        if(checkSecret == 4)
+            answer++;
+
+        //슬라이딩 윈도우
+        for (int i = P; i < S; i++) { //i는 p배열의 마지막인덱스,
+            int j = i - P;
+            add(A[i]);
+            remove(A[j]);
+            if (checkSecret == 4) // 한번에 검사해서(즉 P개) 만큼 해서 그 안에 값이 있기만 하면 되게
+                answer++;
+        }
+        System.out.println(answer);
+
+        br.close();
+    }
+
+    private static void remove(char c) {
+        switch (c) {
+            case 'A' :
+                if (CheckArr[0] == dnaArr[0]) checkSecret--;
+                CheckArr[0]--;
+                break;
+            case 'C' :
+                if (CheckArr[1] == dnaArr[1]) checkSecret--;
+                CheckArr[1]--;
+                break;
+            case 'G' :
+                if (CheckArr[2] == dnaArr[2]) checkSecret--;
+                CheckArr[2]--;
+                break;
+            case 'T' :
+                if (CheckArr[3] == dnaArr[3]) checkSecret--;
+                CheckArr[3]--;
+                break;
+        }
+
+    }
+
+    private static void add(char c) {
+        switch (c) {
+            case 'A' :
+                CheckArr[0]++;
+                if (CheckArr[0] == dnaArr[0]) checkSecret++; // 맞을때만 해주는 이유는 한번만 만족하면 되기에(여러번 있음 안대)
+                break;
+            case 'C' :
+                CheckArr[1]++;
+                if (CheckArr[1] == dnaArr[1]) checkSecret++; // 맞을때만 해주는 이유는 한번만 만족하면 되기에(여러번 있음 안대)
+                break;
+            case 'G' :
+                CheckArr[2]++;
+                if (CheckArr[2] == dnaArr[2]) checkSecret++; // 맞을때만 해주는 이유는 한번만 만족하면 되기에(여러번 있음 안대)
+                break;
+            case 'T' :
+                CheckArr[3]++;
+                if (CheckArr[3] == dnaArr[3]) checkSecret++; // 맞을때만 해주는 이유는 한번만 만족하면 되기에(여러번 있음 안대)
+                break;
         }
     }
 }
