@@ -72,18 +72,18 @@ public class 백준12891DNA비밀번호 {
         }
 
         for (int i = 0; i < P; i++) { // 부분문자열 세팅
-            add(A[i]); // 할 처리가 많아서 함수로 만들고
+            add(A[i]); // 할 처리가 많아서 함수로 만들고 // 초기세팅을 해주고 밑에서 다시 움직여준다! 이러먄 checkArr에서 담기고 비교
         }
 
         if(checkSecret == 4)
-            answer++;
+            answer++; // 1
 
         //슬라이딩 윈도우
-        for (int i = P; i < S; i++) { //i는 p배열의 마지막인덱스,
+        for (int i = P; i < S; i++) { //i는 p배열의 마지막인덱스, 똑같이 위에처럼 움직이면서 비교!
             int j = i - P;
             add(A[i]);
             remove(A[j]);
-            if (checkSecret == 4) // 한번에 검사해서(즉 P개) 만큼 해서 그 안에 값이 있기만 하면 되게
+            if (checkSecret == 4) // 한번에 검사해서(즉 P개) 만큼 해서 그 안에 값이 있기만 하면 되게!!
                 answer++;
         }
         System.out.println(answer);
@@ -91,27 +91,6 @@ public class 백준12891DNA비밀번호 {
         br.close();
     }
 
-    private static void remove(char c) {
-        switch (c) {
-            case 'A' :
-                if (CheckArr[0] == dnaArr[0]) checkSecret--;
-                CheckArr[0]--;
-                break;
-            case 'C' :
-                if (CheckArr[1] == dnaArr[1]) checkSecret--;
-                CheckArr[1]--;
-                break;
-            case 'G' :
-                if (CheckArr[2] == dnaArr[2]) checkSecret--;
-                CheckArr[2]--;
-                break;
-            case 'T' :
-                if (CheckArr[3] == dnaArr[3]) checkSecret--;
-                CheckArr[3]--;
-                break;
-        }
-
-    }
 
     private static void add(char c) {
         switch (c) {
@@ -130,6 +109,28 @@ public class 백준12891DNA비밀번호 {
             case 'T' :
                 CheckArr[3]++;
                 if (CheckArr[3] == dnaArr[3]) checkSecret++; // 맞을때만 해주는 이유는 한번만 만족하면 되기에(여러번 있음 안대)
+                break;
+        }
+    }
+
+
+    private static void remove(char c) {
+        switch (c) {
+            case 'A' :
+                if (CheckArr[0] == dnaArr[0]) checkSecret--;
+                CheckArr[0]--;
+                break;
+            case 'C' :
+                if (CheckArr[1] == dnaArr[1]) checkSecret--;
+                CheckArr[1]--;
+                break;
+            case 'G' :
+                if (CheckArr[2] == dnaArr[2]) checkSecret--;
+                CheckArr[2]--;
+                break;
+            case 'T' :
+                if (CheckArr[3] == dnaArr[3]) checkSecret--;
+                CheckArr[3]--;
                 break;
         }
     }
