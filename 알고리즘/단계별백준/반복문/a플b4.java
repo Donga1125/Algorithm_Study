@@ -20,5 +20,7 @@ public class a플b4 {
             answer = a + b;
             System.out.println(answer);
         }
+
+        br.close();
     }
 }
