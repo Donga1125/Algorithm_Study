@@ -3,7 +3,7 @@ package 알고리즘.단계별백준.일차원배열;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class 최소최대 {
+public class 최소최대sort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
