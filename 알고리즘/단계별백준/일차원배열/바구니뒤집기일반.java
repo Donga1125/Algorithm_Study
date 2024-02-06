@@ -43,7 +43,7 @@ public class 바구니뒤집기일반 {
         while (start < end) { // 0 3
             int temp = arr[start]; // 0
             arr[start] = arr[end]; //
-            arr[ㅎend] = temp;
+            arr[end] = temp;
             start++; // 아 어차피 홀수면 안뒤집어도 되구나!
             end--;
 
