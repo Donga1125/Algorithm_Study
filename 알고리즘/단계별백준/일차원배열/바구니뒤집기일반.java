@@ -39,12 +39,12 @@ public class 바구니뒤집기일반 {
         }
         }
 
-    public static void reverseArrays(int[] arr, int start, int end) {
-        while (start < end) {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
+    public static void reverseArrays(int[] arr, int start, int end) { // 1 4 0 3 투포인터궂나
+        while (start < end) { // 0 3
+            int temp = arr[start]; // 0
+            arr[start] = arr[end]; //
+            arr[ㅎend] = temp;
+            start++; // 아 어차피 홀수면 안뒤집어도 되구나!
             end--;
 
         }
