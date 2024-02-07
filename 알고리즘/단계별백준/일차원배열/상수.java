@@ -24,22 +24,20 @@ public class 상수 {
         int b = 0;
 
 
-        for (int i = 2; i <= 0; i--) {
+        for (int i = 2; i >= 0; i--) {
 //            n = n + String.valueOf(sb.append(n.charAt(i)));
             sb = sb.append(n.charAt(i));
-            System.out.println(sb);
 
         }
         a = Integer.parseInt(String.valueOf(sb));
 
         StringBuilder s6 = new StringBuilder();
 
-        for (int i = 2; i <=0; i--) {
+        for (int i = 2; i >= 0; i--) {
 
 
 //            m = m + String.valueOf(sb.append(m.charAt(i)));
-            s6 = s6.append(m.charAt(i));
-            System.out.println(s6);
+            s6 = s6.append(m.charAt(i)); // n = n + 1 이렇게 만들려다 실패 append는 그냥 붙이면 됨
 
 
         }
