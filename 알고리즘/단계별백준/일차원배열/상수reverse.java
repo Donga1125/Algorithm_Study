@@ -8,19 +8,20 @@ public class 상수reverse {
 
         Scanner sc = new Scanner(System.in);
 
-        int A = sc.nextInt();
-        int B = sc.nextInt();
+        int a = sc.nextInt();
+
+        int b = sc.nextInt();
 
         sc.close();
 
         StringBuilder sb = new StringBuilder();
 
-        A = Integer.parseInt(sb.append(A).reverse().toString());
+         int aa = Integer.parseInt(sb.append(a).reverse().toString());
 
         sb = new StringBuilder();
-        B = Integer.parseInt(sb.append(B).reverse().toString());
+        int bb = Integer.parseInt(sb.append(b).reverse().toString());
 
-        System.out.print(A > B ? A : B);
+        System.out.print(aa > bb ? aa : bb);
 
     }
 }
