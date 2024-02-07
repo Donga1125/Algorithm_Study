@@ -6,15 +6,19 @@ public class 상수reverse {
 
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int A = in.nextInt();
-        int B = in.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
 
-        in.close();
+        sc.close();
 
-        A = Integer.parseInt(new StringBuilder().append(A).reverse().toString());
-        B = Integer.parseInt(new StringBuilder().append(B).reverse().toString());
+        StringBuilder sb = new StringBuilder();
+
+        A = Integer.parseInt(sb.append(A).reverse().toString());
+
+        sb = new StringBuilder();
+        B = Integer.parseInt(sb.append(B).reverse().toString());
 
         System.out.print(A > B ? A : B);
 
