@@ -8,9 +8,13 @@ public class 상수 {
 
         Scanner sc = new Scanner(System.in);
 
-        String n = String.valueOf(sc.nextInt());
 
-        String m = String.valueOf(sc.nextInt());
+        int nn = sc.nextInt();
+        int mm = sc.nextInt();
+
+        String n = String.valueOf(nn);
+        String m = String.valueOf(mm);
+
 
         StringBuilder sb = new StringBuilder();
 
@@ -31,7 +35,7 @@ public class 상수 {
 
 
 //            m = m + String.valueOf(sb.append(m.charAt(i)));
-            s6 = sb.append(s6).append(m.charAt(i));
+            s6 = s6.append(s6).append(m.charAt(i));
             b = Integer.parseInt(String.valueOf(s6));
 
         }
