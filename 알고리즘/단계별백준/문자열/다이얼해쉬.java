@@ -3,7 +3,7 @@ package 알고리즘.단계별백준.문자열;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class 다이얼 {
+public class 다이얼해쉬 {
     static HashMap<Integer, String> map = new HashMap<>();
 
     //해쉬로 값을 저장하자!
