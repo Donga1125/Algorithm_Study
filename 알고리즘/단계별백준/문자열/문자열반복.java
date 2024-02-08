@@ -1,4 +1,4 @@
-package 알고리즘.단계별백준.일차원배열;
+package 알고리즘.단계별백준.문자열;
 
 import java.io.BufferedReader;
 import java.io.IOException;
