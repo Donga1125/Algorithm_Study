@@ -8,6 +8,8 @@ import java.util.StringTokenizer;
 
 public class 행렬덧셈 {
 
+    //문제를 제대로 못 읽어서 계속 틀렸다;;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
