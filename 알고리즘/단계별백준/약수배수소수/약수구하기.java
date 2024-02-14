@@ -1,16 +1,21 @@
 package 알고리즘.단계별백준.약수배수소수;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class 약수구하기 {
     //약수들을 다 구하고,
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int n = sc.nextInt();
-        int k = sc.nextInt();
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
         int count = 0;
         ArrayList<Integer> arrayList = new ArrayList<>();
 
