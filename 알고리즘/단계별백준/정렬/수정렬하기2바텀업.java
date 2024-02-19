@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 수정렬하기2탑다운재귀 {
+public class 수정렬하기2바텀업 {
 
     public static int[] sort;
 
@@ -36,19 +36,28 @@ public class 수정렬하기2탑다운재귀 {
     public static void mergeSort(int[] arr, int left, int right) {
 
         sort = new int[arr.length];
+        //1 - 2 - 4 - 8 - ... 식으로 1부터 서브리스트를 나누는 기준을 두 배씩 늘린다.
 
-        if (left == right) {
-            // left랑 rigth랑 같아진다면 즉 나눈 부분 리스트 1개의 원소만 갖고 있을 때 리턴(나눌 수 없을 시점)
-            return;
+        for (int size = 1; size <= right; size++) {
+
+            /*
+             * 두 부분리스트을 순서대로 병합해준다.
+             * 예로들어 현재 부분리스트의 크기가 1(size=1)일 때
+             * 왼쪽 부분리스트(low ~ mid)와 오른쪽 부분리스트(mid + 1 ~ high)를 생각하면
+             * 왼쪽 부분리스트는 low = mid = 0 이고,
+             * 오른쪽 부분리스트는 mid + 1부터 low + (2 * size) - 1 = 1 이 된다.
+             *
+             * 이 때 high가 배열의 인덱스를 넘어갈 수 있으므로 right와 둘 중 작은 값이
+             * 병합되도록 해야한다.
+             */
+            for(int l = 0; l <= right - size; l += (2 * size)) {
+                int low = l;
+                int mid = l + size - 1;
+                int high = Math.min(l + (2 * size) - 1, right);
+                merge(arr, low, mid, high);		// 병합작업
+
         }
-
-        int mid = (left + right) / 2;
-
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-
-        merge(arr, left, mid, right);
-    }
+    }}
 
     private static void merge(int[] arr, int left, int mid, int right) {
 
