@@ -34,7 +34,7 @@ public class 설탕배달 {
 //        if (n % five == 0 || n % three == 0 || n % 8 == 0 || (n - 5) % 5 == 0 || (n - 5) % 3 == 0 ||(n - 3) % 5 == 0
 //        || (n - 3) % 3 == 0) {
 
-            while (n > 0) {
+            while (n >= 3) {
 
                 if ((n - five >= 0 && n % five == 0)) {
                     n = n - five;
@@ -44,11 +44,12 @@ public class 설탕배달 {
                     count++;
                 }
             }
-            System.out.println(count);
 
-        if (n < 0) {
+
+        if (n != 0 && n < 3) {
             System.out.println(-1);
-        }
+        } else
+            System.out.println(count);
 
 
     }
