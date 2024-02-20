@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 수정렬하기2탑다운재귀 {
+public class 수정렬하기2탑다운재귀머지소트 {
 
     public static int[] sort;
 
