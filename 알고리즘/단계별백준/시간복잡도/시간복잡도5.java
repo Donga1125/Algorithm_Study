@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class 시간복잡도5 {
 
-    public class Main {
+
         public static void main(String[] args) throws IOException {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -25,4 +25,4 @@ public class 시간복잡도5 {
 
             System.out.println(count);
         }
-}}
+}
