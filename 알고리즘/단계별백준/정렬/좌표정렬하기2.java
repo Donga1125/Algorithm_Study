@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class 좌표정렬하기2 {
 
-    //이번엔 반대로 y값 기준이고 x가 증가하게
+    //이번엔 반대로 y값 기준이고 x가 증가하게// 람다식으로
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -36,6 +36,7 @@ public class 좌표정렬하기2 {
         }
 
         System.out.println(sb);
+
 
     }
 }
