@@ -20,7 +20,7 @@ public class 서로다른부분문자열의개수2 {
 
             for (int j = i + 1; j <= n.length(); j++) {
 
-                set.add(n.substring(i, j));
+                set.add(n.substring(i, j)); // 훨씬 깔끔한데 생각하기 어렵다;
 
 
             }
