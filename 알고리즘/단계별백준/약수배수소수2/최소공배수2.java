@@ -9,18 +9,15 @@ public class 최소공배수2 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(br.readLine());
 
-        StringTokenizer st;
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
         StringBuilder sb = new StringBuilder();
 
 
 
-        for (int i = 0; i < t; i++) {
-
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
 
             long count1 = a;
             long count2 = b;
@@ -43,7 +40,7 @@ public class 최소공배수2 {
                     count2 = count2 + b;
 
             }
-        }
+
 
         System.out.println(sb);
 
