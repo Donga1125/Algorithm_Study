@@ -9,6 +9,8 @@ public class 가로수실패 {
     // 주어진 수 중에 사이에 있는 가장 작은 걸 찾아야 하네 ( 증가도 만족 해야하는데 그건 고려 안하고 사이 수중 작은 것만 찾으면 될듯
     // 중간에만 심을 수 있다
 
+    // 배열 사이 수 중 가장 작으면 된다고 생각했는데 가장 작으며서도 + 간격이 맞아야 한다 그걸 고려 안했음
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
