@@ -27,6 +27,7 @@ public class 소수구하기 {
 
 
         for (int i = 2; i <= Math.sqrt(n); i++) {
+
             if (!arr[i]) {
 
                 for (int j = i * i; j <= n; j+=i) {
