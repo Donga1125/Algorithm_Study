@@ -50,7 +50,6 @@ public class 제로 {
             stack[top++] = item;
             sum = sum + item;
 
-
         }
 
         public void pop() {
@@ -58,8 +57,6 @@ public class 제로 {
             sum = sum - stack[--top];
 
         }
-
-
     }
 
 
