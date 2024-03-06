@@ -28,7 +28,6 @@ public class 스택2 {
         for (int i = 0; i < t; i++) {
 
 
-
             st = new StringTokenizer(br.readLine());
             switch (st.nextToken()) {
                 case "1" :
