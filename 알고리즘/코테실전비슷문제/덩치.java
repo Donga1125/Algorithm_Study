@@ -30,18 +30,43 @@ public class 덩치 {
 
         for (int i = 0; i < t; i++) {
             for (int j = i + 1; j < t; j++) {
-                if (arr[i][0] > arr[j][0] && arr[i][1] > arr[j][0]) {
+                if (arr[i][0] > arr[j][0] && arr[i][1] > arr[j][1]) {
                     rank++;
                     arr[j][2] = rank;
+                } else if (arr[i][0] > arr[j][0] && arr[i][1] < arr[j][1]) {
+
+                    arr[j][2] = rank;
+                    arr[i][2] = rank;
+                    rank++;
+
+
+
+                }  else if (arr[i][0] < arr[j][0] && arr[i][1] > arr[j][1]) {
+
+                arr[j][2] = rank;
+                arr[i][2] = rank;
+                rank++;
+            }
+                else if (arr[i][0] == arr[j][0] && arr[i][1] == arr[j][0]) {
+                    arr[j][2] = rank;
+                    arr[i][2] = rank;
+                    rank++;
+
                 }
+
+
+                // 같은 경우에는 어떻게 랭크를 판별하고 넣어줄ㅈ ㅣ?
 
             }
         }
 
-        for (int i = 0; i < t; i++) {
-            System.out.println(arr[i][2]);
+        for (int[] a : arr) {
+            for (int n : a) {
+                System.out.println(n);
 
             }
+
+        }
         }
     }
 
