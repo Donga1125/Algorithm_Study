@@ -25,40 +25,25 @@ public class 덩치 {
 
 
             }
-            
+
         }
+        int rank = 1;
 
         for (int i = 0; i < t; i++) {
-            int rank = 1;
+
             for (int j = i + 1; j < t; j++) {
                 if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) {
-                    rank++;
-                    arr[i][2] = rank;
-                } else if (arr[i][0] > arr[j][0] && arr[i][1] < arr[j][1]) {
+                    swap(arr, i, j);
 
-                    arr[i][2] = rank;
-
-                    rank++;
-
-
-
-                }  else if (arr[i][0] < arr[j][0] && arr[i][1] > arr[j][1]) {
-
-                arr[i][2] = rank;
-
-                rank++;
-            }
-                else if (arr[i][0] == arr[j][0] && arr[i][1] == arr[j][0]) {
-
-                    arr[i][2] = rank;
-                    rank++;
-
+                } else if ((arr[i][0] > arr[j][0] && arr[i][1] < arr[j][1]) || (arr[i][0] < arr[j][0] && arr[i][1] > arr[j][1])) {
+                    swap(arr, i, j);
                 }
 
 
-                // 같은 경우에는 어떻게 랭크를 판별하고 넣어줄ㅈ ㅣ?
-
             }
+            arr[i][2] = rank;
+            rank++;
+
         }
 
         for (int[] a : arr) {
@@ -68,6 +53,17 @@ public class 덩치 {
             }
 
         }
-        }
+    }
+
+    public static void swap(int arr[][], int a, int b) {
+
+        int temp = arr[a][0];
+        arr[a][0] = arr[b][0];
+        arr[b][0] = temp;
+        int temp1 = arr[a][1];
+        arr[a][1] = arr[b][1];
+        arr[b][1] = temp1;
+
+    }
     }
 
