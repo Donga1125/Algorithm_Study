@@ -14,11 +14,11 @@ public class 덩치 {
         int t = Integer.parseInt(br.readLine());
         int[][] arr = new int[t][3];
         StringTokenizer st;
-        int rank = 1;
+
 
         for (int i = 0; i < t ; i++) {
             st = new StringTokenizer(br.readLine());
-            arr[i][2] = rank;
+//            arr[i][2] = rank;
 
             for (int j = 0; j < 2; j++) {
                 arr[i][j] = Integer.parseInt(st.nextToken());
@@ -29,26 +29,27 @@ public class 덩치 {
         }
 
         for (int i = 0; i < t; i++) {
+            int rank = 1;
             for (int j = i + 1; j < t; j++) {
-                if (arr[i][0] > arr[j][0] && arr[i][1] > arr[j][1]) {
+                if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) {
                     rank++;
-                    arr[j][2] = rank;
+                    arr[i][2] = rank;
                 } else if (arr[i][0] > arr[j][0] && arr[i][1] < arr[j][1]) {
 
-                    arr[j][2] = rank;
                     arr[i][2] = rank;
+
                     rank++;
 
 
 
                 }  else if (arr[i][0] < arr[j][0] && arr[i][1] > arr[j][1]) {
 
-                arr[j][2] = rank;
                 arr[i][2] = rank;
+
                 rank++;
             }
                 else if (arr[i][0] == arr[j][0] && arr[i][1] == arr[j][0]) {
-                    arr[j][2] = rank;
+
                     arr[i][2] = rank;
                     rank++;
 
