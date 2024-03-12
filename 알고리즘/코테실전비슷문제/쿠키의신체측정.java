@@ -15,7 +15,7 @@ public class 쿠키의신체측정 {
 
         int t = Integer.parseInt(br.readLine());
         char[][] arr = new char[t][t];
-
+        StringBuilder sb = new StringBuilder();
 
 
         for (int i = 0; i < t; i++) {
@@ -24,34 +24,62 @@ public class 쿠키의신체측정 {
             for (int j = 0; j < t; j++) {
                 arr[i][j] = input.charAt(j);
 
-                }
             }
+        }
 
         heart(arr, t);
+        sb.append(heartx).append(" ").append(hearty).append('\n');
+
         int answer[] = new int[5];
 
-        int count = 0;
-        int count1 = 0;
-        for (int i = 0; i < t; i++) {
+        int leftArm = 0;
+        int rightArm = 0;
+        int length = 0;
+        int leftReg = 0;
+        int rightReg = 0;
 
+        for (int i = 0; i < hearty -1 ; i++) {
+            if (arr[heartx - 1][i] == '*') {
+                leftArm++;
+            }
+        }
 
-            for (int j = 0; j < t; j++) {
-
-                if (arr[heartx - 2][j] == '*') {
-                    count++;
-
-                }
-                if (arr[i][hearty - 1] == '*') {
-                    count1++;
-
-                }
+        for (int i = hearty; i < t; i++) {
+            if (arr[heartx - 1][i] == '*') {
+                rightArm++;
             }
 
         }
 
-
+        for (int i = heartx; i <t ; i++) {
+            if (arr[i][hearty -1] == '*') {
+                length++; // 3 // 3 + 3
+            }
+            
+        }
+        for (int i = heartx + length; i < t; i++) {
+            if (arr[i][hearty - 2] == '*') {
+                leftReg++;
+            }
 
         }
+        for (int i = heartx + length ; i < t; i++) {
+            if (arr[i][hearty] == '*') {
+                rightReg++;
+            }
+
+        }
+
+        sb.append(leftArm).append(" ").append(rightArm).append(" ")
+                .append(length).append(" ").append(leftReg).append(" ").append(rightReg);
+
+        System.out.println(sb);
+    }
+
+
+
+
+
 
 
 
@@ -62,7 +90,7 @@ public class 쿠키의신체측정 {
                 if (arr[i][j] == '*') {
 
                     heartx = i + 2;
-                    hearty = j +1;
+                    hearty = j + 1;
 
 
                     return;
