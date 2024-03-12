@@ -22,42 +22,41 @@ public class 등수구하기 {
         int rank = 0;
         ArrayList<Integer> arrList = new ArrayList<>();
 
-        if (score == 0) {
+        if (n == 0) {
             System.out.println(1);
             return;
         }
 
-        int arr[] = new int[list];
+
+
+//        int arr[] = new int[list];
 
         st = new StringTokenizer(br.readLine());
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < n; i++) {
 
-            if (st.hasMoreTokens()) {
+            arrList.add(Integer.parseInt(st.nextToken()));
 
-                arr[i] =Integer.parseInt(st.nextToken());
-
-            } else
-                arr[i] = 0;
 
         }
 
-        if (arr[arr.length - 1] < score) { // rank는 고민말고 다 넣어주고 마지막에 랭크 다시 찾자!
+        if (arrList.get(list -1) < score) { // rank는 고민말고 다 넣어주고 마지막에 랭크 다시 찾자!
+
 
             for (int i = 0; i < n; i++) {
-                if (arr[i] > score) {
-                    arrList.add(arr[i]);
+                if (arrList.get(i) > score) {
+//                    arrList.add(arr[i]);
                     rank++;
 
-                } else if (arr[i] <= score) {
-                    arrList.add(score);
+                } else if (arrList.get(i) <= score) {
+//                    arrList.add(score);
                     rank++;
                     break;
 
                 }
             }
             System.out.println(rank);
-        } else{
+        } else {
             System.out.println(-1);
         }
 
