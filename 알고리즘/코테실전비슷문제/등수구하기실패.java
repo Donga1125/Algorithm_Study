@@ -12,6 +12,8 @@ public class 등수구하기실패 {
     // 점수 같으면 같은 등수가 되고 리스트가 꽉 차면 태수의 점수가 리스트보다 더높아야만  올라가진다 못올라가면 -1 출력
 
     // 정렬해서 순위 반환하면 될듯 ?
+
+    // 리스트까지 도는데 거기서 break 걸어놓고 n개까지만 돌게 했다
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,9 +22,9 @@ public class 등수구하기실패 {
         int score = Integer.parseInt(st.nextToken());
         int list = Integer.parseInt(st.nextToken());
         int rank = 0;
-        ArrayList<Integer> arrList = new ArrayList<>();
+//        ArrayList<Integer> arrList = new ArrayList<>();
 
-        if (score == 0) {
+        if (n == 0) {
             System.out.println(1);
             return;
         }
@@ -38,19 +40,20 @@ public class 등수구하기실패 {
                 arr[i] =Integer.parseInt(st.nextToken());
 
             } else
-                arr[i] = 0;
+                arr[i] = -1;
 
         }
 
+
         if (arr[arr.length - 1] < score) { // rank는 고민말고 다 넣어주고 마지막에 랭크 다시 찾자!
 
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < list; i++) { // 리스트까지 도는데 거기서 break 걸어놓고 n개까지만 돌게 했다
                 if (arr[i] > score) {
-                    arrList.add(arr[i]);
+//                    arrList.add(arr[i]);
                     rank++;
 
                 } else if (arr[i] <= score) {
-                    arrList.add(score);
+//                    arrList.add(score);
                     rank++;
                     break;
 
