@@ -26,7 +26,7 @@ public class n과m2_틀림 {
 
     }
 
-    public static void backTracking(int n, int m, int depth) {
+    private static void backTracking(int n, int m, int depth) {
 
         if (m == depth) {
 
