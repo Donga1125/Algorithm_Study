@@ -5,52 +5,53 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class n과m2_틀림 {
+public class n과m2 {
 
     //1과는 다르게 반대 중복도 없애주자 찾는 조건에 추가해주면 될듯 ?
     public static int[] arr;
-    public static boolean[] isVisited;
+//    public static boolean[] isVisited;
 
-    public static int depth = 0;
+    public static int n;
+    public static int m;
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
+        n = Integer.parseInt(st.nextToken());
+        m = Integer.parseInt(st.nextToken());
         arr = new int[m];
-        isVisited = new boolean[n + 1];
+//        isVisited = new boolean[n + 1];
 
-        backTracking(n, m, depth);
+        backTracking(1,0);
 
 
     }
 
-    public static void backTracking(int n, int m, int depth) {
+    public static void backTracking(int at, int depth) {
 
-        if (m == depth) {
+        // 원랜 isvisited 배열로 확인했다면 이번엔 at을 그냥 추가해서 at 다음부터 출발할 수 있게금 한다
+        //depth도 하나씩 늘어나서 중복이 담길 수 없는 구조가 됨
+
+        if (depth == m) {
 
             for (int num : arr) {
                 System.out.print(num + " ");
-
             }
             System.out.println();
             return;
         }
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = at; i <= n; i++) {
 
+            arr[depth] = i;
 
-            if (!isVisited[i] && (depth == 0 || (arr[depth - 1] < i))) {
+            backTracking(i + 1, depth + 1);
 
-                arr[depth] = i;
-                isVisited[i] = true;
-                backTracking(n, m, depth + 1);
-                isVisited[i] = false;
             }
 
 
         }
 
     }
-}
+

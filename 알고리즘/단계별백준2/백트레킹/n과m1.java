@@ -23,7 +23,7 @@ public class n과m1 {
 
     }
 
-    public static void backtracking(int[] arr, boolean[] visited, int n, int m, int depth) {
+    private static void backtracking(int[] arr, boolean[] visited, int n, int m, int depth) {
 
         // 수열의 길이가 m까지 온다 출력하고 종료하자!
 
