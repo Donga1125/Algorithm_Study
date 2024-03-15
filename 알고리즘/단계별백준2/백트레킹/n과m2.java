@@ -28,7 +28,7 @@ public class n과m2 {
 
     }
 
-    public static void backTracking(int at, int depth) {
+    private static void backTracking(int at, int depth) {
 
         // 원랜 isvisited 배열로 확인했다면 이번엔 at을 그냥 추가해서 at 다음부터 출발할 수 있게금 한다
         //depth도 하나씩 늘어나서 중복이 담길 수 없는 구조가 됨
