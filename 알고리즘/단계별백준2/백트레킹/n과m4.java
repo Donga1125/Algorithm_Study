@@ -11,14 +11,20 @@ public class n과m4 {
     private static int[] arr;
     private static int n, m;
 
+    private static int at;
+
+    private static StringBuilder sb = new StringBuilder();
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
+        arr = new int[m];
 
-        backTracking();
+        backTracking(0);
+        System.out.println(sb);
 
     }
 
@@ -26,6 +32,24 @@ public class n과m4 {
 
 
         if (depth == m) {
+
+            for (int i : arr) {
+                sb.append(i).append(' ');
+            }
+            sb.append('\n');
+            return;
+        }
+
+
+
+        for (int i = 1; i < n ; i++) {
+
+            arr[depth] = i;
+
+            backTracking( depth +1);
+
+        }
+
 
         }
 
