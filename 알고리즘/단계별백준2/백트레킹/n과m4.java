@@ -23,12 +23,12 @@ public class n과m4 {
         m = Integer.parseInt(st.nextToken());
         arr = new int[m];
 
-        backTracking(0);
+        backTracking(1,0);
         System.out.println(sb);
 
     }
 
-    private static void backTracking(int depth) {
+    private static void backTracking(int at, int depth) {
 
 
         if (depth == m) {
@@ -42,11 +42,11 @@ public class n과m4 {
 
 
 
-        for (int i = 1; i < n ; i++) {
+        for (int i = at; i <= n ; i++) {
 
             arr[depth] = i;
 
-            backTracking( depth +1);
+            backTracking( i,depth +1); // 넘길 때 그 수그대로 넘기면 됨
 
         }
 
