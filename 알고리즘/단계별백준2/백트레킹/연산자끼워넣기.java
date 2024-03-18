@@ -14,9 +14,13 @@ public class 연산자끼워넣기 {
     private static int[] arr;
     private static int[] math = new int[4];
 
-    private static int count = 1;
+    private static int count;
 
     private static int sum;
+    private static int max = Integer.MIN_VALUE;
+    private static int min = Integer.MAX_VALUE;
+
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -34,6 +38,7 @@ public class 연산자끼워넣기 {
 
         for (int i = 0; i < 4; i++) {
             math[i] = Integer.parseInt(st.nextToken());
+            count = count + i; // 카운트만큼 총 다 쓰면 탈출조건
         }
 
         backTracking(0,0);
@@ -45,6 +50,13 @@ public class 연산자끼워넣기 {
 
 
         if (depth == count) {
+
+            if (sum > max) {
+                max = sum;
+            } else if (sum < min) {
+                min = sum;
+
+            }
 
             return;
 
