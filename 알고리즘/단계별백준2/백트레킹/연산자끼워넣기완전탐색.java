@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 연산자끼워넣기 {
+public class 연산자끼워넣기완전탐색 {
     // math { +, -, *, /} 순서
 
     // 수식은 무조건 숫자보다 하나 적게 주어진다..
@@ -61,6 +61,14 @@ public class 연산자끼워넣기 {
             }
 
             return;
+
+        }
+        for (int i = 0; i < count; i++) {
+
+        }
+
+
+
 
         }
 
