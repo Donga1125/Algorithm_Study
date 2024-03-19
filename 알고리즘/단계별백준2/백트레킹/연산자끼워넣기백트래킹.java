@@ -19,6 +19,7 @@ public class 연산자끼워넣기백트래킹 {
     private static int count;
 
     private static int sum;
+    private static int t;
     private static int max = Integer.MIN_VALUE;
     private static int min = Integer.MAX_VALUE;
 
@@ -26,7 +27,7 @@ public class 연산자끼워넣기백트래킹 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(br.readLine());
+        t = Integer.parseInt(br.readLine());
 
         arr = new int[t];
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -40,28 +41,52 @@ public class 연산자끼워넣기백트래킹 {
 
         for (int i = 0; i < 4; i++) {
             math[i] = Integer.parseInt(st.nextToken());
-            count = count + i; // 카운트만큼 총 다 쓰면 탈출조건
+
         }
 
-        backTracking(0,0);
+        backTracking(arr[0], 1);
+
+        System.out.println(max);
+        System.out.println(min);
 
 
     }
 
-    private static void backTracking(int sum,int depth) {
+    private static void backTracking(int num ,int depth) {
 
 
-        if (depth == count) {
+        if (depth == t) {
 
-            if (sum > max) {
-                max = sum;
-            } else if (sum < min) {
-                min = sum;
-
-            }
+            max = Math.max(max, num);
+            min = Math.min(min, num);
 
             return;
+        }
 
+        for (int i = 0; i < 4; i++) {
+            if (math[i] > 0) {
+
+                math[i]--;
+
+
+                switch (i) { // 경우에 다라 값이 달라서 어떻게 쓸 지 고민했는데 찾아보니 그냥 switch로 해결 생각해놓자 ㅠ
+                    case 0:
+                        backTracking(num + arr[depth], depth + 1);
+                        break;
+                    case 1:
+                        backTracking(num - arr[depth], depth + 1);
+                        break;
+                    case 2:
+                        backTracking(num * arr[depth], depth + 1);
+                        break;
+                    case 3:
+                        backTracking(num / arr[depth], depth + 1);
+                        break;
+
+                }
+
+                math[i]++; // 스위치 문 빠져 나오면 무조건 ++로 복궅₩
+            }
         }
 
 
