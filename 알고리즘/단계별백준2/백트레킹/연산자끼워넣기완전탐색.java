@@ -63,7 +63,10 @@ public class 연산자끼워넣기완전탐색 {
             return;
 
         }
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) { // 카운트 만큼 돌면서 계산은 맞지만.. 연산자 구분 어떻게 할꺼지 ?
+            if (math[i] != 0) {
+
+            }
 
         }
 
@@ -75,4 +78,4 @@ public class 연산자끼워넣기완전탐색 {
 
 
     }
-}
+
