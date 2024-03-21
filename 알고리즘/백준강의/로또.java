@@ -24,7 +24,7 @@ public class 로또 {
             sb = new StringBuilder();
             int n = Integer.parseInt(st.nextToken());
             arr = new int[n];
-            answer = new int[n];
+            answer = new int[select];
             answerCheck = new boolean[n];
 
             if (n == 0) {
@@ -39,7 +39,7 @@ public class 로또 {
             }
 
             backTracking(0,0);
-            System.out.println();
+            System.out.println(sb);
 
 
         }
@@ -49,30 +49,27 @@ public class 로또 {
 
     }
 
-    private static void backTracking(int dp,int depth) {
+    private static void backTracking(int dp, int depth) {
 
         if (depth == select) {
 
-            for (int i = 0; i < arr.length; i++) {
-
-                if (answerCheck[i]) {
-                    System.out.println(arr[i] + " ");
-
-                }
+            for (int val : answer) {
+                sb.append(val).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
+            return;
+
 
 
         }
 
-        for (int i = depth; i < arr.length; i++) {
-
-
+        for (int i = dp; i < arr.length; i++) {
 
                 if (!answerCheck[i]) {
                     answerCheck[i] = true;
+                    answer[depth] = arr[i];
 
-                    backTracking(dp +1,i + 1);
+                    backTracking(i,depth + 1);
                     answerCheck[i] = false;
                 }
 
