@@ -10,6 +10,8 @@ public class 퇴사dfs2 {
 
     //일에 걸리는 소요시간과 금액을 잘 배합해서 최적의 이익을 얻어야 한다. 퇴사일이 주어질 때
 
+    //n이 15라서 완탐가능 dfs만 돌려도 됨
+
    private static int[][] dp;
     private static int n;
     private static int max = Integer.MIN_VALUE;
@@ -42,7 +44,8 @@ public class 퇴사dfs2 {
 
     private static void dfs(int day, int benefit) {
 
-        max = Math.max(benefit, max);
+        max = Math.max(benefit, max); // 마지막 날에 우리가 계산하는 게 아니라 돌 때 마다 max값을 갱신해줘야한다
+        // 막날이 꼭 최대가 아니라서
 
         if (day >= n) {
             return;
@@ -51,7 +54,7 @@ public class 퇴사dfs2 {
         if (day + dp[day][0] <= n) { //상담이 가능하다면 ?
             dfs(day + dp[day][0], benefit + dp[day][1]);
 
-        } else {
+        } else { // 상담이 불가능하다면 ?
             dfs(day + 1, benefit);
 
         }
