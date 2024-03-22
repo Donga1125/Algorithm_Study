@@ -13,8 +13,9 @@ public class 로또 {
     private static boolean[] answerCheck;
     private final static int select = 6;
     private static StringBuilder sb;
-    private static boolean visited;
     //6603
+
+    // for문 만드는 과정이 제일 어려웠다.
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -31,7 +32,7 @@ public class 로또 {
                 return;
             }
 
-            for (int i = 0; i <n; i++) {
+            for (int i = 0; i < n; i++) {
 
                 arr[i] = Integer.parseInt(st.nextToken());
 
@@ -41,15 +42,10 @@ public class 로또 {
             backTracking(0,0);
             System.out.println(sb);
 
-
         }
-
-
-
-
     }
 
-    private static void backTracking(int dp, int depth) {
+    private static void backTracking(int dp, int depth) { //dp 넘겨줌으로 순열이 아닌 조합 (중복없는)
 
         if (depth == select) {
 
@@ -58,8 +54,6 @@ public class 로또 {
             }
             sb.append("\n");
             return;
-
-
 
         }
 
