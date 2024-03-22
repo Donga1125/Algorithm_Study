@@ -5,12 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 퇴사dp {
-    //14501
+public class 퇴사2 {
+    //15486
 
-    //일에 걸리는 소요시간과 금액을 잘 배합해서 최적의 이익을 얻어야 한다. 퇴사일이 주어질 때
-
-    //오늘 상담을 하냐 마냐의 선택의 문제니까 부분집합을 구하는 문제2^n
+    //n이 150,000이다 2^150.--- 이라 완탐 불가 dp류 해결
 
    private static int[][] dp;
     private static int n;
