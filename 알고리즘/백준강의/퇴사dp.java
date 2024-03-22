@@ -3,12 +3,14 @@ package 알고리즘.백준강의;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class 퇴사dfs {
+public class 퇴사dp {
     //14501
 
     //일에 걸리는 소요시간과 금액을 잘 배합해서 최적의 이익을 얻어야 한다. 퇴사일이 주어질 때
+
+    //오늘 상담을 하냐 마냐의 선택의 문제니까 부분집합을 구하는 문제2^n
 
    private static int[][] dp;
     private static int n;
