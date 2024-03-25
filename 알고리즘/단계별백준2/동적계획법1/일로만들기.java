@@ -14,6 +14,8 @@ public class 일로만들기 {
 
 
     // 3으로 나누거나 2로 나누거나 -1로 하거나 세가지 경우인데 최소여도 3부터가 아니라 다 경우의 수 따져야 함
+
+    // 함정은 ㅣㅍ했는데 나눴을 때 더 작은 걸 선택하는 dfs 구현이 어렵다.. 나눴을 때 dfs 호출 시 선택 지를 하나가아니라 여러개로
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
