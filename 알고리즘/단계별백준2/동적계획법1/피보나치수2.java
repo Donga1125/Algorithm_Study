@@ -1,4 +1,4 @@
-package 알고리즘.백준강의;
+package 알고리즘.단계별백준2.동적계획법1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
