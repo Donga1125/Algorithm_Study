@@ -27,7 +27,7 @@ public class 퇴사2 {
         n = Integer.parseInt(br.readLine());
 
 
-        dp = new int[n][2];
+        dp = new int[n +1][2];
 
 
 
@@ -49,7 +49,7 @@ public class 퇴사2 {
 
     private static void dfs() {
 
-        int[] data = new int[n + 1];
+        int[] data = new int[n +1];
 
         for (int i = 0; i < n; i++) {
             int next = n + dp[n][0]; // 날짜
