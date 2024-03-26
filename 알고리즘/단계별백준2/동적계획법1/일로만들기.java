@@ -39,6 +39,10 @@ public class 일로만들기 {
         }
 
         for (int i = 0; i < 3; i++) {
+
+            if (n % 6 == 0) {
+
+            }
             if (n % 3 == 0) {
 
                 dfs(n / 3, count);
