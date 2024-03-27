@@ -22,22 +22,48 @@ public class 일로만들기 {
         n = Integer.parseInt(br.readLine());
 
 
-        System.out.println(dfs(n,0));
+        dfs(n, 0);
+        System.out.println(max);
             
     }
 
-    private static int dfs(int n, int count) {
+    private static void dfs(int n, int count) {
 
-        if (n < 2) {
+        if (n == 1) {
 
-            return count;
+            max = Math.min(count, max);
+
+           
+            return;
+
+        }
+
+        for (int i = 0; i < 3; i++) {
+
+            if (n % 6 == 0) {
+
+            }
+            if (n % 3 == 0) {
+
+                dfs(n / 3, count);
+
+            } if (n % 2 == 0) {
+
+                dfs(n / 2, count + 1);
+            } if(n % 2 != 0 && n % 3 != 0)
+                dfs(n - 1, count + 1);
 
         }
 
-        return Math.min(dfs(n / 2, count + 1 + n % 2), dfs(n / 3, count + 1 + n % 3));
 
 
-        }
-}
 
+
+
+
+            }
+
+
+
+    }
 
