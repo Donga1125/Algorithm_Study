@@ -7,8 +7,8 @@ import java.io.InputStreamReader;
 public class 일로만들기dp배열 {
 
     //1463
-    private static int n;
     private static int max = Integer.MAX_VALUE;
+    static Integer dp[];
 
 
 
@@ -19,51 +19,35 @@ public class 일로만들기dp배열 {
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        n = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(br.readLine());
+
+        dp = new Integer[n + 1];
+        dp[0] = dp[1] = 0;
 
 
-        dfs(n, 0);
-        System.out.println(max);
+        System.out.println(dfs(n));
+
             
     }
 
-    private static void dfs(int n, int count) {
+    private static int dfs(int n) {
 
-        if (n == 1) {
-
-            max = Math.min(count, max);
-
-           
-            return;
-
-        }
-
-        for (int i = 0; i < 3; i++) {
+        if (dp[n] == null) {
 
             if (n % 6 == 0) {
+                dp[n] = Math.min(dfs(n - 1), Math.min(dfs(n / 3), dfs(n / 2))) + 1;
+            } else if (n % 3 == 0) {
+                dp[n] = Math.min(dfs(n / 3), dfs(n - 1)) + 1;
+            } else if (n % 2 == 0) {
+                dp[n] = Math.min(dfs(n / 2), dfs(n - 1)) + 1;
+            } else
+                dp[n] = dfs(n - 1) + 1;
 
-            }
-            if (n % 3 == 0) {
-
-                dfs(n / 3, count);
-
-            } if (n % 2 == 0) {
-
-                dfs(n / 2, count + 1);
-            } if(n % 2 != 0 && n % 3 != 0)
-                dfs(n - 1, count + 1);
 
         }
+        return dp[n];
 
 
 
-
-
-
-
-            }
-
-
-
-    }
+    }}
 
