@@ -1,4 +1,4 @@
-package 알고리즘.단계별백준2.백트레킹;
+package 알고리즘.백준책.백준강의커리큘럼.브루트포스.재귀;
 
 import java.io.*;
 import java.util.StringTokenizer;
