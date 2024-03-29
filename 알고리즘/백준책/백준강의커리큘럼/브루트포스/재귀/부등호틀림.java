@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 부등호 {
+public class 부등호틀림 {
 
     //2529
     // <,> , k로 나열된 순서열 a가 있을 때 주어진 부등호를 만족하는 이어진 수 중 최소 값과 최대값을 이어서 반환
