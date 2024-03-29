@@ -3,9 +3,7 @@ package 알고리즘.백준책.백준강의커리큘럼.브루트포스.재귀;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class 부등호 {
 
@@ -18,7 +16,7 @@ public class 부등호 {
 
     //숫자는 0~9 , 10개로 구성 각 하나 씩 써야함
 //    private static int[] num; // 오답 반복문에서 범위 지정으로 해결
-    private static String[] arr;
+    private static char[] arr;
     private static int t;
 
     static List<String> list = new ArrayList<>();
@@ -30,22 +28,26 @@ public class 부등호 {
         t = Integer.parseInt(br.readLine());
 //        num = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         // num 배열로 관리할 필요가 없다 그냥 반복문에서 범위로 지정해주면 되니까
-        sb = new StringBuilder();
+
 
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        arr = new String[t];
+        arr = new char[t];
 
         for (int i = 0; i < t ; i++) {
-            arr[i] = st.nextToken(); // 어차피 하나 밖에 없어서 하나만 담음
+            arr[i] = st.nextToken().charAt(0); // 어차피 하나 밖에 없어서 하나만 담음
 
         }
 
         recursion("", 0);
 
-        System.out.println(max);
-        System.out.println(min);
+
+//        System.out.println(max);
+//        System.out.println(min);
+
+        System.out.println(list.get(list.size() - 1));
+        System.out.println(list.get(0));
 
 
 
@@ -55,8 +57,9 @@ public class 부등호 {
 
         // 기저 조건
         if (depth == t + 1) {
-            max = Math.max(max, Integer.parseInt(a));
-            min = Math.min(min, Integer.parseInt(a));
+//            int ans = Integer.parseInt(a);
+//            max = Math.max(max, ans);
+//            min = Math.min(min, ans); // 021가 들어와서 숫자로 바뀌면 0이 없어짐 ㅠ 그래서 리스트로 해야겠다
             list.add(a);
 
             return;
@@ -85,13 +88,14 @@ public class 부등호 {
 
 
 
-    private static boolean check(int a, int b, String c) { // 체크 배열로 해결
+    private static boolean check(int a, int b, char c) { // 체크 배열로 해결
+        //char를 그냥 String으로 했더니 순서에서 오류가 남
 
 
-        if (c == "<") {
+        if (c == '<') {
             if (a > b)
                 return false;
-        } else if (c == ">") {
+        } else if (c == '>') {
             if (a < b) {
                 return false;
             }
