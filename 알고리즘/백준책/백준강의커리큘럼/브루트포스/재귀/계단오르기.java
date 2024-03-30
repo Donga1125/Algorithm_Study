@@ -23,10 +23,12 @@ public class 계단오르기 {
         }
     }
 
-    private static void dfs(int n) {
+    private static int dfs(int n) {
 
         if (dp[n] == null) {
-            dp[n] == Math.max(dfs(n - 2), dfs(n - 3) + arr[n - 1]) + arr[n];
+            dp[n] = Math.max(dfs(n - 2), dfs(n - 3) + arr[n - 1]) + arr[n];
         }
+
+        return dp[n];
     }
 }
