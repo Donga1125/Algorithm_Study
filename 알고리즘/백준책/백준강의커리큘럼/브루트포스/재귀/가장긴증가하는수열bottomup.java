@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 가장긴증가하는수열 {
+public class 가장긴증가하는수열bottomup {
 
     //11053
     private static int t;
