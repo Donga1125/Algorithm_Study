@@ -40,9 +40,7 @@ public class 가장긴증가수열 {
                 }
 
             }
-            if (dp[i] == 0) {
-                dp[i] = 1;
-            }
+
             max = Math.max(dp[i], max);
 
 
