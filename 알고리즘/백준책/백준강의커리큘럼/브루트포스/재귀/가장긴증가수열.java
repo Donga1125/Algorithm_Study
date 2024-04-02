@@ -23,14 +23,17 @@ public class 가장긴증가수열 {
         for (int i = 0; i < t; i++) {
 
             arr[i] = Integer.parseInt(st.nextToken());
+            dp[i] = 1;
 
             
         }
 
-        dp[0] = 1;
+        max = 1;
 
-        for (int i = 1; i < arr.length; i++) {
-            max = 1;
+
+
+        for (int i = 0; i < t; i++) {
+
 
             for (int j = 0; j < i; j++) {
 
