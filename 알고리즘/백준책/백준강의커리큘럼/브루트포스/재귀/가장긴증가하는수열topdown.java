@@ -33,8 +33,9 @@ public class 가장긴증가하는수열topdown {
             // j번째 원소가 i번째 원소보다 작으면서 i번째 dp가 j번째 dp+1 값보다 작은경우
 
             for (int j = 0; j < t; j++) {
-                if (arr[j] < arr[i] && dp[i] < dp[j] + 1) {
-                    dp[i] = dp[j] + 1; // j번째 원소의 +1 값이 i번째 dp가 된다.
+                if (arr[j] < arr[i]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                    // j번째 원소의 +1 값이 i번째 dp가 된다.
                 }
             }
         }
