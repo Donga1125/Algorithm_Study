@@ -17,7 +17,7 @@ public class 동빈나2xn타일링 {
         dp = new Integer[t +1];
 
 
-        System.out.println(dp(t));
+        System.out.println(dp(t) % 10007);
 
 
 
@@ -25,19 +25,16 @@ public class 동빈나2xn타일링 {
 
     private static int dp(int t) {
 
-        if (t == 1) {
-            return 1;
-        }
-        if (t == 2) {
-            return 2;
-        }
+        dp[0] = 1;
+        dp[1] = 1;
+        dp[2] = 2;
 
-        if (dp[t] != null) {
+        if (dp[t] == null) {
 
+            return dp[t] = (dp(t - 2) + dp(t - 1)) % 10007;
 
-            return dp[t] % 10007;
         }
-        return dp[t] = (dp(t - 2) + dp(t - 1)) % 10007;
+        return dp[t] % 10007;
 
 
 
