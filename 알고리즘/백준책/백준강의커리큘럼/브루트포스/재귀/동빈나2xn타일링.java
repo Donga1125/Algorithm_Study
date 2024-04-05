@@ -17,7 +17,7 @@ public class 동빈나2xn타일링 {
         dp = new Integer[t +1];
 
 
-        System.out.println(dp(t) % 10007);
+        System.out.println(dp(t));
 
 
 
