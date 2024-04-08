@@ -15,6 +15,7 @@ public class 다리놓기 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
 
 
         for (int i = 0; i < t; i++) {
@@ -22,7 +23,7 @@ public class 다리놓기 {
             n = Integer.parseInt(st.nextToken());
             m = Integer.parseInt(st.nextToken());
 
-            System.out.println(combi(m, n));
+            sb.append(combi(m, n)).append('\n');
 
 
         }
