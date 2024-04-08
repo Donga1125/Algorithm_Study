@@ -28,22 +28,22 @@ public class 다리놓기 {
 
     }
 
-    private static int dp(int depth) {
+    private static int combi(int n, int m) {
 
 
-        if(depth == m){
+        if(n == m){
             return dp[n];
         }
 
 
 
-        if (dp[depth] == null) {
+        if (dp[n] == null) {
 
-            return dp[depth] = dp(depth + 1) + dp(depth + 2);
+            return dp[n] = combi(1,2,) + combi(3,4)
 
         }
 
-        return dp[depth];
+        return dp[n];
 
     }
 }
