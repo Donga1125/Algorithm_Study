@@ -10,7 +10,7 @@ public class 다리놓기 {
     //1010 // 조합 문제
     static int n;
     static int m;
-    static Integer[] dp;
+    static int[][] dp = new int[30][30];
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,29 +21,28 @@ public class 다리놓기 {
             StringTokenizer st = new StringTokenizer(br.readLine());
             n = Integer.parseInt(st.nextToken());
             m = Integer.parseInt(st.nextToken());
-            dp = new Integer[m +1];
-            System.out.println(dp(0));
+
+            System.out.println(combi(m, n));
+
 
         }
 
     }
 
-    private static int combi(int n, int m) {
+    private static int combi(int n, int r) {
 
 
-        if(n == m){
-            return dp[n];
-        }
+        if (dp[n][r] > 0) {
+            return dp[n][r];}
+
+            if (n == r || r == 0) {
+
+                return dp[n][r] = 1;
+
+            }
+            return dp[n][r] = combi(n - 1, r - 1) + combi(n - 1, r);
+        }}
 
 
 
-        if (dp[n] == null) {
 
-            return dp[n] = combi(1,2,) + combi(3,4)
-
-        }
-
-        return dp[n];
-
-    }
-}
