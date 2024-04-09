@@ -23,10 +23,14 @@ public class 다리놓기 {
             n = Integer.parseInt(st.nextToken());
             m = Integer.parseInt(st.nextToken());
 
+            dp = new int[m + 1][n + 1];
+
             sb.append(combi(m, n)).append('\n');
 
 
         }
+
+        System.out.println(sb);
 
     }
 
@@ -36,12 +40,14 @@ public class 다리놓기 {
         if (dp[n][r] > 0) {
             return dp[n][r];}
 
-            if (n == r || r == 0) {
+            if (n == r || r == 0) { //  조합의 성질로 기저조건 n과r이 같거 r이 0이면 1이 된다. //ts를 기저조건으로 줘서
+                // 확인이 더 쉽다
 
                 return dp[n][r] = 1;
 
             }
             return dp[n][r] = combi(n - 1, r - 1) + combi(n - 1, r);
+            // 조합의 성질을 재귀조건으로 n-1,r-1 + n-1,r로 만들어주 ㅁdp
         }}
 
 
