@@ -25,13 +25,13 @@ public class 투xn타일링투 {
 
     }
 
-    private static Integer dp(int n) {
+    private static int dp(int n) {
 
         dp[0] = 1;
         dp[1] = 1;
         dp[2] = 3; // 2일때 경우의 수가 3가지다.
 
-        if (dp[n] == null) {
+        if (dp[n] == 0) {
             return dp[n] = (dp(n - 1) + 2 * dp(n - 2)) % 10007;
 
             //dp n-1의 경우 어차피 세로 하나밖에 못오고 dp n-2의 경우 원래 2xn문제에선 가로 하나만 왔지만,
