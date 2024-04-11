@@ -12,4 +12,6 @@ public class 설탕배달re {
         int t = Integer.parseInt(br.readLine());
             
     }
+
+
 }
