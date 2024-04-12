@@ -38,7 +38,8 @@ public class 다리놓기 {
 
 
         if (dp[n][r] > 0) {
-            return dp[n][r];}
+            return dp[n][r];
+        }
 
             if (n == r || r == 0) { //  조합의 성질로 기저조건 n과r이 같거 r이 0이면 1이 된다. //ts를 기저조건으로 줘서
                 // 확인이 더 쉽다
