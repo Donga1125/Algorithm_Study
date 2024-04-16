@@ -25,7 +25,7 @@ public class 연속부분최대곱 {
 
         for (int i = 1; i <= t; i++) {
             arr[i] = Double.parseDouble(br.readLine());
-            dp[i] = Math.max(arr[i], dp[i - 1] * arr[i]);
+            dp[i] = Math.max(arr[i], dp[i - 1] * arr[i]); // 0곱이라 헷갈렸는데 어차피 arr[i]로 저장되니 ㄱㅊ
             max = Math.max(max, dp[i]);
         }
         System.out.println(String.format("%.3f",max)); // 소수점3번째 자리를 출력하는 스트링포맷
