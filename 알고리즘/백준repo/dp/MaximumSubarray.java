@@ -11,8 +11,8 @@ public class MaximumSubarray {
     // 주어진 arr[i]와 dp[i-1] + drr[i]의 수를 비교해서 더 큰 값을 저장
     // 1000 1000 이 가능
 
-    static int[] arr;
-    static int[] dp;
+    static long[] arr;
+    static long[] dp;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -23,19 +23,21 @@ public class MaximumSubarray {
         for (int i = 0; i < t; i++) {
             int n = Integer.parseInt(br.readLine());
 
-            arr = new int[n+1];
-            dp = new int[n+1];
-            int max = 0;
+            arr = new long[n+1];
+            dp = new long[n+1];
+            long max = Long.MIN_VALUE;
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             for (int j = 1; j <= n; j++) {
 
                 arr[j] = Integer.parseInt(st.nextToken());
                 dp[j] = Math.max(arr[j], dp[j - 1] + arr[j]);
-                max = Math.max(max, dp[j]);
+                max = Math.max(max, dp[j]); // 처음에 음수가 나온다면 ? 지금은 max가 0이라, 0이 더해짐
+                // max 값을 0이 아닌 MIN_VALUE로 해결
 
             }
             sb.append(max).append('\n');
+
 
         }
 
