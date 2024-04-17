@@ -19,40 +19,60 @@ public class 수열 {
     // 정답은 dp를 2차원 배열로 증가하는 수와 감소하는 수 두개를 저장하는 것
 
     static int arr[];
-    static int dp[];
+    static int dp[][];
     static int max = Integer.MIN_VALUE;
-    static int min = Integer.MAX_VALUE;
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
-        arr = new int[t];
-        dp = new int[t];
+        arr = new int[t+1];
+        dp = new int[2][t+1];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < t; i++) {
+        for (int i = 1; i <= t; i++) {
 
             arr[i] = Integer.parseInt(st.nextToken());
 
         }
 
-        dp[0] = 1;
+        dp[0][1] = 1; // 증가 값
+        dp[1][1] = 1; // 감소 값
 
+        for (int i = 2; i <= t; i++) {
 
+            if (arr[i] >= arr[i - 1]) { // 증가의 경우
 
-    }
+                dp[0][i] = dp[0][i - 1] + 1; //카운트 증가
 
-    private static int dp(int n) {
+            } else dp[0][i] = 1; // 반대의 경우 i를 다시 1부터 시작하게
 
+            if (arr[i] <= arr[i - 1]) { // 감소의 경우
 
-        if (dp[n] == 0) {
-            if (dp[n - 1] <= dp[n]) {
-              return dp[n] = dp()
+                dp[1][i] = dp[1][i - 1] + 1; //카운트 증가
 
-            }
+            } else dp[1][i] = 1; // 반대의 경우 i를 다시 1부터 시작하게
+
+            max = Math.max(max, Math.max(dp[0][i], dp[1][i])); // 매번 max 값을 max에 저장해줌
+        }
+
+        System.out.println(max);
+
+        for (int i = 1; i <=t ; i++) {
+            System.out.print(dp[0][i]);
+            System.out.print(" ");
 
         }
+        System.out.println();
+
+        for (int i = 1; i <=t; i++) {
+            System.out.print(dp[1][i]);
+            System.out.print(" ");
+        }
+
+        }
+
     }
 
 
-}
+
