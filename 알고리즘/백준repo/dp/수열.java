@@ -26,8 +26,12 @@ public class 수열 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
+
+
         arr = new int[t+1];
         dp = new int[2][t+1];
+
+
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= t; i++) {
@@ -35,6 +39,12 @@ public class 수열 {
             arr[i] = Integer.parseInt(st.nextToken());
 
         }
+        if (t == 1) {
+            System.out.println(1); // 0인줄 알고 계속 풀었는데 1이면 연속하는 수열이 0개인 거 아닌가 ?.. 하나라도 하나로 친다고 봐야하네
+            return;
+        }
+
+
 
         dp[0][1] = 1; // 증가 값
         dp[1][1] = 1; // 감소 값
@@ -53,22 +63,22 @@ public class 수열 {
 
             } else dp[1][i] = 1; // 반대의 경우 i를 다시 1부터 시작하게
 
-            max = Math.max(max, Math.max(dp[0][i], dp[1][i])); // 매번 max 값을 max에 저장해줌
+            max = Math.max(max, Math.max(dp[0][i], dp[1][i])); // 매번 max 값 max에 저장해줌
         }
 
         System.out.println(max);
-
-        for (int i = 1; i <=t ; i++) {
-            System.out.print(dp[0][i]);
-            System.out.print(" ");
-
-        }
-        System.out.println();
-
-        for (int i = 1; i <=t; i++) {
-            System.out.print(dp[1][i]);
-            System.out.print(" ");
-        }
+//
+//        for (int i = 1; i <=t ; i++) {
+//            System.out.print(dp[0][i]);
+//            System.out.print(" ");
+//
+//        }
+//        System.out.println();
+//
+//        for (int i = 1; i <=t; i++) {
+//            System.out.print(dp[1][i]);
+//            System.out.print(" ");
+//        }
 
         }
 
