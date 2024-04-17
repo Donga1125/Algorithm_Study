@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 가장긴짝수연속하는수열 {
+public class 가장긴짝수연속하는수열실패 {
     //22857
     // 연속한 정수 수열 중 k만큼 수를 지울 수 있다 지우고 난 후 가장 긴 짝수 부분 수열을 구하자!
     // 지울 수는 홀수를 지우는 게 가장 긴 수열을 뽑아낼 수 있을 거 같고, k 번째는 짝수와 인접한 수를 지우는 게 유리하겠네..

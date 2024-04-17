@@ -32,7 +32,7 @@ public class 알고리즘수업피보나치의수 {
 
     }
 
-    public static int fibo(int n) {
+    private static int fibo(int n) {
         if (n == 1 || n == 2) {
             fiboC++;
             return 1;
