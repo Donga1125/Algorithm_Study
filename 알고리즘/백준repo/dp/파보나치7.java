@@ -15,7 +15,7 @@ public class 파보나치7 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        dp = new long[n + 1];
+        dp = new long [1000001];
 
         Arrays.fill(dp, -1);
 
