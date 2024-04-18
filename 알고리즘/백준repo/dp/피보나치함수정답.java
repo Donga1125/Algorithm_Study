@@ -18,12 +18,17 @@ public class 피보나치함수 {
 
         StringBuilder sb = new StringBuilder();
 
+
         for (int i = 0; i < t; i++) {
             int n = Integer.parseInt(br.readLine());
 
             dp = new Integer[41];
 
+
+
             or = new int[2];
+
+
 
             fibo(n);
 
@@ -39,6 +44,9 @@ public class 피보나치함수 {
 
     private static int fibo(int n) {
 
+        dp[0] = 0;
+        dp[1] = 1;
+
         if (n == 0) {
             or[0]++;
         }
@@ -46,12 +54,11 @@ public class 피보나치함수 {
             or[1]++;
         }
 
-        dp[0] = 0;
-        dp[1] = 1;
+
 
         if (dp[n] == null) {
 
-            return fibo(n - 1) + fibo(n - 2);
+            return dp[n] = fibo(n - 1) + fibo(n - 2);
 
         }
 
