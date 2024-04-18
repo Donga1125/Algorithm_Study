@@ -8,6 +8,8 @@ public class 피보나치함수틀림 {
 
     //1003 0 or 1 얼마나 많이 출력 하는 지 배열 형태로
 
+    // 지금 피보나치 함수도 구하고, 0 1도 구했는데 피보나치 함수만 dp로 저장해서 틀렸다
+
     private static Integer[] dp;
     private static int[] or;
 
