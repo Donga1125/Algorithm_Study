@@ -61,4 +61,20 @@ public class 피보나치함수정답 {
         return dp[n];
 
     }
+
+    private static void fibonacci(int N) { // 반복문으로 풀 경우
+        // n에 대한 0의 호출 횟수는 n-1의 1의 호출횟수고,
+        // n에 대한 1의 호출 횟수는 n-1의 0의 호출횟 + n-1의 1의 호출횟수의 규칙이 보인다. 그걸 이용 어렵다 ㅠㅠ
+
+        int zero = 1;
+        int one = 0;
+        int zero_plus_one = 1;
+
+        for (int i = 0; i < N; i++) {
+            zero = one;
+            one = zero_plus_one;
+            zero_plus_one = zero + one;
+        }
+
+    }
 }
