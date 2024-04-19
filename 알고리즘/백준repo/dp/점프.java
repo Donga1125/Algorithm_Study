@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class 점프 {
+    //바텀업과 topdown의 방식이 혼합해서 자꾸 나오다보니 이도 저도 아닌 상태가 된다..
+    // 너무 헷갈려서 개념을 잡고 싶은데도 그것도 힘드네..
 
     static int board[][];
     static int dp[][];
