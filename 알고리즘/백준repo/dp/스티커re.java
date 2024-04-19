@@ -45,12 +45,12 @@ public class 스티커re {
 
                     for (int j = 0; j < 2; j++) {
 
-                        if (j == 0) {
+                        if (j == 0 && k +1 < n && k+2 < n ) {
                             dp[j][k] = dp[j][k] + Math.max(sticker[j +1][k + 1], sticker[j+1][k + 2]);
 
                         }
 
-                        if (j == 1) {
+                        if (j == 1 && k +1 < n && k+2 < n) {
                             dp[j][k] = dp[j][k] + Math.max(sticker[j -1][k + 1], sticker[j -1][k + 2]);
                         }
 
@@ -58,10 +58,12 @@ public class 스티커re {
                     }
                 }
 
-
+            sb.append(Math.max(dp[0][n-1], dp[1][n-1])).append('\n');
 
 
 
         }
+
+        System.out.println(sb);
     }
 }
