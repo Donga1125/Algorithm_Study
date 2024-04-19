@@ -21,7 +21,7 @@ public class 스티커re {
         for (int i = 0; i < t; i++) {
             int n = Integer.parseInt(br.readLine());
 
-            sticker = new int[2][n];
+            sticker = new int[2][n +1];
             dp = new int[2][100001];
 
 
@@ -30,35 +30,30 @@ public class 스티커re {
                 StringTokenizer st = new StringTokenizer(br.readLine());
 
 
-                for (int k = 0; k < n; k++) {
+                for (int k = 1; k <= n; k++) {
                     sticker[j][k] = Integer.parseInt(st.nextToken());
 
                 }
             }
-            dp[0][0] = sticker[0][0];
             dp[0][1] = sticker[0][1];
+            dp[1][1] = sticker[1][1];
+
+            for (int j = 2; j <= n; j++) {
+                dp[0][j] = Math.max(dp[1][j - 1], dp[1][j - 2]) + sticker[0][j];
+                dp[1][j] = Math.max(dp[0][j - 1], dp[0][j - 2]) + sticker[1][j];
+                // max값으로 더 큰 dp에 바로 직전 누적합을 가져오고 현재 값을 더해서 저장
+
+                // 예제1의 경우 dp에 저장되는 값은
+                // 50 60 200 150 250
+                // 30 100 130 210 260 으로 예제1의 가장 큰 스티커의 합은 260이 된다..
+            }
 
 
 
 
-                for (int k = 1; k < n; k++) {
-
-                    for (int j = 0; j < 2; j++) {
-
-                        if (j == 0 && k +1 < n && k+2 < n ) {
-                            dp[j][k] = dp[j][k] + Math.max(sticker[j +1][k + 1], sticker[j+1][k + 2]);
-
-                        }
-
-                        if (j == 1 && k +1 < n && k+2 < n) {
-                            dp[j][k] = dp[j][k] + Math.max(sticker[j -1][k + 1], sticker[j -1][k + 2]);
-                        }
 
 
-                    }
-                }
-
-            sb.append(Math.max(dp[0][n-1], dp[1][n-1])).append('\n');
+            sb.append(Math.max(dp[0][n], dp[1][n])).append('\n');
 
 
 
