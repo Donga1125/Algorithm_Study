@@ -42,6 +42,7 @@ public class 점프 {
 
                 for (int k = 1; k <t ; k++) {
                     int a = board[j][k];
+                    //현재 수를 저장하고 그만큼 움직이려면, 다음 점화식은
 
 
                     if (dp[j][k] == board[j][k]) {
