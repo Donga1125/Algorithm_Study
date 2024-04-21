@@ -33,8 +33,6 @@ public class 점프 {
                 
             }
 
-
-
             dp[0][0] = board[0][0];
             movement(0, 0);
 
@@ -43,6 +41,7 @@ public class 점프 {
             for (int j = 1; j < t; j++) {
 
                 for (int k = 1; k <t ; k++) {
+                    int a = board[j][k];
 
 
                     if (dp[j][k] == board[j][k]) {
