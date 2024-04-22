@@ -10,7 +10,7 @@ public class 점프 {
     // 너무 헷갈려서 개념을 잡고 싶은데도 그것도 힘드네..
 
     static int board[][];
-    static int dp[][];
+    static long dp[][];
     static int count = 0;
 
     //1890
@@ -20,7 +20,7 @@ public class 점프 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
         board = new int[t][t];
-        dp = new int[101][101];
+        dp = new long[t][t];
 
         for (int i = 0; i < t; i++) {
 
@@ -33,43 +33,45 @@ public class 점프 {
                 
             }
 
-            dp[0][0] = board[0][0];
-            movement(0, 0);
+           // dp[0][0] = board[0][0]; // 왜 그 수로 저장해줬을까 dp에 저장된 건 이동한 수여야 한다.. 이러니 헷갈림
+            dp[0][0] = 1; //
 
-            System.out.println(count);
 
-            for (int j = 1; j < t; j++) {
 
-                for (int k = 1; k <t ; k++) {
-                    int a = board[j][k];
+            for (int j = 0; j < t; j++) {
+
+                for (int k = 0; k <t ; k++) {
+                    int now = board[j][k];
+
+                    if (now == 0) {
+                        break;
+                    }
+                    if (j + now < t) {
+                        dp[j + now][k] = dp[j + now][k] + dp[j][k];
+                    }
+                    if (k + now < t) {
+                        dp[j][k + now] = dp[j][k + now] + dp[j][k];
+                    }
+
                     //현재 수를 저장하고 그만큼 움직이려면, 다음 점화식은
 
 
-                    if (dp[j][k] == board[j][k]) {
 
-                    }
 
                 }
-
             }
+        }
 
-            
+        for (long[] longs : dp) {
+            for (long aLong : longs) {
+                System.out.print(aLong + " ");
+            }
+            System.out.println();
         }
 
 
 
     }
 
-    private static int movement(int n, int m) {
 
-        if (board[n][m] == 0) {
-
-            return count++;
-
-        }
-        int a = dp[n][m];
-        int b =board[a][a];
-        return movement(b, b);
-
-    }
 }
