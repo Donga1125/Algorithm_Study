@@ -31,26 +31,28 @@ public class 점프 {
                 board[i][j] = Integer.parseInt(st.nextToken());
 
                 
-            }
+            }}
 
            // dp[0][0] = board[0][0]; // 왜 그 수로 저장해줬을까 dp에 저장된 건 이동한 수여야 한다.. 이러니 헷갈림
             dp[0][0] = 1; //
 
 
 
-            for (int j = 0; j < t; j++) {
+            for (int j = 0; j <t; j++) {
 
-                for (int k = 0; k <t ; k++) {
+                for (int k = 0; k<t ; k++) {
                     int now = board[j][k];
 
                     if (now == 0) {
                         break;
+//                        count++; // 도착하면 ++숫자 세려고 했지만 그렇다면 같은 장소로 오는 경우 중 다른 경우를 통해 올 수 있기에
+                        // 즉 겹치는 수에 대해선 카운트가 안되기에 실패)
                     }
                     if (j + now < t) {
-                        dp[j + now][k] = dp[j + now][k] + dp[j][k];
+                        dp[j + now][k] += dp[j][k];
                     }
                     if (k + now < t) {
-                        dp[j][k + now] = dp[j][k + now] + dp[j][k];
+                        dp[j][k + now] += dp[j][k];
                     }
 
                     //현재 수를 저장하고 그만큼 움직이려면, 다음 점화식은
@@ -60,14 +62,15 @@ public class 점프 {
 
                 }
             }
-        }
+        System.out.println(dp[t-1][t-1]);
 
-        for (long[] longs : dp) {
-            for (long aLong : longs) {
-                System.out.print(aLong + " ");
-            }
-            System.out.println();
-        }
+
+//        for (long[] longs : dp) {
+//            for (long aLong : longs) {
+//                System.out.print(aLong + " ");
+//            }
+//            System.out.println();
+//        }
 
 
 
