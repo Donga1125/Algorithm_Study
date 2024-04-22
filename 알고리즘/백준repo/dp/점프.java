@@ -49,10 +49,10 @@ public class 점프 {
                         // 즉 겹치는 수에 대해선 카운트가 안되기에 실패)
                     }
                     if (j + now < t) {
-                        dp[j + now][k] += dp[j][k];
+                        dp[j + now][k] += dp[j][k]; // 여기까지 올 수 있는 경우의 수도 포함되어 있다
                     }
                     if (k + now < t) {
-                        dp[j][k + now] += dp[j][k];
+                        dp[j][k + now] += dp[j][k]; // 여기까지 올 수 있는 경우의 수도 포함되어 있다
                     }
 
                     //현재 수를 저장하고 그만큼 움직이려면, 다음 점화식은
@@ -65,12 +65,12 @@ public class 점프 {
         System.out.println(dp[t-1][t-1]);
 
 
-//        for (long[] longs : dp) {
-//            for (long aLong : longs) {
-//                System.out.print(aLong + " ");
-//            }
-//            System.out.println();
-//        }
+        for (long[] longs : dp) {
+            for (long aLong : longs) {
+                System.out.print(aLong + " ");
+            }
+            System.out.println();
+        }
 
 
 
