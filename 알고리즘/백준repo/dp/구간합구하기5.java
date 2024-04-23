@@ -11,6 +11,7 @@ public class 구간합구하기5 {
     //2,2 -> 3,4 구하라고 하면 22 23 24 32 33 34구하기다 21은 포함안됨
     static int[][] arr;
     static int[][] wanted;
+    static long[] dp1;
     static int[][] from;
     static int[][] to;
     static long[][] dp;
@@ -22,7 +23,7 @@ public class 구간합구하기5 {
         int m = Integer.parseInt(st.nextToken());
         arr = new int[n+ 1][n+1];
 
-        wanted = new int[m][4];
+
 
         from = new int[m +1][2 +1];
         to = new int[m+1][2 + 1];
@@ -41,6 +42,7 @@ public class 구간합구하기5 {
 
         for (int i = 1; i <= m; i++) {
             dp = new long[n + 1][n + 1];
+            dp1 = new long[n + 1];
             st = new StringTokenizer(br.readLine());
             int x1 = 0;
             int x2 = 0;
@@ -68,6 +70,7 @@ public class 구간합구하기5 {
                 for (int k = x2; k <= y2; k++) {
 
                     dp[j][k] = dp[j][k - 1] + arr[j][k];
+                    dp[]
                     System.out.println("누적합: " + dp[j][k]);
 
                 }
