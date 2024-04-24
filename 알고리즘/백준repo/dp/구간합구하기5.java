@@ -9,6 +9,8 @@ public class 구간합구하기5 {
 
     //11660
     //2,2 -> 3,4 구하라고 하면 22 23 24 32 33 34구하기다 21은 포함안됨
+
+    //현재 막히는 부분이 2차원 dp의 순서에 따라 어떻게 저장하는지 ? or 1차원 dp로 바꿔서증가 시킬지
     static int[][] arr;
     static int[][] wanted;
     static long[] dp1;
@@ -66,18 +68,18 @@ public class 구간합구하기5 {
             y2 = to[i][2];
             dp[x1][x2] = arr[x1][x2];
 
-            for (int j = x1; j <= y1 ; j++) {
-                for (int k = x2; k <= y2; k++) {
-
-                    dp[j][k] = dp[j][k - 1] + arr[j][k];
-                    dp[]
-                    System.out.println("누적합: " + dp[j][k]);
-
-                }
-
-                
-            }
-            System.out.println(" 하나 끝");
+//            for (int j = x1; j <= y1 ; j++) {
+//                for (int k = x2; k <= y2; k++) {
+//
+//                    dp[j][k] = dp[j][k - 1] + arr[j][k];
+//
+//                    System.out.println("누적합: " + dp[j][k]);
+//
+//                }
+//
+//
+//            }
+//            System.out.println(" 하나 끝");
 
 //            System.out.println(dp[y1][y2]);
 
