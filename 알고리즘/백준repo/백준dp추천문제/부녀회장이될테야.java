@@ -9,15 +9,22 @@ public class 부녀회장이될테야 {
     // 바로 아래층의 누적합을 구해
 
 
-    // 입력값에 따라 그때의 0층 0호부터 n호까지 있는건지 잘 모르겠다
+    // 입력값에 따라 그때의 0층 0호부터 n호까지 있는건지 잘 모르겠ㅇ
+
+    static int[][] dp;
+
+
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
 
+
         for (int i = 0; i < t; i++) {
+
             int k = Integer.parseInt(br.readLine());
             int n = Integer.parseInt(br.readLine());
+            dp = new int[k+1][n+1];
         }
             
     }
