@@ -6,7 +6,10 @@ import java.io.InputStreamReader;
 
 public class 부녀회장이될테야 {
     //2775
-    // 바로 아래층의 누적합을 구해라
+    // 바로 아래층의 누적합을 구해
+
+
+    // 입력값에 따라 그때의 0층 0호부터 n호까지 있는건지 잘 모르겠다
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
