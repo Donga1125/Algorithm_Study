@@ -11,5 +11,10 @@ public class 달나라토끼를위한 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
 
+        StringBuilder sb = new StringBuilder();
+
+
+        System.out.println(sb);
+
     }
 }
