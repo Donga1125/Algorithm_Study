@@ -17,7 +17,7 @@ public class 투xn타일링투 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         t = Integer.parseInt(br.readLine());
         dp = new int[1001]; // 항상 t+1로 초기화하는데 이럴 경우 arrayIndexOutOfBound가 날 수 있다.
-        // 경계조건이나, 예치직않은 입력 방지 ,예상치못한 인덱스오버플로우 방지
+        // 경계조건이나, 예치직않은 입력 방지 ,예상치못한 인덱스오버플로우 방지 그리고 1,2가 들어올 경우 dp[3]에서 오류가남!!
 
         for (int i = 0; i <= t; i++) {
             dp[i] = -1;
