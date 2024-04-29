@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 달나라토끼를위한 {
+public class 달나라토끼를위한그리디실패 {
     //17212
     // 동전종류는 1 2 5 7고, 최소의 동전으로 지불할 수 있게 만들자
     private static int[] coin = {7, 5, 2, 1};
