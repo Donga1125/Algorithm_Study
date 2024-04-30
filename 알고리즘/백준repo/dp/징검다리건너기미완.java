@@ -15,5 +15,7 @@ public class 징검다리건너기미완 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
 
+        System.out.println(t);
+
     }
 }
