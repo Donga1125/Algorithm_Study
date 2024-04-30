@@ -30,6 +30,7 @@ public class 달나라토끼를위한dp {
                  
              }
          System.out.println(dp[t]);
+         System.out.println(dp);
 
          }
 
