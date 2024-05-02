@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 일로만들기2 {
+public class 일로만들기2실패 {
     //12852
     //3으로 나눠지면 3나누기, 2로 나눠지면 2 나누기, 1빼지면 1빼기
     // 3개를 섞어 사용하는데, 최소로 되는 경우를 찾아내자
