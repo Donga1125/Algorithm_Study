@@ -26,13 +26,10 @@ public class 동전1 {
         }
         dp[0] = 1;
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = coin[0]; j <= k; j++) {
-                if (j < coin[i]) {
-                    continue;
+        for (int i = 1; i <= n; i++) { //coin에 하나씩 저장된 수들을 돌면서 dp를 계속 갱신
+            for (int j = coin[i]; j <= k; j++) { //coin[j] 값들 ex) 1,2,5로 k = 10까지 시작해서 쭉 갱신해줌
 
-                }
-                dp[j] += dp[j - coin[i]];
+                dp[j] += dp[j - coin[i]]; //dp [j] 값은 dp[j] + dp[j - 여기서 이해가 안감.
 
             }
 
