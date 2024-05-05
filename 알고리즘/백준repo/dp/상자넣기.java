@@ -13,15 +13,33 @@ public class 상자넣기 {
 
     // 상자는 1000개 까지 낳옴
     private static int[] box;
+    private static int[] dp;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
         box = new int[t + 1];
+        dp = new int[t + 1];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < t; i++) {
+        for (int i = 1; i <= t; i++) {
             box[i] = Integer.parseInt(st.nextToken());
         }
+
+        dp[0] = 0; // 첫 수가 안담은 게 더클 수 있음
+
+
+        int n = 0;
+
+        for (int i = 1; i <=t ; i++) {
+            for (int j = i +1; j <=t ; j++) {
+                // dp[i] 가 담았을 때 맥스되게 하면 될듯
+                // 가정이 다음 수가 더 클때만 가능한데, 그 수를 담거나 안 담거나 했을 때 맥스가 되게
+                if(box[i-1] < box[i] ){
+                dp[j] = Math.max(dp[j - 1] + 1, dp[j] + 1);}
+
+            }
+        }
+        System.out.println(dp[t]);
     }
 }
