@@ -32,11 +32,11 @@ public class 상자넣기 {
         int n = 0;
 
         for (int i = 1; i <=t ; i++) {
-            for (int j = i +1; j <=t ; j++) {
+            for (int j = i; j <=t ; j++) {
                 // dp[i] 가 담았을 때 맥스되게 하면 될듯
                 // 가정이 다음 수가 더 클때만 가능한데, 그 수를 담거나 안 담거나 했을 때 맥스가 되게
-                if(box[i-1] < box[i] ){
-                dp[j] = Math.max(dp[j - 1] + 1, dp[j] + 1);}
+                if(box[i] < box[j] ){
+                    dp[i] = dp[i] + dp[j] + 1;}
 
             }
         }
