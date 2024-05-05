@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 상자넣기 {
+public class 상자넣기실패 {
     // 쭉 나열된 상자들이 있는데 앞 상자가 뒤에 상자보다 더 작다면 뒤 상자에 넣을 수 있다 (건너뛰기 가능)
     // 1, 5, 2, 3, 7 가 있다면 1을 5에 넣고 -> 다시 7에 넣으면 3번 넣게 된다
     // 근데 1 2 3 7 순으로 넣게 된다면 4번 넣을 수 있다 최대로 넣는 횟수를 구해라
@@ -31,7 +31,7 @@ public class 상자넣기 {
 
         int n = 0;
 
-        for (int i = 1; i <=t ; i++) {
+        for (int i = 1; i <=t ; i++) { // 최장 증가하는 수열이래
             for (int j = i; j <=t ; j++) {
                 // dp[i] 가 담았을 때 맥스되게 하면 될듯
                 // 가정이 다음 수가 더 클때만 가능한데, 그 수를 담거나 안 담거나 했을 때 맥스가 되게
