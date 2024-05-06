@@ -21,29 +21,35 @@ public class 상자넣기성공 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
         box = new int[t];
-        dp = new int[t ];
-        int answer = 0;
+        dp = new int[t];
+        int answer = Integer.MIN_VALUE;
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < t; i++) {
             box[i] = Integer.parseInt(st.nextToken());
             dp[i] = 1;
-            for (int j = 0; j < i ; j++) {
-                if(box[i] < box[j] ){
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
+        }
+
+        for (int i = 0; i <t ; i++) {// 현재 i까지 오는데, 올 수 있는 가장 큰수를 저장한다
+
+            for (int j = 0; j < i ; j++) { // 0부터 i까지 돌면서 즉 j-3,j-2,j-1 이렇게 다 비교해서 그 수를 i 값에 저장
+                if(box[i] > box[j] ){
+
+                    dp[i] = Math.max(dp[i], dp[j] + 1); // 크다면 이거 없어도 dp[j]+1 해주는 거 아닌가 ?
+                    // 현재 수와 전 수들만 비교해서 넣기에
+
                 }
             }
             answer = Math.max(answer, dp[i]);
+        }
 
-                
-            }
         System.out.println(answer);
         }
 
 
 
 
-        int n = 0;
+
 
 //        for (int i = 1; i <=t ; i++) { // 최장 증가하는 수열이래
 //            for (int j = i; j <=t ; j++) {
