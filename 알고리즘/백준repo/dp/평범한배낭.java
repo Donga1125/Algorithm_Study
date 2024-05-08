@@ -10,7 +10,12 @@ public class 평범한배낭 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int b = Integer.parseInt(br.readLine());
 
+        for (int i = 0; i < b; i++) {
+
+        }
+
         System.out.println();
+
 
     }
 }
