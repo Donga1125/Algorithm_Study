@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 파이프옮기기1 {
+public class 파이프옮기기1dp {
     //17070
     // 벽이 존재할 수 있다 1로 주어짐 그럴 거긴 예외로 처리
     // 파이프는 45도만 가능하고 초기ㅇ ㅔ놓인 조건에 따라 즉 - 이면 \,  \ 이면 ㅣ,- ㅣ이면 \
