@@ -48,7 +48,7 @@ public class 파이프옮기기1dp {
                 }
             }
 
-            System.out.println(dp[n][n][0] +dp[n][n][1] + dp[n][n][2]);
+            System.out.println(dp[n+1][n+1][0] +dp[n+1][n+1][1] + dp[n+1][n+1][2]);
         }
 
 
