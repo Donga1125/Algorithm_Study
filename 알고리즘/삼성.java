@@ -1,4 +1,4 @@
-package 알고리즘.doit;
+package 알고리즘;
 
 import java.io.BufferedReader;
 import java.io.IOException;
