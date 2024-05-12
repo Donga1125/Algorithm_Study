@@ -6,10 +6,17 @@ import java.io.InputStreamReader;
 
 public class 신나는함수실행 {
     //9184
+    //a b c 주어지면 그걸재귀 구현
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        int a = 0;
+        int b= 0;
+        int c = 0;
+        int answer = 0;
+        sb.append("w(").append(a).append(", ").append(b).append(", ").append(c + ") = ").append(answer);
 
     }
 }
