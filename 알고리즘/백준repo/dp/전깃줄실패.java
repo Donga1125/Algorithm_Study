@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 전깃줄 {
+public class 전깃줄실패 {
     //2565
 
     //서로 전깃줄이 연결되어 있는데 교차되지 않는 최소의 수를 제거하자 많이 얽혀있는 거 위주로일듯 (아닐 수 있다
