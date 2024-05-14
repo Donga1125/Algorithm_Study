@@ -10,6 +10,9 @@ public class lcs {
     // 모두의 부분 수열이 되는 수열 중 가장 긴 것을 찾는 문제이다.
 
     //예를 들어, ACAYKP와 CAPCAK의 LCS는 ACAK가 된다. lis같은 느낌인데, 두 수열의 공통된 가장 긴 부분
+
+    // 2차원 배열로 수를 채워서 비교하는데 예를 들어  aca와 cap를 비교한다면 aca 와 차례대로c,ca,cap를 비교하는 게 이해가 안간다
+    // 설명으로는 순서가 상관있기에 전체부분수열로 비교하는데 이 개념이 어렵다
     private static int[] dp;
     private static char[] f;
     private static char[] s;
