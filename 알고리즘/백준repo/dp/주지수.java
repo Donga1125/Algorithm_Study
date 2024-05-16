@@ -8,8 +8,14 @@ import java.util.StringTokenizer;
 public class 주지수 {
 
     //15724
+
+    // 범위의 사람의 수를 부르면 그 안에 총 사람 계산이네
+    // 아마 점화식이 x-1,y + x ,y-1 -(x,y)
+    // dp 자체를 구하는 식은 x-1,y + x, y-1 + x,y
     private static int[][] land;
+    private static int[][] dp;
     private static int answer;
+    private static int location[][];
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,18 +23,29 @@ public class 주지수 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         land = new int[n + 1][m + 1];
+        dp = new int[n + 1][m + 1];
 
         for (int i = 1; i <= n; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= m; j++) {
                 land[i][j] = Integer.parseInt(st.nextToken());
-                System.out.print(land[i][j] + " ");
+                dp[i][j] = land[i - 1][j] + land[i][j - 1] + land[i][j];
+                // 누적합 dp로 저장
 
             }
-            System.out.println();
         }
 
         answer = Integer.parseInt(br.readLine());
+        location = new int[answer + 1][4 +1];
+        for (int i = 1; i <=3 ; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 1; j <=4 ; j++) {
+                location[i][j] = Integer.parseInt(st.nextToken());
+
+            }
+
+
+        }
 
     }
 }
