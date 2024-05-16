@@ -29,10 +29,12 @@ public class 주지수 {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= m; j++) {
                 land[i][j] = Integer.parseInt(st.nextToken());
-                dp[i][j] = land[i - 1][j] + land[i][j - 1] + land[i][j];
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1] + land[i][j] - dp[i-1][j-1];
                 // 누적합 dp로 저장
+                System.out.print(dp[i][j] + " ");
 
             }
+            System.out.println();
         }
 
         answer = Integer.parseInt(br.readLine());
@@ -43,6 +45,8 @@ public class 주지수 {
                 location[i][j] = Integer.parseInt(st.nextToken());
 
             }
+            int d = dp[location[1][3]][location[1][4]] -;
+
 
 
         }
