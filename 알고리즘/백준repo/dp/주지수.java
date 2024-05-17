@@ -45,7 +45,8 @@ public class 주지수 {
                 location[i][j] = Integer.parseInt(st.nextToken());
 
             }
-            int d = dp[location[1][3]][location[1][4]] -;
+            int d = dp[location[1][3]][location[1][4]];
+            System.out.println();
 
 
 
