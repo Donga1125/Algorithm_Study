@@ -23,37 +23,21 @@ public class PhoneBook {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine());
 
-//        PhoneBook pb = new PhoneBook();
+        PhoneBook pb = new PhoneBook();
+        input = new String[] { "119", "97674223", "1195524421" };
+
+
+        pb.solution2(input);
 //        pb.Solution(input);
+        // blog 나는 그냥 길이 별로 정렬했는데, 그러지말고 그냥 정렬하면
+        // arrays의 배열이 붙으니까 양 옆만 비교하면 좀 더 빠르게 가능하다
+
 
 
     }
 
     private boolean Solution(String[] phone_book) {
 
-//        Arrays.sort(phone_book, new Comparator<String>() {
-//            @Override
-//            public int compare(String o1, String o2) {
-//                return o1.length() - o2.length();
-//            }
-//
-//        });
-//
-//
-//
-//        for (int i = 0; i < phone_book.length-1; i++) {
-//            int now = phone_book[i].length();
-//
-//
-//            for (int j = i+1; j < phone_book.length ; j++) {
-//                if (now < phone_book[j].length()) {
-//                    if (phone_book[j].startsWith(phone_book[i]) )
-//
-//                        return false;
-//                }
-//            }
-//        }
-//        return true;
         Arrays.sort(phone_book, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -64,34 +48,66 @@ public class PhoneBook {
 
 
 
-       for (int i = 0; i <= phone_book.length; i++) {
-                if(phone_book[i].length() < phone_book[i+1].length()){
-                    map.put(phone_book[i], i);
-                    // map으로 관리할 필요가 없어 보이네..
+        for (int i = 0; i < phone_book.length-1; i++) {
+            int now = phone_book[i].length();
 
-                    String now = phone_book[i];
 
-                    Iterator<String> it = map.keySet().iterator();
-                    while (it.hasNext()) {
-                        String next = it.next();
+            for (int j = i+1; j < phone_book.length ; j++) {
+                if (now < phone_book[j].length()) {
+                    if (phone_book[j].startsWith(phone_book[i]) )
 
-                        if (next.startsWith(now)) {
-                            return false;
+                        return false;
+                }
+            }
+        }
+        return true;}
+//        Arrays.sort(phone_book, new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return o1.length() - o2.length();
+//            }
+//
+//        });
+//
+//
+//
+//       for (int i = 0; i <= phone_book.length; i++) {
+//                if(phone_book[i].length() < phone_book[i+1].length()){
+//                    map.put(phone_book[i], i);
+//                    // map으로 관리할 필요가 없어 보이네..
+//
+//                    String now = phone_book[i];
+//
+//                    Iterator<String> it = map.keySet().iterator();
+//                    while (it.hasNext()) {
+//                        String next = it.next();
+//
+//                        if (next.startsWith(now)) {
+//                            return false;
+//
+//                        }
+//
+//                    }
+//
+//                }}
+//        return true;
+//
+//
+//    }
 
-                        }
 
-                    }
 
-                }}
+    private boolean solution2(String[] phone_book) {
+        Arrays.sort(phone_book); // 이대로 119 , 119123, 44, 이런 식으로 접두어끼리 정렬하기
+
+        for (int i = 0; i < phone_book.length; i++) {
+            if (phone_book[i].length() < phone_book[i + 1].length()) {
+                if (phone_book[i + 1].startsWith(phone_book[i])) {
+                    return false;
+                }
+            }
+        }
         return true;
-
-
-    }
-
-
-
-    private void solution2(String[] phone_book) {
-        // bol로 반환 ?
     }
 
 
