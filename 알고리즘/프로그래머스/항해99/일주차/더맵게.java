@@ -1,6 +1,7 @@
 package 알고리즘.프로그래머스.항해99.일주차;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class 더맵게 {
@@ -27,6 +28,12 @@ public class 더맵게 {
 
         arr = new int[]{1, 2, 3, 9, 10, 12};
         k = 7;
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new Comparator<Integer>()
+        {
+            @Override
+            public int compare(Integer o1, Integer o2)
+            { return - Integer.compare(o1,o2); } });
 
 
 
