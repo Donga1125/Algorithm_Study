@@ -14,7 +14,7 @@ public class 올바른괄호 {
 
         올바른괄호 main = new 올바른괄호();
 
-        boolean answer = main.solution("))))()");
+        boolean answer = main.solution("()()()");
 
         System.out.println(answer);
 
@@ -41,7 +41,25 @@ public class 올바른괄호 {
 
             } else // 시작부터 닫는 괄호면 ? poll 했을 때 뺼 수 있는 게 없기에 에러가 날껀데
 
-                queue.poll(); // 시작을 미리 걸렀기에 )부터 실행될 일은 없다.
+                if (queue.isEmpty()) {
+                    return false;
+                } else
+                    queue.poll();
+
+
+
+//                if(queue.poll();)
+
+//                if (a instanceof Integer) {
+//
+//                }
+
+
+
+
+
+
+                // 시작을 미리 걸렀기에 )부터 실행될 일은 없다.
 
         }
 
