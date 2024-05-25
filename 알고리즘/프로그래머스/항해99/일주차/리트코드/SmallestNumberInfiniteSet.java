@@ -41,7 +41,7 @@ public class SmallestNumberInfiniteSet {
 //        int min = set.stream()
 //                .min(Comparator.comparing(x -> x))
 //                .orElseThrow(NoSuchElementException::new);
-        int min = set.first();
+        int min = set.first(); // 이진탐색트리의 첫 요소를 가져옴
         set.remove(min);
 
         return min;
