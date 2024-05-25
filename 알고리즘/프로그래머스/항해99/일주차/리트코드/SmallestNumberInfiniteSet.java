@@ -13,8 +13,9 @@ public class SmallestNumberInfiniteSet {
     // 1000개라고 하니까 1~1000까지 넣어주면 될듯
 
 //    private static PriorityQueue<Integer> minHeap;
-    SmallestNumberInfiniteSet obj = new SmallestNumberInfiniteSet();
+
     TreeSet<Integer> set;
+
 
 
 
@@ -50,6 +51,13 @@ public class SmallestNumberInfiniteSet {
     public void addBack(int num) {
 
         set.add(num);
+
+    }
+
+    public static void main(String[] args) {
+        SmallestNumberInfiniteSet obj = new SmallestNumberInfiniteSet();
+        obj.addBack(1);
+        obj.popSmallest();
 
     }
 }
