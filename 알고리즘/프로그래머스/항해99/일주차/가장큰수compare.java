@@ -1,4 +1,4 @@
-package 알고리즘.프로그래머스.항해99.일주차.리트코드;
+package 알고리즘.프로그래머스.항해99.일주차;
 
 import java.util.Arrays;
 import java.util.Comparator;
