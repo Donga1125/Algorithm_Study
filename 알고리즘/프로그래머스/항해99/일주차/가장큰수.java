@@ -14,15 +14,22 @@ public class 가장큰수 {
     private static int[] sorted;
 
     public static void main(String[] args) {
-        int[] num = new int[] {6, 10, 2};
+        int[] num = new int[] {6, 10, 2, 123};
+        sorted = new int[num.length];
 
         가장큰수 main = new 가장큰수();
         main.solution(num);
-        sorted = new int[num.length];
+
 
     }
 
     private String solution(int[] numbers) {
+
+        mergeSort(numbers, 0, numbers.length - 1);
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+
 
 
 
@@ -35,7 +42,7 @@ public class 가장큰수 {
 
         if(left == right) return; // 둘다 같다는 건 나눈 리스트들이 1개의 요소를 가진 기저조건
 
-        int mid = (left + right) / 2; // mid로 나누는 건
+        int mid = (left + right) / 2; // mid 는 중간 값으로 두개 나누기 위해
 
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
@@ -50,7 +57,39 @@ public class 가장큰수 {
         int idx = left; // 배열에 채워넣을 현재 인덱스
 
 
-        while (l <= mid && mid <= right) { // 하나씩 돌면서
+        while (l <= mid && r <= right) { // 하나씩 돌면서
+
+
+            int max = Integer.max(arr[l], arr[r]);
+            int min = Integer.min(arr[l], arr[r]);
+            String comparison = String.valueOf(max);
+            String standdard = String.valueOf(min);
+
+
+
+            for (int i = 0; i < standdard.length(); i++) {
+                int s = Integer.valueOf(standdard.charAt(i) - 0);
+
+                for (int j = 0; j < comparison.length(); j++) {
+                    int a = Integer.valueOf(comparison.charAt(j) - 0);
+                    if (s <= a) {
+                        sorted[idx] = arr[l]; // 작은 수를 실제로 넣어주고
+                        idx++; // 인덱스 올려주고,
+                        l++; // 완쪽배열의 인덱스를 올려줌
+                        break;
+
+                    }
+
+
+                }
+
+
+
+
+
+            }
+
+
 
             if (arr[l] <= arr[r]) { // 두개의 배열의 왼 배열이 실제 값이 작거나 같으면 그 수 먼저
 
@@ -60,11 +99,11 @@ public class 가장큰수 {
 
 
             }
-            else
+            else {
                 sorted[idx] = arr[r];
-            idx++;
-            r++;
-
+                idx++;
+                r++;
+            }
         }
 
         if (l > mid) { // 다 돌았는데 mid보다 l이 크다는 건 오른쪽 배열의 수만 남고 왼쪽 배열만 다 채워졌다는 뜻
