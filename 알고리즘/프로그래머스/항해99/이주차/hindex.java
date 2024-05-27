@@ -1,6 +1,7 @@
 package 알고리즘.프로그래머스.항해99.이주차;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class hindex {
     //문제를 잘 읽어야 한다.. h 수를 찾자
@@ -14,6 +15,7 @@ public class hindex {
     private static int[] sorted;
 
     public static void main(String[] args) {
+
 
     }
 
