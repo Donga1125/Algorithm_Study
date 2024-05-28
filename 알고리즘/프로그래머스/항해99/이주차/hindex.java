@@ -32,12 +32,8 @@ public class hindex {
             if (citations[i] >= h) {
                 answer = h;
                 break;
-
             }
-
-            }
-
-
+        }
 
         return answer;
     }
