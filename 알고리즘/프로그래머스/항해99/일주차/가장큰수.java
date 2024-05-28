@@ -17,8 +17,8 @@ public class 가장큰수 {
         int[] num = new int[] {6, 10, 2, 123};
         sorted = new int[num.length];
 
-        가장큰수 main = new 가장큰수();
-        main.solution(num);
+//        가장큰수 main = new 가장큰수();
+//        main.solution(num);
 
 
     }
