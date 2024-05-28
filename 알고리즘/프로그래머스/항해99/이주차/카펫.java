@@ -17,7 +17,7 @@ public class 카펫 {
 
         카펫 main = new 카펫();
 
-        int arr[] = main.solution(16, 8);
+        int arr[] = main.solution(18, 6);
         for (int i : arr) {
             System.out.println(i);
         }
@@ -28,7 +28,6 @@ public class 카펫 {
 
     private int[] solution(int brown, int yellow) {
         int[] answer = new int[2];
-        int[] yellowRow;
 
 
         int size = brown + yellow;
