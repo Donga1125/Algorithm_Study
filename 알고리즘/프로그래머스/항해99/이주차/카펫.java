@@ -12,11 +12,17 @@ public class 카펫 {
     // 가로가 더 기니까 약수들을 찾고 o1(가로)의 약수가 더 커지거나 같아질 때(제곱근까지만 구해도 되긴 하겠다)
 
 
+
     public static void main(String[] args) {
 
         카펫 main = new 카펫();
-        main.solution(24,24);
-//        System.out.println(main.solution(24, 24).toString());
+
+        int arr[] = main.solution(16, 8);
+        for (int i : arr) {
+            System.out.println(i);
+        }
+
+
 
     }
 
@@ -27,40 +33,46 @@ public class 카펫 {
 
         int size = brown + yellow;
 
-        for (int i = 1; i < size; i++) {
+        for (int row = 1; row < size; row++) {
 
 
 
 
-            if (size % i == 0) { // 제곱근까지 할 지  ? 그냥 size는 안들어오게 하면 될듯
+            if (size % row == 0) { // 제곱근까지 할 지  ? 그냥 size는 안들어오게 하면 될듯
 
 
-                int j = size / i;
+                int column = size / row;
 
-                if (i >= j) {
-                    if(i > yellow){
+                if (row == column) {
 
+                    answer[0] = row; // fail 일차적으로 약수고, 가로가 더 커지거나 둘 중 같은 수만 생각했는데 반례가 있다
+                    answer[1] = column;
 
-                    answer[0] = i; // fail 일차적으로 약수고, 가로가 더 커지거나 둘 중 같은 수만 생각했는데 반례가 있다
-                    answer[1] = j;
-                    System.out.println(answer[0]);
-                    System.out.println(answer[1]);
                     break;
 
+                }
+                if (row > column) {
+                    for (int j = 1; j <= row; j++) {
 
-                }}
-//                if (i > j) {
-//                    for (int k = 1; k <= i; k++) {
-//
-//                        if (i % k == 0 && (yellow - k) % 2 == 0) {
-//
-//
-//                        }
-//
-//                    }
-//                }
+                        if (row % j == 0 && (row - j) % 2 == 0) {
+                            for (int k = 1; k <=column ; k++) {
+                                if (column % k == 0 &&(column - k) % 2 == 0 && j * k == yellow) {
 
-            }
+                                    answer[0] = row;
+                                    answer[1] = column;
+                                    return answer;
+
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                    }
+                }
+
+
 
 
         }
