@@ -27,10 +27,9 @@ public class 소수찾기 {
 
         int answer = 0;
 
-        dfs(numbers, "", 0);
-        for (Integer i : set) {
-            System.out.println(i);
-        }
+        recur(numbers, "");
+
+        System.out.println(set);
 
         return answer;
     }
@@ -42,25 +41,24 @@ public class 소수찾기 {
         return 1;
     }
 
-    private void dfs(String num, String str, int depth) {
+    private void recur(String num, String str) {
 
-        if (num.length() < depth) { // num을 다 탐색했다면 return;
+        if (!str.equals("")) {
+            set.add(Integer.parseInt(str));
 
-            return;
         }
 
         for (int i = 0; i < num.length(); i++) {
-            if (!isVisited[i]) {
-                isVisited[i] = true;
-                set.add(Integer.parseInt(str + num.charAt(i)));
-                dfs(num, str, depth + 1);
-                isVisited[i] = false;
+            recur(str + num.charAt(i), num.substring(0, i) + num.substring(i + 1));
+            // 1를 쓰고, 앞 뒤에 남은 것들 그대로 recur에 넘겨준다.
+            // 다음 recur은 str에 1이 담겨 있고, num에는 7이 남을 것
+            // 그럼 "17" 붙이고 다음 재귀를 부르는데 num.length를 넘으면서 종료하고 다시 7부터 또 시작
+        }
 
-            }
 
         }
 
-    }
+
 
 
     public static void main(String[] args) {
