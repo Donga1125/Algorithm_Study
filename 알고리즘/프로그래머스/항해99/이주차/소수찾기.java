@@ -54,6 +54,7 @@ public class 소수찾기 {
                 isVisited[i] = true;
                 set.add(Integer.parseInt(str + num.charAt(i)));
                 dfs(num, str, depth + 1);
+                isVisited[i] = false;
 
             }
 
