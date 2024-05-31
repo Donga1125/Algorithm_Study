@@ -17,15 +17,18 @@ public class 게임맵최단거리 {
 
     private static int[][] moving = new int[][]
             {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
-            //  왼  ,    오  ,    위   ,   아래
+    //  왼  ,    오  ,    위   ,   아래
+    private static boolean[][] isVisited;
+    private static int maps[][];
 
     public static void main(String[] args) {
         int[][] arr = new int[][]
-                       {{1, 0, 1, 1, 1},
-                        {1, 0, 1, 0, 1},
-                        {1, 0, 1, 1, 1},
-                        {1, 1, 1, 0, 1},
-                        {0, 0, 0, 0, 1}};
+                {       {0,0, 0, 0, 0, 0},
+                        {0,1, 0, 1, 1, 1},
+                        {0,1, 0, 1, 0, 1},
+                        {0,1, 0, 1, 1, 1},
+                        {0,1, 1, 1, 0, 1},
+                        {0,0, 0, 0, 0, 1}};
         게임맵최단거리 sol = new 게임맵최단거리();
         sol.solution(arr);
 
@@ -33,19 +36,38 @@ public class 게임맵최단거리 {
 
     private int solution(int[][] maps) {
         size = maps.length;
-        System.out.println();
+
+        isVisited = new boolean[size+1][size+1];
+
 
 
         int answer = 0;
         return answer;
     }
 
-    private void dfs(int depth) {
+    private void dfs(int x, int y) {
 
-        if (depth == size) {
+        if (isVisited[x][y]) {
 
+            return;
 
         }
+
+        if (maps[x][y] == 1) {
+            if (!isVisited[x][y]) {
+                isVisited[x][y] = true;
+                dfs(x+1,y); //아래
+                dfs(x, y + 1); //오른
+                dfs(x - 1, y); // 위 (배열 범위 밖 벗어날 수있는 걸 처리하자
+                dfs(x, y - 1); // 아래 ( 배열 범위 밖을 if문으로 밖에서 처리하고 돌릴까 ?)
+                isVisited[x][y] = false;
+            }
+
+        }
+
+
+
+
 
 
     }
