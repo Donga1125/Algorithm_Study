@@ -1,10 +1,6 @@
 package 알고리즘.프로그래머스.항해99.이주차;
 
-import org.w3c.dom.Node;
 
-import javax.swing.tree.TreeNode;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class DeepestLeavesSum {
     //1302 leetcode
@@ -21,16 +17,19 @@ public class DeepestLeavesSum {
     int maxDepth = -1;
     int sum = 0;
     public int deepestLeavesSum(TreeNode root) {
+
         return dfs(root, 0);
     }
 
     private int dfs(TreeNode root, int depth) {
+
         if (root == null) {
             return 0;
         }
         if (maxDepth < depth) {
             maxDepth = depth;
             sum = root.val;
+
         } else if (maxDepth == depth) {
             sum += root.val;
         }
@@ -43,5 +42,23 @@ public class DeepestLeavesSum {
         }
         return sum;
     }
-}
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+      TreeNode() {
 
+      }
+
+        TreeNode(int val) {
+
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+  }}
