@@ -2,7 +2,7 @@ package 알고리즘.프로그래머스.항해99.이주차;
 
 
 
-public class DeepestLeavesSum {
+public class deepestLeavesSum {
     //1302 leetcode
 
     //이진 탐색트리의 가장 깊은 리프의 값들의 합을 반환
