@@ -1,4 +1,4 @@
-package 알고리즘.프로그래머스.항해99.이주차;
+package 알고리즘.프로그래머스.항해99.삼주차;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -50,22 +50,5 @@ public class reverseLevels {
         System.out.println();
     }}
 
-public  class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
 }
 
