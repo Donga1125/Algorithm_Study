@@ -13,39 +13,21 @@ public class allPathsFromSourcetoTarget {
     // hashmap으로 생각했는데 중복때문에 pass
     // 기저 조건을 어떻게 잡아줄까... index를 늘려주면서 그 index에 접근하면 ?
 
-    private static int[][] graph;
     private static int n;
 
-    public static void main(String[] args) {
 
-        int[][] graph = new int[][]
-                {{1, 2},
-                        {3},
-                        {3},
-                        {}};
-
-
-
-
-
-
-        allPathsFromSourcetoTarget main = new allPathsFromSourcetoTarget();
-
-        main.allPathsSourceTarget(graph);
-
-
-    }
 
     private List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+
         n = graph.length;
 
         List<List<Integer>> answer = new ArrayList<>(); // 경로들이 다 담긴 정답리스트
+
         List<Integer> route = new ArrayList<>(); // 정답인 하나의 경로
-        route.add(0); // 모든 경로의 시작은 0에서
+
+        route.add(0); // 첫 경로 시작을 0
+
         dfs(0, graph, route, answer);
-
-
-
 
 
         return answer;
@@ -66,6 +48,22 @@ public class allPathsFromSourcetoTarget {
             dfs(j, graph, route, answer); // 추가한 후 그 수로 이동해서 계속 ~
             route.remove(route.size() - 1); //백트레킹을 위해 다시 호출한 idx에서 다음 j번째 탐색
         }
+    }
+
+    public static void main(String[] args) {
+
+        int[][] graph = new int[][]
+                {{1, 2},
+                        {3},
+                        {3},
+                        {}};
+
+
+        allPathsFromSourcetoTarget main = new allPathsFromSourcetoTarget();
+
+        main.allPathsSourceTarget(graph);
+
+
     }
 
 
