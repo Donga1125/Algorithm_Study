@@ -1,4 +1,4 @@
-package 알고리즘.프로그래머스.항해99.이주차;
+package 알고리즘.프로그래머스.항해99.삼주차;
 
 public class reverseOddLevelsofBinaryTree {
 
@@ -17,19 +17,19 @@ public class reverseOddLevelsofBinaryTree {
     public static void main(String[] args) {
         reverseOddLevelsofBinaryTree main = new reverseOddLevelsofBinaryTree();
         int[] arr = new int[]{2, 3, 5, 8, 13, 21, 34};
-        TreeNode
-        main.reverseOddLevels(arr);
+
+//        main.reverseOddLevels();
 
     }
     public TreeNode reverseOddLevels(TreeNode root) {
         TreeNode answer = new TreeNode();
-        return
+        return answer;
 
     }
 
     private void dfs(int index, int[] arr) { // level 별로 인덱스 관ㄹ ㅣ? 배열로 들어오면
 
-        if(index)
+
     }
 
 
