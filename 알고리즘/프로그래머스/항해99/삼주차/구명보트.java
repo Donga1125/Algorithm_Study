@@ -29,59 +29,59 @@ public class 구명보트 {
 
         Arrays.sort(people);
         int count = 0;
-//        Deque<Integer> deque = new ArrayDeque<>();
-//        for (int i = 0; i < people.length; i++) {
-//            deque.add(people[i]);
-//        }
-//        while (!deque.isEmpty()) {
-//
-//
-//            int start = deque.getFirst();
-//            int end = deque.getLast();
-//
-//            if (deque.size() == 1) {
-//                deque.removeFirst();
-//
-//
-//                return ++count;
+        Deque<Integer> deque = new ArrayDeque<>();
+        for (int i = 0; i < people.length; i++) {
+            deque.add(people[i]);
+        }
+
+        while (!deque.isEmpty()) {
+
+            int start = deque.getFirst();
+            int end = deque.getLast();
+
+            if (deque.size() == 1) {
+                deque.removeFirst();
+
+
+                return ++count;
+
+            }
+
+            if (start + end <= limit) {
+
+                deque.removeFirst();
+                deque.removeLast();
+                count++;
+
+
+            } else if (start + end > limit) {
+
+
+                deque.removeLast();
+                count++;
+            }}
+
+
+
+
+
+//        int start = 0;
+//        int end = people.length - 1;
+//        while (start != end) { // 이러면 그 수 하나를 세어주지 못한다..
+//            if (end - start == 1) {
+//                count++;
+//                return count;
+//            }
+//            if (people[start] + people[end] > limit) {
+//                end--;
+//                count++;
 //
 //            }
+//            else {
+//                start++;
+//                count++;}
 //
-//            if (start + end <= limit) {
-//
-//                deque.removeFirst();
-//                deque.removeLast();
-//                count++;
-//
-//
-//            } else if (start + end > limit) {
-//
-//
-//                deque.removeLast();
-//                count++;
-//            }}
-
-
-
-
-
-        int start = 0;
-        int end = people.length - 1;
-        while (start != end) { // 이러면 그 수 하나를 세어주지 못한다..
-            if (end - start == 1) {
-                count++;
-                return count;
-            }
-            if (people[start] + people[end] > limit) {
-                end--;
-                count++;
-
-            }
-            else {
-                start++;
-                count++;}
-
-        }
+//        }
 
         return count;
 
