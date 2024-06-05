@@ -8,11 +8,11 @@ public class 조이스틱 {
     // 가장 적게 움직여서 원하는 글자 만들기!
 
     // 커서의 이동은 aaaaaaz를 만들어야 한다면 왼쪽 커서로 움직이는게 베스트니까 필요
-    // 알파벳을 저장해두고, 알파벳 총 크기와 그 수를 크기를 비교해 반이상일지 아닐지 판별,
+    // 알파벳을 저장해두고, 알파벳 총 크기와 그 수를 크기를 비교해 반이상일지 아닐지 판별, xx
     // 왼 오도 전체 문장의 인덱스와 그 인덱스의 절반을 비ㅣ교해 왼일지 오른일지 판별
     // 왼 오로 움직이려면 현재 인덱스를 저장해줘야 하나 ? aabaaaaaaab라면 오2번, 왼3번으로 최소 움직임을 가질 수 있으니
-    // 알파벳 순서는 링크드 리스트로 관리 ?
-    // 현재 위치는 큐로 관리
+    // 알파벳 순서는 링크드 리스트로 관리 ? or  현재 위치는 큐로 관리 ? (이럴 필요 x)
+
 
     private final static int[] AlPHABET = new int[]
             {       65,66,67,68,69,70,71,72,73,74,
@@ -29,22 +29,41 @@ public class 조이스틱 {
 
     public int solution(String name) {
 
-        int answer = 0;
-        int count = 0;
 
-        for (int i = 0; i < name.length(); i++) {
+        int count = 0;
+        int answer = 0;
+        int length = name.length();
+
+
+
+
+
+        for (int i = 0; i <length; i++) {
             int now = name.charAt(i);
 
-            System.out.println("now = " + now);
             if (now <= 77) {
                 count = count+(now - 65);
 
             } else {
                 count = count + (91 - now);
-            }}
-            System.out.println("count = " + count);
+            }
+        }
 
 
-        return count;
+        int min = length - 1; // 오른쪽 쭉 하는 경우로 일단 먼저
+
+        for (int i = 0; i < length; i++) {
+            int next = i + 1;
+            while (next != length && name.charAt(next) == 65) {
+                next++;
+            }
+            // i까지 가는 거리 + 돌아가서 나머지 처리하는 거리
+            min = Math.min(min, i + length - next + Math.min(i, length - next));
+        }
+
+        answer = count + min;
+
+
+        return answer;
     }
 }
