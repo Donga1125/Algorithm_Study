@@ -13,7 +13,7 @@ public class 구명보트 {
     // 최대한 적게 구명보트 사용해서 탈출
     //사람들의 몸무게를 담은 배열 people과 구명보트의 무게 제한 limit가 매개변수로 주어짐
 
-    // 그리디니까 투포인터로 ?
+    // 투포인터로 ?
 
     public static void main(String[] args) {
         int[] arr = new int[]{20,50,60,70,80};
@@ -29,15 +29,49 @@ public class 구명보트 {
 
         Arrays.sort(people);
         int count = 0;
-        Deque<Integer> deque = new ArrayDeque<>();
-        for (int i = 0; i < people.length; i++) {
-            deque.add(people[i]);
-        }
+//        Deque<Integer> deque = new ArrayDeque<>();
+//        for (int i = 0; i < people.length; i++) {
+//            deque.add(people[i]);
+//        }
+//        while (!deque.isEmpty()) {
+//
+//
+//            int start = deque.getFirst();
+//            int end = deque.getLast();
+//
+//            if (deque.size() == 1) {
+//                deque.removeFirst();
+//
+//
+//                return ++count;
+//
+//            }
+//
+//            if (start + end <= limit) {
+//
+//                deque.removeFirst();
+//                deque.removeLast();
+//                count++;
+//
+//
+//            } else if (start + end > limit) {
+//
+//
+//                deque.removeLast();
+//                count++;
+//            }}
+
+
+
 
 
         int start = 0;
         int end = people.length - 1;
         while (start != end) { // 이러면 그 수 하나를 세어주지 못한다..
+            if (end - start == 1) {
+                count++;
+                return count;
+            }
             if (people[start] + people[end] > limit) {
                 end--;
                 count++;
