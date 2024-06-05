@@ -1,5 +1,7 @@
 package 알고리즘.프로그래머스.항해99.삼주차;
 
+import java.util.*;
+
 public class 구명보트 {
 
     //무인도에 갇힌 사람이 탈출하기 위해 구명보트 사용
@@ -11,11 +13,44 @@ public class 구명보트 {
     // 최대한 적게 구명보트 사용해서 탈출
     //사람들의 몸무게를 담은 배열 people과 구명보트의 무게 제한 limit가 매개변수로 주어짐
 
+    // 그리디니까 투포인터로 ?
+
     public static void main(String[] args) {
+        int[] arr = new int[]{20,50,60,70,80};
+        int limit = 100;
+        구명보트 main = new 구명보트();
+
+        System.out.println(main.solution(arr, limit));
+
+
 
     }
     private int solution(int[] people, int limit) {
-        int answer = 0;
-        return answer;
+
+        Arrays.sort(people);
+        int count = 0;
+        Deque<Integer> deque = new ArrayDeque<>();
+        for (int i = 0; i < people.length; i++) {
+            deque.add(people[i]);
+        }
+
+
+        int start = 0;
+        int end = people.length - 1;
+        while (start != end) { // 이러면 그 수 하나를 세어주지 못한다..
+            if (people[start] + people[end] > limit) {
+                end--;
+                count++;
+
+            }
+            else {
+                start++;
+                count++;}
+
+        }
+
+        return count;
+
+
     }
 }
