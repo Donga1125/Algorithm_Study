@@ -39,6 +39,17 @@ public class 피보나치수2 {
         return arr[n];
 
     }
+    private static long fibonacci(int n) {
+
+        arr[0] = 0;
+        arr[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            arr[i] = arr[i - 1] + arr[i - 2];
+        }
+
+        return arr[n];
+    }
 
 
 }
