@@ -16,8 +16,8 @@ public class allPossibleFullBinaryTrees {
 
     // 제한 1~20
 
-    private static Integer[] dp = new Integer[21];
-    // 2차원 배열 ? 밑에 null이 오면 숫자가 못와서 1, 2,4,8 15 ? 개 중 7개만 가능
+//    private static Integer[] dp = new Integer[21];
+
 
     public static void main(String[] args) {
 
@@ -46,7 +46,7 @@ public class allPossibleFullBinaryTrees {
                 // 재귀적으로 rightnode를 호출
 
                 for (TreeNode left : leftTrees) {
-                    // 트리 노드 만들어주기 (이 부분이 어렵다)
+                    // 트리 노드 만들어주기
                     for (TreeNode right : rightTrees) {
                         TreeNode root = new TreeNode(0);
                         root.left = left;
