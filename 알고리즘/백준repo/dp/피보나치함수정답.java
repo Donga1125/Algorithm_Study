@@ -38,8 +38,6 @@ public class 피보나치함수정답 {
         }
 
         System.out.println(sb);
-
-
     }
 
     private static Integer[] fibo(int n) {
