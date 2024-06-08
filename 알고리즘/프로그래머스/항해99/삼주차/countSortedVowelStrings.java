@@ -41,7 +41,7 @@ public class countSortedVowelStrings {
 
         // 하나의 모음의 경우 a,e,i,o,u로 초기화 직관적이기 위해 하나씩 넣어줌
 
-        for (int i = 2; i <= n +1; i++) {
+        for (int i = 2; i <= n + 1; i++) {
 
             for (int j = i; j <= 5; j++) {
                 // dp[j] = dp[i] + dp[j]  aa + a , aa + e , aa
@@ -51,8 +51,7 @@ public class countSortedVowelStrings {
             }
         }
 
-
-
+        return 1;
     }
 
 
