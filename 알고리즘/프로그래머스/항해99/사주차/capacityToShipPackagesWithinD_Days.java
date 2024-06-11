@@ -9,7 +9,7 @@ public class capacityToShipPackagesWithinD_Days {
 
     // 주어진 day 안에 보내려면 하루에 몇개씩 묶어보내야 하나 ?
     // 하루에 몇개 씩 보낼 지 정했다면 최소한의 무게를 찾기 위해
-    //순서대로 실을 수 있네
+    //순서대로 싣을 수 있네
     // 무게 범위를 탐색
 
     //이진 탐색으로 탐색한다고 하면 최악의 경우에 아무 것도 안 보내는 건 너무 말도 안되니까
@@ -32,7 +32,7 @@ public class capacityToShipPackagesWithinD_Days {
 
 
         int left = 0;
-        int right = 0; // 최악의 경우를 그냥 첫날에 다 때려넣으면 다음날 아무것도 안 실어도 되려나
+        int right = 0; // 최악의 경우를 그냥 첫날에 다 때려넣으면 다음날 아무것도 안 싣어도 되려나
 
         for (int weight : weights) {
             left = Math.max(left, weight);
@@ -60,11 +60,7 @@ public class capacityToShipPackagesWithinD_Days {
                 if (sum + weights[i] > mid) {
                     day++; // 더 커지면 다음 날로 넘김
                     sum = 0; // 다시 0으로 초기화
-//                    if (day > days) {
-//                        // day를 더했는데 days를 초과한다면 더 큰 값으로 (왼쪽의 기준을 다시잡고 오른쪽 배열탐색)break;
-////                        left = mid + 1;
-//                        break;
-//                    }
+//
                 }
                 sum = sum + weights[i]; //계속 sum에 더해줘서 다음 수를 담고 day를 유지
 
