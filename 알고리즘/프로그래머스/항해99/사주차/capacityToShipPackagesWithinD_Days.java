@@ -9,7 +9,7 @@ public class capacityToShipPackagesWithinD_Days {
 
     // 주어진 day 안에 보내려면 하루에 몇개씩 묶어보내야 하나 ?
     // 하루에 몇개 씩 보낼 지 정했다면 최소한의 무게를 찾기 위해
-    //순서대로 싣을 수 있네
+    //순서대로 을 수 있네
     // 무게 범위를 탐색
 
     //이진 탐색으로 탐색한다고 하면 최악의 경우에 아무 것도 안 보내는 건 너무 말도 안되니까
@@ -60,14 +60,21 @@ public class capacityToShipPackagesWithinD_Days {
                 if (sum + weights[i] > mid) {
                     day++; // 더 커지면 다음 날로 넘김
                     sum = 0; // 다시 0으로 초기화
+
+                    if (day > days)
+                        left = mid + 1;
+                    break;
 //
                 }
                 sum = sum + weights[i]; //계속 sum에 더해줘서 다음 수를 담고 day를 유지
 
             }
+
             if (day > days) {
+
                 left = mid + 1;
             } else {
+
                 right = mid;
             }
         }
@@ -76,7 +83,7 @@ public class capacityToShipPackagesWithinD_Days {
             // 넣는 갯수가 중요한 게 아니고 한번에 mid보다 작은 수만큼 넣기
 
 
-        return left;
+        return right;
 
     }
 }
