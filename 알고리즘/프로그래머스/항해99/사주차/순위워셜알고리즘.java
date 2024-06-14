@@ -23,21 +23,21 @@ public class 순위워셜알고리즘 {
         int n = 5;
 
         순위워셜알고리즘 main = new 순위워셜알고리즘();
-        System.out.println(main.solution(n, fight));
+//        System.out.println(main.solution(n, fight));
+
+        main.solution(n, fight);
 
     }
 
     public int solution(int n, int[][] results) {
 
-        //나보다 쎈 사람과 약한 사람을 구분해서 써야 하나 ?
+
 
         int answer = 0;
 
 
         boolean[][] graph = new boolean[n + 1][n + 1];
-
-
-
+       int[][] graph1 = new int[n + 1][n + 1];
 
 
 
@@ -47,7 +47,23 @@ public class 순위워셜알고리즘 {
 
 
             graph[win][lose] = true;
+            graph1[win][lose] = 1;
+
+
         }
+
+//
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= n; j++) {
+                System.out.print(graph1[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+        System.out.println("------------------------");
+
+
 
 
         for (int i = 1; i <= n; i++) {
@@ -55,11 +71,24 @@ public class 순위워셜알고리즘 {
                 for (int k = 1; k <= n; k++) {
                     if (graph[j][i] && graph[i][k]) {
                         graph[j][k] = true;
+                        graph1[j][k] = 1;
                     }
                 }
 
             }
         }
+
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= n; j++) {
+                System.out.print(graph1[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+
+
+
 
         for (int i = 1; i <= n; i++) {
             int count = 0;
@@ -73,6 +102,7 @@ public class 순위워셜알고리즘 {
             // 자신을 제외한 모든 선수와의 관계가 확인되면 정확한 순위를 판별할 수 있음
             if (count == n - 1) {
                 answer++;
+                System.out.println(i);
 
         }}
 
