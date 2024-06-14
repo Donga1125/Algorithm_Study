@@ -5,7 +5,7 @@ public class subrectangleQueries {
     //1476. Subrectangle Queries
 
     //총 3가지 메서드,
-    // 1. 들어온대로 배열 만드릭
+    // 1. 들어온대로 배열 만들기
     // 2. row,col을 들어오면 그 좌표 값 반환
     // 3. row1 co1 부터 row2 col2까지의 수를 들어온 newvalue로 초기화
 
@@ -42,13 +42,15 @@ public class subrectangleQueries {
         for (int i = row1; i <= row2; i++) {
             for (int j = col1; j <= col2; j++) {
                 rectangle1[i][j] = newValue;
+
             }
+
         }
 
     }
 
     public int getValue(int row, int col) {
-        System.out.println(rectangle1[row][col]);
+
 
         return rectangle1[row][col];
 
