@@ -26,7 +26,7 @@ public class findTheOriginalArrayofPrefixXor {
         arr[0] = pref[0];
 
 
-        int now = 0;
+        int now = arr[0];
 
 
         for (int i = 1; i < pref.length; i++) {
