@@ -18,13 +18,15 @@ public class findWordsContainingCharacter {
         String[] arr = new String[]{"leet", "code"};
         String[] arr1 = new String[]{"abc","bcd","aaaa","cbc"};
         String[] arr2 = new String[]{"abc","bcd","aaaa","cbc"};
-        char a = 'a';
+        char a = 'e';
         findWordsContainingCharacter main = new findWordsContainingCharacter();
 
-        System.out.println(main.findWordsContaining(arr2, a));
+        System.out.println(main.findWordsContaining(arr, a));
     }
 
     public List<Integer> findWordsContaining(String[] words, char x) {
+
+
         List<Integer> answerList = new ArrayList<>();
 
 
@@ -39,7 +41,7 @@ public class findWordsContainingCharacter {
                     break;
                 }
             }
-        }ㅎ
+        }
 
         return answerList;
 
