@@ -25,6 +25,8 @@ public class groupthePeopleGiventheGroupSizeTheyBelongTo {
     public List<List<Integer>> groupThePeople(int[] groupSizes) {
 
         List<List<Integer>> answer = new ArrayList<>();
+
+
         HashMap<Integer, List<Integer>> map = new HashMap<>();
 
         //그 인덱스 만큼 찾는 게 어려워서 걍 정렬 ?
@@ -48,31 +50,20 @@ public class groupthePeopleGiventheGroupSizeTheyBelongTo {
 
             }
 
-            map.get(size).add(i); // map에서 list를 가져오고 그 list에 add
-
-
         }
+
 
 //        for (int i = 0; i < groupSizes.length; i++) {
 //            if (answer.get(i).isEmpty() || answer.get(i).size() == groupSizes[i]) {
 //                // 없거나 다 찾거나
 //                answer.add(new ArrayList<>(groupSizes[i]));
 //
-//            } else if (answer.get(i).size() > groupSizes[i]) {
+//            } if (answer.get(i).size() > groupSizes[i]) {
 //                answer.get(i).add(i);
 //            }
+//
+//            answer.get(i).contains()
 //        }
-
-
-
-
-
-
-
-
-
-
-
         return answer;
 
     }
