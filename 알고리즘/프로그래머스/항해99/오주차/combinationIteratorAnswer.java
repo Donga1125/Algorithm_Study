@@ -22,6 +22,7 @@ public class combinationIteratorAnswer {
 
     private List<String> list = new ArrayList<>();
 
+    int now = 0;
 
     String characters = " ";
     int combiLength;
@@ -45,7 +46,30 @@ public class combinationIteratorAnswer {
         System.out.println(main.hasNext());
         System.out.println(main.hasNext());
         System.out.println(main.hasNext());
+
+        StringBuilder sb = new StringBuilder("Hello");
+
+
+        String str1 = sb.toString();
+        System.out.println("toString 사용 str1 = " + str1);
+
+
+        String str2 = String.valueOf(sb);
+        System.out.println("valueOf 사용 str2  = " + str2);
+
+
+        sb = null;
+
+        try {
+            String str3 = sb.toString();
+        } catch (NullPointerException e) {
+            System.out.println("toString의 null의 경우 : " + e);
+        }
+
+        String str4 = String.valueOf(sb);
+        System.out.println("str4 = " + str4);
     }
+
 
 
     public combinationIteratorAnswer(String characters, int combinationLength) {
@@ -64,6 +88,8 @@ public class combinationIteratorAnswer {
 
         if (current.length() == combiLength) {
             list.add(current.toString());
+
+
             return;
         }
 
@@ -81,10 +107,7 @@ public class combinationIteratorAnswer {
 
         // 호출 시 하나씩 반환
 
-
-
         String next = list.get(now++);
-//        String next = la.get(now++);
 
 
         return next;
