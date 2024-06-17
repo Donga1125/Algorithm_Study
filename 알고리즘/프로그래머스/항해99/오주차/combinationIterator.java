@@ -20,14 +20,18 @@ public class combinationIterator {
     int length;
     String chch;
     static StringBuilder sb;
-    static List<StringBuilder> list = new ArrayList<>();
+    static List<String> list = new ArrayList<>();
     static int now = 0;
+    static List<String> la = new ArrayList<>();
 
 
     public static void main(String[] args) {
         String ch = "chp";
         int combi = 1;
+        String test = "abc";
+        int comm = 2;
         combinationIterator main = new combinationIterator(ch, combi);
+//        combinationIterator main = new combinationIterator(test, comm);
         System.out.println(main.hasNext());
         System.out.println(main.next());
         System.out.println(main.hasNext());
@@ -46,19 +50,48 @@ public class combinationIterator {
 
         for (int i = 0; i < characters.length(); i++) {
 
-            for (int j = i +1; j <= combinationLength; j++) {
-                sb = new StringBuilder();
-                sb.append(characters.charAt(i)).append(characters.charAt(j));
-                System.out.println("i = " + characters.charAt(i));
-                System.out.println("j = " + characters.charAt(j));
-                list.add(sb); // 10000번 호출 ?
+            if (length == 1) {
 
+                list.add(String.valueOf(characters.charAt(i)));
+            } else {
+
+            sb = new StringBuilder();
+            sb.append(characters.charAt(i));
+
+
+            for (int j = i+1; j < characters.length(); j++) {
+
+
+                sb.append(characters.charAt(j));
+                if (sb.length() == combinationLength) {
+                    list.add(sb.toString());
+
+                }
+                sb.deleteCharAt(sb.length() - 1);
 
             }
 
-        }
+        }}
 
-        System.out.println(list);
+        String anan = " ";
+
+//        for (int i = 0; i < characters.length(); i++) {
+//
+//
+//
+//            for (int j = 0; j < combinationLength; j++) {
+//                anan = String.valueOf(characters.charAt(i));
+//                anan = anan + characters.charAt(j+1);
+//
+//
+//            }
+//            la.add(anan);
+//
+//        }
+        System.out.println("list = " + list);
+        System.out.println("la" + la);
+
+
 
 
 
@@ -68,8 +101,11 @@ public class combinationIterator {
 
         // 호출 시 하나씩 반환
 
-        StringBuilder sbNext = list.get(now++);
-        String next = sbNext.toString();
+
+
+        String next = list.get(now++);
+//        String next = la.get(now++);
+
 
         return next;
 
