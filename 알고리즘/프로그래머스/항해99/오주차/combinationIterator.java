@@ -67,6 +67,7 @@ public class combinationIterator {
                     list.add(sb.toString());
 
                 }
+
                 sb.deleteCharAt(sb.length() - 1);
 
             }

@@ -21,7 +21,7 @@ public class combinationIteratorAnswer {
 
 
     private List<String> list = new ArrayList<>();
-    private int now = 0;
+
 
     String characters = " ";
     int combiLength;
@@ -49,6 +49,7 @@ public class combinationIteratorAnswer {
 
 
     public combinationIteratorAnswer(String characters, int combinationLength) {
+
         this.characters = characters;
         this.combiLength = combinationLength;
 
@@ -56,11 +57,11 @@ public class combinationIteratorAnswer {
         generateCombinations(new StringBuilder(), 0);
 
 
-        
+
     }
 
     private void generateCombinations(StringBuilder current, int start) {
-        
+
         if (current.length() == combiLength) {
             list.add(current.toString());
             return;
@@ -72,7 +73,7 @@ public class combinationIteratorAnswer {
             current.deleteCharAt(current.length() - 1);
 
         }
-        
+
     }
 
 
