@@ -51,36 +51,36 @@ public class sortCharactersByFrequency {
 
 
 
-        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>(
-                (a, b) -> b.getValue() - a.getValue()
-        );
-        maxHeap.addAll(map1.entrySet());
-
-        while (!maxHeap.isEmpty()) {
-            Map.Entry<Character, Integer> entry = maxHeap.poll();
-            char c = entry.getKey();
-            int count = entry.getValue();
-            for (int i = 0; i < count; i++) {
-                sb.append(c);
-
-            }
-
-        }
-
-//        List<Map.Entry<Character, Integer>> list = new ArrayList<>(map1.entrySet());
+//        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>(
+//                (a, b) -> b.getValue() - a.getValue()
+//        );
+//        maxHeap.addAll(map1.entrySet());
 //
-//
-//
-//        list.sort((a, b) -> b.getValue().compareTo(a.getValue()));
-//
-//
-//        for (Map.Entry<Character, Integer> entry : list) {
-//            char key = entry.getKey();
+//        while (!maxHeap.isEmpty()) {
+//            Map.Entry<Character, Integer> entry = maxHeap.poll();
+//            char c = entry.getKey();
 //            int count = entry.getValue();
 //            for (int i = 0; i < count; i++) {
-//                sb.append(key);
+//                sb.append(c);
+//
 //            }
+//
 //        }
+
+        List<Map.Entry<Character, Integer>> list = new ArrayList<>(map1.entrySet());
+
+
+
+        list.sort((a, b) -> b.getValue().compareTo(a.getValue()));
+
+
+        for (Map.Entry<Character, Integer> entry : list) {
+            char key = entry.getKey();
+            int count = entry.getValue();
+            for (int i = 0; i < count; i++) {
+                sb.append(key);
+            }
+        }
 
 
         return sb.toString();
