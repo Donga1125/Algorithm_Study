@@ -1,5 +1,6 @@
 package 알고리즘.프로그래머스.항해99.오주차;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -17,14 +18,69 @@ public class topKFrequentElementsCountingSort {
         int k = 2;
         topKFrequentElementsCountingSort main = new topKFrequentElementsCountingSort();
         int[] now = main.topKFrequent(nums, k);
-        for (int num : now) {
-            System.out.println(num);
 
-        }
+
+        int arr[] = new int[]{4, 2, 2, 8, 3, 3, 1};
+        main.countingSort(arr);
 
 
 
     }
+
+    public void countingSort(int[] arr) {
+
+        if (arr.length == 0) {
+            return;
+        }
+        int max = Arrays.stream(arr).max().getAsInt();
+        int min = Arrays.stream(arr).min().getAsInt();
+        int range = max - min + 1;
+
+        System.out.println("min = " + min);
+        System.out.println("max = " + max);
+        System.out.println("range = " + range);
+
+        // 카운트 배열과 출력 배열 생성
+        int[] count = new int[range];
+        int[] output = new int[arr.length];
+
+        // 카운트 배열 초기화
+        for (int i = 0; i < arr.length; i++) {
+            count[arr[i] - min]++;
+        }
+
+
+        // 카운트 배열의 누적합 계산
+        for (int i = 1; i < count.length; i++) {
+            count[i] += count[i - 1];
+        }
+//        System.out.println("  기존 arr 배열   = " + Arrays.toString(arr));
+//        System.out.println("count배열의 누적합 = " + Arrays.toString(count));
+        int q = 1;
+
+        // 출력 배열에 정렬된 값 저장
+        for (int i = arr.length - 1; i >= 0; i--) {
+
+            output[count[arr[i] - min] - 1] = arr[i];
+            System.out.println(q +":회차 = " + "빼기 전 count = " + Arrays.toString(count));
+            count[arr[i] - min]--;
+
+
+
+            System.out.println(q +":회차 = " + "     arr    = " + Arrays.toString(arr));
+            System.out.println(q +":회차 = " + "   output   = " + Arrays.toString(output));
+            System.out.println(q +":회차 = " + " 뺀 후 count = " + Arrays.toString(count));
+            q++;
+        }
+
+
+        // 원본 배열에 정렬된 값 복사
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = output[i];
+        }
+    }
+
+
 
     public int[] topKFrequent(int[] nums, int k) {
 
