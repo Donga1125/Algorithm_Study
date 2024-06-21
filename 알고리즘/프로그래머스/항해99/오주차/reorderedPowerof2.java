@@ -13,6 +13,7 @@ public class reorderedPowerof2 {
     // 그러면 들어오는 숫자는 10억이지만 숫자는 10개 0이 먼저할 수 없는 위치에 따라
     //987,654,321이라면 9! = 최대 362,880개를 하나씩 다 2의 거듭제곱이 맞는 지 확인
     // 그렇다면 그냥 2의 거듭제곱 테이블 만들고 있는 지 비교 o(n^2)
+    // 2^30승이 10억쯤 되니 int형 최대치인 31승까지만 그냥 담자
 
     // 먼저 들어온 숫자를 String으로 바꾸고, 순열을 재귀로 만들기
     // 만들어진 수열
@@ -35,6 +36,19 @@ public class reorderedPowerof2 {
 
 
         dfs("", new boolean[now.length()]);
+
+        int[] powerOf2 = new int[31];
+
+        for (int i = 1; i < 31; i++) {
+
+            for (int j = 1; j <= i; j++) {
+
+                powerOf2[i] = 2 * j;
+
+            }
+
+
+        }
 
 
 
