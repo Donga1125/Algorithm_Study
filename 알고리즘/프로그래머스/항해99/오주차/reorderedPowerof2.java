@@ -21,11 +21,11 @@ public class reorderedPowerof2 {
     private static HashSet<String> set = new HashSet<>();
 
     public static void main(String[] args) {
-        int n = 312;
+        int n = 1;
 
 
         reorderedPowerof2 main = new reorderedPowerof2();
-        main.reorderedPowerOf2(n);
+        System.out.println(main.reorderedPowerOf2(n));
     }
 
     public boolean reorderedPowerOf2(int n) {
@@ -37,23 +37,40 @@ public class reorderedPowerof2 {
 
         dfs("", new boolean[now.length()]);
 
-        int[] powerOf2 = new int[31];
+        String[] powerOf2 = new String[31];
+        int now = 2;
+        powerOf2[0] = "1";
+        powerOf2[1] = "2";
 
-        for (int i = 1; i < 31; i++) {
 
-            for (int j = 1; j <= i; j++) {
+        for (int i = 2; i < 31; i++) {
 
-                powerOf2[i] = 2 * j;
+            now = now * 2;
+
+            powerOf2[i] = String.valueOf(now);
+            System.out.println("powerOf2[ "+i + " ] :" + powerOf2[i]);
 
             }
 
 
+
+        for (String s : set) {
+            System.out.println(s);
+
+
+            System.out.println(s);
+            for (String i : powerOf2) {
+                System.out.println(i);
+                if (s == i) {
+
+                    return true;
+                }
+
+            }
+
         }
 
-
-
-
-        return true;
+        return false;
 
     }
 
@@ -76,11 +93,10 @@ public class reorderedPowerof2 {
                 isVisited[i] = true;
                 dfs(s + now.charAt(i), isVisited);
                 isVisited[i] = false;
-
-        }}
-
-
-    }
+            }
         }
+    }
+
+}
 
 
