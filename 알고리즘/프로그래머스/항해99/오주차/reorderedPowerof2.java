@@ -18,10 +18,10 @@ public class reorderedPowerof2 {
     // 먼저 들어온 숫자를 String으로 바꾸고, 순열을 재귀로 만들기
     // 만들어진 수열
     private static String now;
-    private static HashSet<String> set = new HashSet<>();
+    private static HashSet<String> set;
 
     public static void main(String[] args) {
-        int n = 1;
+        int n = 10;
 
 
         reorderedPowerof2 main = new reorderedPowerof2();
@@ -30,44 +30,45 @@ public class reorderedPowerof2 {
 
     public boolean reorderedPowerOf2(int n) {
 
-
+        set = new HashSet<>();
         now = String.valueOf(n);
-
 
 
         dfs("", new boolean[now.length()]);
 
-        String[] powerOf2 = new String[31];
+        int[] powerOf2 = new int[31];
         int now = 2;
-        powerOf2[0] = "1";
-        powerOf2[1] = "2";
+        powerOf2[0] = 1;
+        powerOf2[1] = 2;
 
 
         for (int i = 2; i < 31; i++) {
 
             now = now * 2;
 
-            powerOf2[i] = String.valueOf(now);
-            System.out.println("powerOf2[ "+i + " ] :" + powerOf2[i]);
+            powerOf2[i] = now;
+
+            System.out.println("powerOf2[ "+ i + " ] = " + powerOf2[i]);
+
 
             }
 
 
 
         for (String s : set) {
-            System.out.println(s);
 
+            if (s.charAt(0) != '0') {
 
-            System.out.println(s);
-            for (String i : powerOf2) {
-                System.out.println(i);
-                if (s == i) {
+            int check = Integer.valueOf(s);
+
+            for (int i : powerOf2) {
+
+                if (check == i) {
 
                     return true;
                 }
-
             }
-
+            }
         }
 
         return false;
