@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-public class nestedIterator implements Iterator<Integer>{
+public class NestedIterator implements Iterator<Integer>{
 
 
     /**
@@ -43,10 +43,10 @@ public class nestedIterator implements Iterator<Integer>{
 
     // 판단 방식은 while문에서 hasNext가 true면 next를 호출
 
-    private Stack<Integer> stack;
+    private Stack<NestedInteger> stack;
 
 
-        public nestedIterator(List<Integer> nestedList) { // 타입만 바꿔서 ㄱㄱ
+        public NestedIterator(List<NestedInteger> nestedList) { // 타입만 바꿔서 ㄱㄱ
 
             stack = new Stack<>();
 
