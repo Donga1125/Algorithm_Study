@@ -53,6 +53,7 @@ public class RemovingStarsFromAString {
 
             while (stack.peek() == '*') {
                 char n = stack.pop();
+                System.out.println("*이여서 빠지는  = " + n);
                 star++;
 
                 }
@@ -62,6 +63,8 @@ public class RemovingStarsFromAString {
             }}
 
             else deque.addFirst(stack.pop());
+
+
 
 
         }
