@@ -1,8 +1,6 @@
 package 알고리즘.프로그래머스.항해99.오주차;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class NestedIterator implements Iterator<Integer>{
 
@@ -45,8 +43,31 @@ public class NestedIterator implements Iterator<Integer>{
 
     private Stack<NestedInteger> stack;
 
+    public static void main(String[] args) {
+        List<NestedInteger> list =Arrays.asList(
+                new NestedIntegerImpl(Arrays.asList(
+                        new NestedIntegerImpl(1),
+                        new NestedIntegerImpl(1)
+                )), new NestedIntegerImpl(2),
+                        new NestedIntegerImpl(Arrays.asList(
+                                new NestedIntegerImpl(1),
+                                new NestedIntegerImpl(1))
 
-        public NestedIterator(List<NestedInteger> nestedList) { // 타입만 바꿔서 ㄱㄱ
+        ));
+
+        NestedIterator it = new NestedIterator(list);
+        List<Integer> result = new ArrayList<>();
+        while (it.hasNext()) {
+            result.add(it.next());
+        }
+        System.out.println(result);
+
+
+
+    }
+
+
+        public NestedIterator(List<NestedInteger> nestedList) {
 
             stack = new Stack<>();
 
