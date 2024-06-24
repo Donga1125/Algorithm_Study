@@ -6,7 +6,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class RemovingStarsFromAString {
+public class RemovingStarsFromAString정답 {
 
     // 2390. Removing Stars From a String
     // String이 주어지면 그 안에 있는 *가 들어온 만큼 왼쪽 char를 지우기
@@ -22,61 +22,37 @@ public class RemovingStarsFromAString {
 
     public static void main(String[] args) {
         String s = "abb*cdfg*****x*";
+        String s1 = "leet**cod*e";
 
-        RemovingStarsFromAString main = new RemovingStarsFromAString();
-        main.removeStars(s);
+        RemovingStarsFromAString정답 main = new RemovingStarsFromAString정답();
+        System.out.println(main.removeStars(s1));
     }
 
 
 
     public String removeStars(String s) {
-        Stack<Character> stack = new Stack<>();
+
         Deque<Character> deque = new LinkedList<>();
-
         StringBuilder sb = new StringBuilder();
-
-
         int length = s.length();
 
         for (int i = 0; i < length; i++) {
-            stack.push(s.charAt(i));
-        }
 
+            char current = s.charAt(i);
+            if (current == '*') {
 
+                deque.removeLast();
 
-        while (!stack.isEmpty()) { // isEmpty ?
-
-            int star = 0;
-
-            if(stack.peek() == '*') {
-
-
-            while (stack.peek() == '*') {
-                char n = stack.pop();
-                System.out.println("*이여서 빠지는  = " + n);
-                star++;
-
-                }
-            for (int i = 0; i < star; i++) {
-                stack.pop();
-
-            }}
-
-            else deque.addFirst(stack.pop());
-
-
-
-
+            } else  deque.add(current);
         }
 
         while (!deque.isEmpty()) {
-            sb.append(deque.pollFirst());
+            sb.append(deque.removeFirst());
+
         }
-
-
-
 
         return sb.toString();
 
+
+        }
     }
-}
