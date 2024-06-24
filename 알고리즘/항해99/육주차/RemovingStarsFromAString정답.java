@@ -39,6 +39,7 @@ public class RemovingStarsFromAString정답 {
         for (int i = 0; i < length; i++) {
 
             char current = s.charAt(i);
+
             if (current == '*') {
 
                 deque.removeLast();
