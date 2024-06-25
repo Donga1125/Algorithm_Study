@@ -30,7 +30,9 @@ public class findtheWinneroftheCircularGame요세푸스 {
 
         // 친구의 수가 1에서 n까지 증가할 때마다 마지막 남는 친구 계산
         for (int i = 1; i <= n; i++) {
+            System.out.println("현재 " + i+ " 번째 시작 전 = " + winner );
             winner = (winner + k) % i;
+            System.out.println("현재 " + i+ " 번째 시작 후 = " + winner );
         }
 
         return winner + 1; // 0번 인덱스를 1번 인덱스로 변환
