@@ -2,7 +2,7 @@ package 알고리즘.항해99.육주차;
 
 import java.util.Stack;
 
-public class MinimumAddtoMakeParenthesesValid {
+public class MinimumAddtoMakeParenthesesValid정답 {
 
     // 921. Minimum Add to Make Parentheses Valid
 
@@ -18,7 +18,7 @@ public class MinimumAddtoMakeParenthesesValid {
     public static void main(String[] args) {
         String s = "())";
 
-        MinimumAddtoMakeParenthesesValid main = new MinimumAddtoMakeParenthesesValid();
+        MinimumAddtoMakeParenthesesValid정답 main = new MinimumAddtoMakeParenthesesValid정답();
         System.out.println(main.minAddToMakeValid(s));
 
     }
@@ -26,23 +26,31 @@ public class MinimumAddtoMakeParenthesesValid {
 
     public int minAddToMakeValid(String s) {
 
-        int opening = 0;
-        int closing = 0;
+        Stack<Character> stack = new Stack<>();
+        int anyCount = 0;
+
 
 
         for (int i = 0; i < s.length(); i++) {
             char current = s.charAt(i);
 
             if(current == '(') {
-                opening++;
-            } else
-                closing++;
 
+                stack.push(current);
 
+            } else {
+
+                if (stack.size() != 00 && stack.peek() == '(') {
+
+                stack.pop();
+                } else
+                    anyCount++;
+
+            }
         }
 
 
-        return Math.abs(opening - closing);
+        return stack.size() + anyCount;
 
     }
 
