@@ -12,12 +12,9 @@ public class SeatManager {
     //  reserve 예약하면 작은 수부터 반환
     //  unreserve 들어온 자석 번호 취소 취소void
 
-    //일반적으로 O(n0)으로 하니 마지막에 시간초과 걸림
-
-    private static Deque<Integer> deque;
+    //일반적으로 O(n)으로 하니 마지막에 시간초과 걸림
 
 
-    private static ArrayList<Integer> arrSeat;
     int n;
     private int[] seat;
 
@@ -33,14 +30,9 @@ public class SeatManager {
 
         this.n = n;
 
-        deque = new ArrayDeque<>();
         seat = new int[n + 1];
-        arrSeat = new ArrayList<>();
 
-        for (int i = 1; i <= n; i++) {
-            deque.add(i);
-            arrSeat.add(i);
-        }
+
 
     }
 
@@ -53,9 +45,7 @@ public class SeatManager {
                 seat[i] = i;
 
                 return i;
-
             }
-
         }
 
         return n;
