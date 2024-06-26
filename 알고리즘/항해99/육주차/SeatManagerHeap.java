@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 
-public class SeatManager {
+public class SeatManagerHeap {
 
     // 1845. Seat Reservation Manager
 
@@ -24,12 +24,12 @@ public class SeatManager {
 
     public static void main(String[] args) {
         int n = 5;
-        SeatManager main = new SeatManager(n);
+        SeatManagerHeap main = new SeatManagerHeap(n);
 
     }
 
 
-    public SeatManager(int n) {
+    public SeatManagerHeap(int n) {
 
         this.n = n;
 
