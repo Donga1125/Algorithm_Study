@@ -3,6 +3,7 @@ package 알고리즘.항해99.육주차;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.PriorityQueue;
 
 public class SeatManagerHeap {
 
@@ -14,17 +15,17 @@ public class SeatManagerHeap {
 
     //일반적으로 O(n0)으로 하니 마지막에 시간초과 걸림
 
-    private static Deque<Integer> deque;
 
-
-    private static ArrayList<Integer> arrSeat;
     int n;
-    private int[] seat;
+
+    PriorityQueue<Integer> minHeap;
 
 
     public static void main(String[] args) {
         int n = 5;
         SeatManagerHeap main = new SeatManagerHeap(n);
+        main.reserve();
+
 
     }
 
@@ -33,38 +34,29 @@ public class SeatManagerHeap {
 
         this.n = n;
 
-        deque = new ArrayDeque<>();
-        seat = new int[n + 1];
-        arrSeat = new ArrayList<>();
+
+        minHeap = new PriorityQueue<>();
 
         for (int i = 1; i <= n; i++) {
-            deque.add(i);
-            arrSeat.add(i);
+            minHeap.add(i);
+
         }
+
 
     }
 
     public int reserve() {
 
-        for (int i = 1; i <= n; i++) {
+        int q  =minHeap.remove();
 
-            if (seat[i] == 0) {
 
-                seat[i] = i;
-
-                return i;
-
-            }
-
-        }
-
-        return n;
+        return q;
 
     }
 
-    public void unreserve(int seatNumber) {
+    public void unReserve(int seatNumber) {
 
-        seat[seatNumber] = 0;
+        minHeap.add(seatNumber);
 
     }
 }
