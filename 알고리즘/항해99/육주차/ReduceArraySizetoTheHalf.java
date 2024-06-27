@@ -29,7 +29,6 @@ public class ReduceArraySizetoTheHalf {
         HashMap<Integer, Integer> map = new HashMap<>();
 
 
-
         for (int i = 0; i < arr.length; i++) {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
@@ -40,8 +39,8 @@ public class ReduceArraySizetoTheHalf {
 
         for (Integer value : map.values()) {
             index[now++] = value;
-
         }
+
         Arrays.sort(index, new Comparator<Integer>() {
 
 
@@ -53,23 +52,20 @@ public class ReduceArraySizetoTheHalf {
 
 
         int sum = 0;
-
+        int count = 0;
 
 
         for (int i = 0; i < index.length; i++) {
             sum += index[i];
-
-
+            count++;
 
             if (sum >=arr.length/ 2) {
-                return i +1;
+                break;
+
             }
-
-
         }
 
-
-        return -1;
+        return count;
 
     }
 }
