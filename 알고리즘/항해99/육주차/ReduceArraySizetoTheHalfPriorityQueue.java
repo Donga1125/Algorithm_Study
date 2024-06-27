@@ -1,10 +1,8 @@
 package 알고리즘.항해99.육주차;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 
-public class ReduceArraySizetoTheHalf배열로만 {
+public class ReduceArraySizetoTheHalfPriorityQueue {
 
     //1338. Reduce Array Size to The Half
 
@@ -18,7 +16,7 @@ public class ReduceArraySizetoTheHalf배열로만 {
 
     public static void main(String[] args) {
         int arr[] = new int[]{3, 3, 3, 3, 5, 5, 5, 2, 2, 7};
-        ReduceArraySizetoTheHalf배열로만 main = new ReduceArraySizetoTheHalf배열로만();
+        ReduceArraySizetoTheHalfPriorityQueue main = new ReduceArraySizetoTheHalfPriorityQueue();
         System.out.println(main.minSetSize(arr));
     }
 
