@@ -1,5 +1,7 @@
 package 알고리즘.항해99.육주차;
 
+import java.util.HashMap;
+
 public class OptimalPartitionofString {
 
     //2405. Optimal Partition of String
@@ -15,16 +17,31 @@ public class OptimalPartitionofString {
 
         String s = "abacaba";
         OptimalPartitionofString main = new OptimalPartitionofString();
-        main.partitionString(s);
+        System.out.println(main.partitionString(s));
     }
     public int partitionString(String s) {
         int count = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
 
 
-        return count;
+        for (int i = 0; i < s.length(); i++) {
+
+            char current = s.charAt(i);
+            //현재 current가
+            // map에 없으면 넣고 다음수
+            // map에 있다면 count++해주고, map을 초기화하고 다시 담기
+            if (!map.containsKey(current)) {
+                map.put(current, 1);
+
+            } else {
+                count++;
+                map = new HashMap<>();
+                map.put(current, 1);
+            }
+        }
+
+        return count +1; // 마지막 subString이 하나 남아있으니 그 수 +1
 
     }
-
-
 
 }
