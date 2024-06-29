@@ -40,6 +40,8 @@ public class OptimalPartitionofString {
             }
         }
 
+
+
         return count +1; // 마지막 subString이 하나 남아있으니 그 수 +1
 
     }
@@ -61,6 +63,7 @@ public class OptimalPartitionofString {
         }
 
         return count + 1; // 마지막 부분 문자열을 포함하기 위해 1을 추가합니다.
+
     }
 
 
