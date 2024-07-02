@@ -1,5 +1,6 @@
 package 알고리즘.leetcode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllAncestorsofaNodeinaDirectedAcyclicGraph {
@@ -12,6 +13,10 @@ public class AllAncestorsofaNodeinaDirectedAcyclicGraph {
 
 
     public List<List<Integer>> getAncestors(int n, int[][] edges) {
+        List<List<Integer>> arr = new ArrayList<>();
+
+
+        return arr;
 
     }
 }
