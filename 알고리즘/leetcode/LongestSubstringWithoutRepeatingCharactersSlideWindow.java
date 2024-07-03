@@ -46,6 +46,7 @@ public class LongestSubstringWithoutRepeatingCharactersSlideWindow {
 
 
 
+
     public int lengthOfLongestSubstring(String s) {
 
         HashMap<Character, Integer> map = new HashMap<>();
@@ -60,7 +61,7 @@ public class LongestSubstringWithoutRepeatingCharactersSlideWindow {
 
             if (map.containsKey(current)) {
 
-                left = // 있으면 left 를 slidingWindow 하면 l,r 가 헷갈리는데.....
+//                left = // 있으면 left 를 slidingWindow 하면 l,r 가 헷갈리는데.....
 
             }
 
