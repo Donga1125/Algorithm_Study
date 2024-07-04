@@ -1,6 +1,6 @@
 package 알고리즘.leetcode;
 
-public class MergeNodesinBetweenZeros {
+public class MergeNodesinBetweenZeros정답 {
 
     //2181. Merge Nodes in Between Zeros
 
@@ -44,55 +44,46 @@ public class MergeNodesinBetweenZeros {
                         (0, new ListNode(4, new ListNode(5, new ListNode(2, new ListNode(0))))))));
 
 
-        MergeNodesinBetweenZeros main = new MergeNodesinBetweenZeros();
-        main.mergeNodes(node);
+        MergeNodesinBetweenZeros정답 main = new MergeNodesinBetweenZeros정답();
+        ListNode listNode = main.mergeNodes(node);
+        printList(listNode);
 
 
 
     }
 
     public ListNode mergeNodes(ListNode head) {
+        ListNode dummy = new ListNode(0);
+        ListNode current = dummy;
+        int sum = 0;
 
-        int notFirst = 0;
-        int nowCount = 0;
+        while (head.next != null) {
 
-        ListNode answer = new ListNode();
+            if (head.val == 0 && sum != 0) {
+                current.next = new ListNode(sum);
+                current = current.next; //
+                sum = 0;
 
-        while (true) { // 마지막 0은 ?
-            // 다시 잘 생각해보면 3가지 동작
-            // 현재 수가 0이고, 다음 수가 있으면  nowCount를  초기화
+            } else {
+                sum = sum + head.val;}
 
-            // 현재 수가 0이고, 다음 수가 없으면  break ?
-
-            // 다음 수가 0일 때 현재까지의 NowCount를 answer의 next에 넣어준다. (이때 초기화해도 되고, 더해줘도 된다)
-
-
-            if (head.val == 0 && head.next.val != 0) { // 자료 구조의 값을
-
-                nowCount = 0; // 현재 수가 0이고, 다음 수가 있으면  nowCount를  초기화 // 첫0 시작의 0의 경우
-
-
-            } else if (head.val == 0 && head.next == null) { // 현재 수가 0이고, 다음 수가 아예 없음 break;
-
-                break;
-
-            } else if (head.next.val == 0) { // 다음 수가 0이면 nowCOunt를 answer에 넣어주기
-                nowCount = nowCount + head.val;
-
-                answer.next = new ListNode(nowCount);
-                answer = answer.next;
-                // 다음 주소 값 연결을 어떻게 하지 ?
-                //answr[
-
-
-            }
-
-
+            head = head.next;
         }
 
 
-        return answer;
+        return dummy;
 
+
+    }
+    public static void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val);
+            head = head.next;
+            if (head != null) {
+                System.out.print(" -> ");
+            }
+        }
+        System.out.println();
     }
 
 }
