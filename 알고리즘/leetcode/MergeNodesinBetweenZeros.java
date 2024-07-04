@@ -1,5 +1,7 @@
 package 알고리즘.leetcode;
 
+import java.util.ArrayList;
+
 public class MergeNodesinBetweenZeros {
 
     //2181. Merge Nodes in Between Zeros
@@ -58,6 +60,8 @@ public class MergeNodesinBetweenZeros {
 
         ListNode answer = new ListNode();
 
+        ArrayList<Integer> arr = new ArrayList<>();
+
         while (true) { // 마지막 0은 ?
             // 다시 잘 생각해보면 3가지 동작
             // 현재 수가 0이고, 다음 수가 있으면  nowCount를  초기화
@@ -67,27 +71,46 @@ public class MergeNodesinBetweenZeros {
             // 다음 수가 0일 때 현재까지의 NowCount를 answer의 next에 넣어준다. (이때 초기화해도 되고, 더해줘도 된다)
 
 
-            if (head.val == 0 && head.next.val != 0) { // 자료 구조의 값을
+            if (head.val == 0 && head.next != null && notFirst != 0) { // 자료 구조의 값을
 
+                answer.val = nowCount;
+                arr.add(nowCount);
                 nowCount = 0; // 현재 수가 0이고, 다음 수가 있으면  nowCount를  초기화 // 첫0 시작의 0의 경우
 
 
+                answer.next = new ListNode();
+                answer = answer.next;
+
+
+
+
             } else if (head.val == 0 && head.next == null) { // 현재 수가 0이고, 다음 수가 아예 없음 break;
+                answer.val = nowCount;
+                arr.add(nowCount);
 
                 break;
 
-            } else if (head.next.val == 0) { // 다음 수가 0이면 nowCOunt를 answer에 넣어주기
+            } else if (head.val > 0) { // 다음 수가 이상이면 nowCOunt를 answer에 넣어주기
                 nowCount = nowCount + head.val;
 
-                answer.next = new ListNode(nowCount);
-                answer = answer.next;
+
                 // 다음 주소 값 연결을 어떻게 하지 ?
                 //answr[
 
 
             }
 
+            head = head.next;
+            notFirst++;
 
+
+        }
+
+        ListNode node = new ListNode();
+
+        for (int i = 0; i < arr.size(); i++) {
+            node.val = arr.get(i);
+            node.next = new ListNode(arr.get(i + 1));
         }
 
 

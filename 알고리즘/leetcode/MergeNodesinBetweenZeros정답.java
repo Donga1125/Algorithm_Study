@@ -53,7 +53,7 @@ public class MergeNodesinBetweenZeros정답 {
     }
 
     public ListNode mergeNodes(ListNode head) {
-        ListNode dummy = new ListNode(0);
+        ListNode dummy = new ListNode();
         ListNode current = dummy;
         int sum = 0;
 
