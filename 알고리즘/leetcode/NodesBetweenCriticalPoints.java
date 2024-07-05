@@ -29,8 +29,9 @@ public class NodesBetweenCriticalPoints {
 
 
         NodesBetweenCriticalPoints main = new NodesBetweenCriticalPoints();
-        main.nodesBetweenCriticalPoints(node1);
-
+        int[] r = main.nodesBetweenCriticalPoints(node1);
+        System.out.println(r[0]);
+        System.out.println(r[1]);
 
     }
 
@@ -67,8 +68,9 @@ public class NodesBetweenCriticalPoints {
         }
 
         int size = dummy.size();
+        System.out.println(size);
 
-        if (size < 1) { // 임계점이 2개 미만이라면 바로 -1,-1 return
+        if (size <= 1) { // 임계점이 2개 미만이라면 바로 -1,-1 return
             answer[0] = -1;
             answer[1] = -1;
             return answer;
