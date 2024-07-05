@@ -59,6 +59,7 @@ public class MergeNodesinBetweenZeros {
         int nowCount = 0;
 
         ListNode answer = new ListNode();
+        ListNode current = answer;
 
         ArrayList<Integer> arr = new ArrayList<>();
 
@@ -73,13 +74,14 @@ public class MergeNodesinBetweenZeros {
 
             if (head.val == 0 && head.next != null && notFirst != 0) { // 자료 구조의 값을
 
+                current.val = nowCount;
                 answer.val = nowCount;
                 arr.add(nowCount);
                 nowCount = 0; // 현재 수가 0이고, 다음 수가 있으면  nowCount를  초기화 // 첫0 시작의 0의 경우
 
 
-                answer.next = new ListNode();
-                answer = answer.next;
+                current.next = new ListNode();
+                current = current.next;
 
 
 
@@ -106,12 +108,7 @@ public class MergeNodesinBetweenZeros {
 
         }
 
-        ListNode node = new ListNode();
 
-        for (int i = 0; i < arr.size(); i++) {
-            node.val = arr.get(i);
-            node.next = new ListNode(arr.get(i + 1));
-        }
 
 
         return answer;
