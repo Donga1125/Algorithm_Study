@@ -34,7 +34,7 @@ public class PassthePillow {
 
         int answer = 0;
 
-        return
+            return 0;
 
     }
 }
