@@ -10,6 +10,8 @@ public class WaterBottles {
 
     public int numWaterBottles(int numBottles, int numExchange) {
 
+        //리트코드
+
 
         return 0;
     }
