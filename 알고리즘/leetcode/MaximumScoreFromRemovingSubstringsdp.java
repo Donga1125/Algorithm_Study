@@ -11,6 +11,8 @@ public class MaximumScoreFromRemovingSubstringsdp {
     private static String first = "ab";
     private static String second = "ba";
 
+    private int dp[];
+
 
 
 
@@ -37,6 +39,9 @@ public class MaximumScoreFromRemovingSubstringsdp {
         // 그냥 같을 경우엔 비교하자 그리디로 해서 둘다 빼봐서
 
         // 현재 돌면서 x먼저 빼고, 다음 스트링에서 또 x빼고 뺄 ㄱㅔ없음 y빼는 형식
+
+        //dp 배열에 서로 다른 점수들을 저장해가며 큰 점수 반환 최종 반환
+
         int xCount = 0;
         int yCount = 0;
 
