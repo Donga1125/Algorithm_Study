@@ -25,7 +25,7 @@ public class MaximumScoreFromRemovingSubstrings {
 
         MaximumScoreFromRemovingSubstrings main = new MaximumScoreFromRemovingSubstrings();
 //        main.maximumGain(s1, x1, y1);
-        System.out.println(main.maximumGain(s1, x1, y1));
+        System.out.println(main.maximumGain(s, x, y));
 
     }
 
@@ -33,14 +33,15 @@ public class MaximumScoreFromRemovingSubstrings {
 
         // x가 ㄷ ㅓ큰지 y가 더 큰지에 따라 다른데
         // 더 큰걸 판별하고 같다면 둘 중 하나로 하자
-        // 둘다 해봐야할 것 같은데 ?.. 이래서 dp가 편해보이긴하는데..
+
 
         //현재 x제거했을 때와 y를 제거했을때의 값을 저장해가면서 두 분기로
-        // 현재 dp 에 담기는 값은
-        // "cdbcbbaaabab" 의 경우 ab를 빼게되면 cdbcbbaaab, cdbcbbaa 5 5  54
+
+        // "cdbcbbaaabab" 의 경우 ab를 빼게되면 cdbcbbaaab, cdbcbbaa
         // 그냥 같을 경우엔 비교하자 그리디로 해서 둘다 빼봐서
 
         // 현재 돌면서 x먼저 빼고, 다음 스트링에서 또 x빼고 뺄 ㄱㅔ없음 y빼는 형식
+
         int xCount = 0;
         int xCount1 = 0;
         int yCount = 0;
@@ -57,46 +58,46 @@ public class MaximumScoreFromRemovingSubstrings {
 
                 while (s.contains(first)) {
 
-                    int length = s.length();
+
 
                     s = s.replaceFirst(first, "");
                     xCount1++;
 
 
 
-                xCount = xCount + length - s.length();}
+              }
 
                 while (s.contains(second)) {
-                    int length = s.length();
+
 
                     s = s.replaceFirst(second, "");
                     yCount1++;
 
-                    yCount = yCount + length - s.length();}
+                    }
 
 
 
             } else if (x <= y) {
 
                 while (s.contains(second)) {
-                    int length = s.length();
+
 
                     s = s.replaceFirst(second, "");
                     yCount1++;
 
-                    yCount = yCount + length - s.length();}
+                   }
 
 
                 while (s.contains(first)) {
 
-                    int length = s.length();
+
 
                     s = s.replaceFirst(first, "");
                     xCount1++;
 
 
 
-                    xCount = xCount + length - s.length();}
+                   ;}
             }
         }
 
