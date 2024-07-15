@@ -45,37 +45,8 @@ public class MaximumScoreFromRemovingSubstringsdp {
         int xCount = 0;
         int yCount = 0;
 
+        while ()
 
-        while (s.contains(first) || s.contains(second)) {
-
-
-            if (x >= y) {
-
-                while (s.contains(first)) {
-
-                    int length = s.length();
-
-                s = s.replaceFirst(first, "");
-                System.out.println(s);
-
-
-                xCount = xCount + length - s.length();}
-
-            } else if (x <= y) {
-
-                int length = s.length();
-
-                s = s.replaceFirst(second, "");
-
-                yCount = yCount + length - s.length();
-
-            }
-
-        }
-        System.out.println(xCount);
-        System.out.println(yCount);
-
-        return xCount;
 
     }
 

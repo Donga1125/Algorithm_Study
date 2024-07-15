@@ -17,11 +17,15 @@ public class MaximumScoreFromRemovingSubstrings {
     public static void main(String[] args) {
 
         String s = "cdbcbbaaabab";
+        String s1 = "aabbabkbbbfvybssbtaobaaaabataaadabbbmakgabbaoapbbbbobaabvqhbbzbbkapabaavbbeghacabamdpaaqbqabbjbababmbakbaabajabasaabbwabrbbaabbafubayaazbbbaababbaaha";
         int x = 4;
+        int x1 = 1926;
         int y = 5;
+        int y1 = 4320;
 
         MaximumScoreFromRemovingSubstrings main = new MaximumScoreFromRemovingSubstrings();
-        main.maximumGain(s, x, y);
+//        main.maximumGain(s1, x1, y1);
+        System.out.println(main.maximumGain(s1, x1, y1));
 
     }
 
