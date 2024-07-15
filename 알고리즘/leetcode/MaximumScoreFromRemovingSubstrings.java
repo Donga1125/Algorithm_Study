@@ -17,8 +17,8 @@ public class MaximumScoreFromRemovingSubstrings {
     public static void main(String[] args) {
 
         String s = "cdbcbbaaabab";
-        int x = 5;
-        int y = 4;
+        int x = 4;
+        int y = 5;
 
         MaximumScoreFromRemovingSubstrings main = new MaximumScoreFromRemovingSubstrings();
         main.maximumGain(s, x, y);
@@ -38,10 +38,15 @@ public class MaximumScoreFromRemovingSubstrings {
 
         // 현재 돌면서 x먼저 빼고, 다음 스트링에서 또 x빼고 뺄 ㄱㅔ없음 y빼는 형식
         int xCount = 0;
+        int xCount1 = 0;
         int yCount = 0;
+        int yCount1 = 0;
+
+
 
 
         while (s.contains(first) || s.contains(second)) {
+            //cdbcbbaaabab
 
 
             if (x >= y) {
@@ -50,27 +55,51 @@ public class MaximumScoreFromRemovingSubstrings {
 
                     int length = s.length();
 
-                s = s.replaceFirst(first, "");
-                System.out.println(s);
+                    s = s.replaceFirst(first, "");
+                    xCount1++;
+
 
 
                 xCount = xCount + length - s.length();}
 
+                while (s.contains(second)) {
+                    int length = s.length();
+
+                    s = s.replaceFirst(second, "");
+                    yCount1++;
+
+                    yCount = yCount + length - s.length();}
+
+
+
             } else if (x <= y) {
 
-                int length = s.length();
+                while (s.contains(second)) {
+                    int length = s.length();
 
-                s = s.replaceFirst(second, "");
+                    s = s.replaceFirst(second, "");
+                    yCount1++;
 
-                yCount = yCount + length - s.length();
+                    yCount = yCount + length - s.length();}
 
+
+                while (s.contains(first)) {
+
+                    int length = s.length();
+
+                    s = s.replaceFirst(first, "");
+                    xCount1++;
+
+
+
+                    xCount = xCount + length - s.length();}
             }
-
         }
-        System.out.println(xCount);
-        System.out.println(yCount);
 
-        return xCount;
+
+
+
+        return (xCount1 * x) + (yCount1 * y);
 
     }
 
