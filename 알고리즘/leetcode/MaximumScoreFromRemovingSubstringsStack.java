@@ -8,10 +8,9 @@ public class MaximumScoreFromRemovingSubstringsStack {
     // 최대 얻을 수 있는 점수를 반환
     // 높은 점수대로 그리디를 쓰면 될 것 같은데
     // 예외가 있을수도 있어보인다 있으면 stack
-    private static String first = "ab";
-    private static String second = "ba";
 
-    private int dp[];
+
+
 
 
 
@@ -19,11 +18,11 @@ public class MaximumScoreFromRemovingSubstringsStack {
     public static void main(String[] args) {
 
         String s = "cdbcbbaaabab";
-        int x = 5;
-        int y = 4;
+        int x = 4;
+        int y = 5;
 
         MaximumScoreFromRemovingSubstringsStack main = new MaximumScoreFromRemovingSubstringsStack();
-        main.maximumGain(s, x, y);
+        System.out.println(main.maximumGain(s,x,y));
 
     }
 
@@ -42,11 +41,64 @@ public class MaximumScoreFromRemovingSubstringsStack {
 
         //dp 배열에 서로 다른 점수들을 저장해가며 큰 점수 반환 최종 반환
 
-        int xCount = 0;
-        int yCount = 0;
 
-        while ()
 
+        if (x > y) {
+
+            return useStack(s, x, y, "ab","ba");
+
+        } else
+            return useStack(s, y, x,"ba","ab");
+
+
+
+
+
+    }
+
+    private int useStack(String s, int x, int y,String first, String second) {
+
+        int answerCount = 0;
+
+        StringBuilder sb = new StringBuilder();
+
+        int sLength = s.length();
+
+        for (int i = 0; i < sLength; i++) {
+
+            sb.append(s.charAt(i));
+            int length = sb.length();
+
+            if (length >= 2 && sb.substring(length - 2).equals(first)) {
+
+                sb.delete(length - 2, length);
+                answerCount = answerCount + x;
+
+            }
+        }
+
+        s = sb.toString(); // 빼고 남아진 s를 만들어주기
+        sb = new StringBuilder();
+
+        sLength = s.length();
+
+
+        for (int i = 0; i < sLength; i++) {
+            sb.append(s.charAt(i));
+
+            int length = sb.length();
+
+            if (sb.length() >= 2 && sb.substring(length - 2).equals(second)) {
+
+                sb.delete(length - 2, length);
+
+                answerCount = answerCount + y;
+            }
+        }
+
+
+
+        return answerCount;
 
     }
 
