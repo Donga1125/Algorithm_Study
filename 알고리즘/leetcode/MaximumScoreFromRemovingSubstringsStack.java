@@ -1,13 +1,13 @@
 package 알고리즘.leetcode;
 
-public class MaximumScoreFromRemovingSubstringsdp {
+public class MaximumScoreFromRemovingSubstringsStack {
 
     //1717. Maximum Score From Removing Substrings
 
     //String 값을 주고, ab를 지우면 x점수, ba를 지우면 y점수를 얻을 수 있다
     // 최대 얻을 수 있는 점수를 반환
     // 높은 점수대로 그리디를 쓰면 될 것 같은데
-    // 예외가 있을수도 있어보인다 있으면 dp를 쓰러 오
+    // 예외가 있을수도 있어보인다 있으면 stack
     private static String first = "ab";
     private static String second = "ba";
 
@@ -22,7 +22,7 @@ public class MaximumScoreFromRemovingSubstringsdp {
         int x = 5;
         int y = 4;
 
-        MaximumScoreFromRemovingSubstringsdp main = new MaximumScoreFromRemovingSubstringsdp();
+        MaximumScoreFromRemovingSubstringsStack main = new MaximumScoreFromRemovingSubstringsStack();
         main.maximumGain(s, x, y);
 
     }
