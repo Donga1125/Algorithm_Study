@@ -1,8 +1,8 @@
-package 알고리즘.leetcode;
+package 알고리즘.leetcode.july;
 
 import java.util.ArrayList;
 
-public class NodesBetweenCriticalPoints배열없이 {
+public class NodesBetweenCriticalPoints {
 
     //2058. Find the Minimum and Maximum Number of Nodes Between Critical Points
 
@@ -28,7 +28,7 @@ public class NodesBetweenCriticalPoints배열없이 {
         //2,2,1,3
 
 
-        NodesBetweenCriticalPoints배열없이 main = new NodesBetweenCriticalPoints배열없이();
+        NodesBetweenCriticalPoints main = new NodesBetweenCriticalPoints();
         int[] r = main.nodesBetweenCriticalPoints(node1);
         System.out.println(r[0]);
         System.out.println(r[1]);

@@ -1,4 +1,4 @@
-package 알고리즘.leetcode;
+package 알고리즘.leetcode.july;
 
 public class MaximumScoreFromRemovingSubstrings {
 
@@ -42,15 +42,13 @@ public class MaximumScoreFromRemovingSubstrings {
 
         // 현재 돌면서 x먼저 빼고, 다음 스트링에서 또 x빼고 뺄 ㄱㅔ없음 y빼는 형식
 
-        int xCount = 0;
         int xCount1 = 0;
-        int yCount = 0;
         int yCount1 = 0;
 
 
 
 
-        while (s.contains(first) || s.contains(second)) {
+
             //cdbcbbaaabab
 
 
@@ -58,17 +56,13 @@ public class MaximumScoreFromRemovingSubstrings {
 
                 while (s.contains(first)) {
 
-
-
                     s = s.replaceFirst(first, "");
                     xCount1++;
-
 
 
               }
 
                 while (s.contains(second)) {
-
 
                     s = s.replaceFirst(second, "");
                     yCount1++;
@@ -99,7 +93,7 @@ public class MaximumScoreFromRemovingSubstrings {
 
                    ;}
             }
-        }
+
 
 
 

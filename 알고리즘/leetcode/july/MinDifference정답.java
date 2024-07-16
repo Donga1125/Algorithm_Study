@@ -1,7 +1,6 @@
-package 알고리즘.leetcode;
+package 알고리즘.leetcode.july;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class MinDifference정답 {
 
