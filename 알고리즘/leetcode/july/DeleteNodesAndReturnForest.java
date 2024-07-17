@@ -1,9 +1,6 @@
 package 알고리즘.leetcode.july;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class DeleteNodesAndReturnForest {
 
@@ -26,8 +23,20 @@ public class DeleteNodesAndReturnForest {
         DeleteNodesAndReturnForest main = new DeleteNodesAndReturnForest();
         main.delNodes(node, delete);
 
+//        List<TreeNode> result = main.delNodes(node,delete);
+//        for (TreeNode node1 : result) {
+//            printTree(node1);
+//            System.out.println();
+//        }
+
 
     }
+//    private static void printTree(TreeNode node) {
+//        if (node == null) return;
+//        System.out.print(node.val + " ");
+//        printTree(node.left);
+//        printTree(node.right);
+//    }
 
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
 
@@ -40,12 +49,14 @@ public class DeleteNodesAndReturnForest {
         }
         List<TreeNode> forest = new ArrayList<>();
         deleteNode(root, toDeleteSet, forest, true);
+
         return forest;
     }
 
     private TreeNode deleteNode(TreeNode node, Set<Integer> toDeleteSet, List<TreeNode> forest, boolean isRoot) {
 
-        if (node == null) return null;
+        if (node == null)
+            return null;
 
         boolean deleted = toDeleteSet.contains(node.val);
         if (isRoot && !deleted) {
