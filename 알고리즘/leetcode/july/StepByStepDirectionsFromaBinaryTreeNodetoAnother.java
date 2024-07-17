@@ -92,5 +92,26 @@ public class StepByStepDirectionsFromaBinaryTreeNodetoAnother {
 
     }
 
+    private boolean findPath(TreeNode node, int value) {
+        if(node == null){
+
+            return false;}
+
+        if (node.val == value) {
+            node.val = -1;
+            return true;
+        }
+
+        if (findPath(node.left, value)) {
+            return true;
+        }
+
+        if (findPath(node.right, value)) {
+            return true;
+        }
+
+        return false;
+    }
+
 
 }
