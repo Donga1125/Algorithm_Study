@@ -1,5 +1,9 @@
 package 알고리즘.leetcode.july;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 public class NumberofGoodLeafNodesPairs {
 
     // 1530 Number of Good Leaf Nodes Pairs
@@ -10,16 +14,43 @@ public class NumberofGoodLeafNodesPairs {
 
     public static void main(String[] args) {
 
+        TreeNode treeNode = new TreeNode(1,
+                new TreeNode(2, new TreeNode(4), new TreeNode(5)),
+                new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+        int distance = 3;
+        NumberofGoodLeafNodesPairs main = new NumberofGoodLeafNodesPairs();
+        main.countPairs(treeNode, distance);
+
     }
 
     public int countPairs(TreeNode root, int distance) {
 
-        // 1. 이진트리의 리프 노드들의 위치를 저장
+        // 1. 이진트리의 리프 노드들의 위치를 찾기
         // 2. 저장된 이진트리의 리프 노드들을 비교해가며, 거리를 구한다
 
         // 2-1 거리를 어떻게 구할 것인가 생각해보면  lowest common Ancestor(공통조상)로
         // 각 노드 두개끼리의 공통조상을 구한 뒤 거기서부터 둘다 탐색했을때 distance보다 작거나 같아야함
         // 근데 애초에 안되는 딱봐도 엄청 먼 것은 굳이 공통조상으로 확인도 안해도 될 거 같은데
+        HashSet<Integer> set = new HashSet<>();
+        List<TreeNode> leafNodes = new ArrayList<>();
+        findLeefNodes(root, leafNodes);
+
+    }
+
+    private void findLeefNodes(TreeNode root,  List<TreeNode> leafNodes) {
+
+        if (root == null) {
+            return;
+
+        }
+        if (root.left == null && root.right == null) {
+
+            leafNodes.add(root);
+        }
+
+            findLeefNodes(root.right, leafNodes);
+            findLeefNodes(root.left, leafNodes);
+
 
     }
 
