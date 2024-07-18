@@ -35,6 +35,8 @@ public class NumberofGoodLeafNodesPairs {
         List<TreeNode> leafNodes = new ArrayList<>();
         findLeefNodes(root, leafNodes);
 
+        return 1;
+
     }
 
     private void findLeefNodes(TreeNode root,  List<TreeNode> leafNodes) {
