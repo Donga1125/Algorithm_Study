@@ -36,11 +36,26 @@ public class CreateBinaryTreeFromDescriptions {
         HashSet<Integer> set = new HashSet<>();
 
         int length = descriptions.length;
+        int root = 0;
+
+
+
 
         for (int i = 0; i < length; i++) {
 
+            root += descriptions[i][1];
+
+            for (int j = i+1; j < length; j++) {
+                if (descriptions[i][0] == descriptions[j][1]) {
+                    break;
+
+
+
+                }
+            }
 
         }
+
 
     }
 
