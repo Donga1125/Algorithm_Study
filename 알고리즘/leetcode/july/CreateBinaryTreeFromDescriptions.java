@@ -1,6 +1,9 @@
 package 알고리즘.leetcode.july;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class CreateBinaryTreeFromDescriptions {
 
@@ -40,23 +43,40 @@ public class CreateBinaryTreeFromDescriptions {
 
 
 
+        Map<Integer, TreeNode> nodeMap = new HashMap<>();
+        Set<Integer> children = new HashSet<>();
 
-        for (int i = 0; i < length; i++) {
+        // 각 노드를 생성하고 부모-자식 관계를 설정
+        for (int[] description : descriptions) {
+            int parentVal = description[0];
+            int childVal = description[1];
+            boolean isLeft = description[2] == 1;
 
-            root += descriptions[i][1];
+            TreeNode parentNode = nodeMap.getOrDefault(parentVal, new TreeNode(parentVal));
+            TreeNode childNode = nodeMap.getOrDefault(childVal, new TreeNode(childVal));
 
-            for (int j = i+1; j < length; j++) {
-                if (descriptions[i][0] == descriptions[j][1]) {
-                    break;
-
-
-
-                }
+            if (isLeft) {
+                parentNode.left = childNode;
+            } else {
+                parentNode.right = childNode;
             }
+
+            nodeMap.put(parentVal, parentNode);
+            nodeMap.put(childVal, childNode);
+            children.add(childVal);
+
 
         }
 
 
-    }
+        for (int[] description : descriptions) {
+            int parentVal = description[0];
+            if (!children.contains(parentVal)) {
+                return nodeMap.get(parentVal);
+            }
+        }
+
+
+        return null;}
 
 }
