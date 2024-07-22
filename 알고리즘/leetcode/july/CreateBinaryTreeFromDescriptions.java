@@ -36,10 +36,6 @@ public class CreateBinaryTreeFromDescriptions {
 
         // 2. 루트로부터 계속 자식 노드를 찾아서 만들며 반환
 
-        HashSet<Integer> set = new HashSet<>();
-
-        int length = descriptions.length;
-        int root = 0;
 
 
 
