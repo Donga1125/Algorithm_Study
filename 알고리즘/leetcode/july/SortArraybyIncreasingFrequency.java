@@ -34,19 +34,23 @@ public class SortArraybyIncreasingFrequency {
 
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
-        int now = 0;
+
 
         List<Map.Entry<Integer, Integer>> entries = new ArrayList<>(map.entrySet());
+
 
         entries.sort((a,b) ->
                 { // 람다식
                     if (!a.getValue().equals(b.getValue())) { // 둘의 밸류(빈도)가 다르면 빈도가 작은 거부터
                         return Integer.compare(a.getValue(), b.getValue());
+                        // return 되는 건 무조건 entry 값이네 ex1=1  기준을 빈도로 잡는거지
                     } else // 둘의 빈도가 같다면 key(그 수 자체가 큰 순서)로
                         return Integer.compare(b.getKey(), a.getKey());
 
                 }
                 );
+
+
         int index = 0;
 
         for (Map.Entry<Integer, Integer> entry : entries) {
