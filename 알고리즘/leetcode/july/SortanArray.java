@@ -9,19 +9,33 @@ public class SortanArray {
     // 다른 함수를 쓰지 않고 해라
     // 시간복잡도가 가장 낮고, O(NlogN)을 가지는 정렬을 쓰라는 뜻
     // merge sort 쓰면 될듯 ?
-    // 분할과 정렬
+    // 분할과 정분할
 
     public static void main(String[] args) {
         //
 
-        int[] arr = new int[]{5, 2, 3, 1};}
+        int[] arr = new int[]{5, 2, 3, 1};
         SortanArray main = new SortanArray();
+        main.sortArray(arr);
+
+    }
+
 
 
     public int[] sortArray(int[] nums) {
 
+        int answer[] = new int[nums.length];
+
+        // 1.
+
+        mergeSort();
+
+
+
     }
 
+    private void mergeSort() {
+    }
 
 
 }
