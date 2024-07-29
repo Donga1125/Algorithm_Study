@@ -37,6 +37,7 @@ public class MinimumCosttoConvertStringI {
         // 그리고 dp 저장 전 change를 좀 더 빠르게 불러올 수 있는 정보를 저장하는게 좋을듯 ? map이라던지..
 
         int length = source.length();
+        int ArrayLength = original.length;
 
         int dp[][] = new int[26][26]; // from to로 알파벳 변환
         for (int i = 0; i < 26; i++) {
@@ -45,7 +46,7 @@ public class MinimumCosttoConvertStringI {
             dp[i][i] = 0; // a ->a 가는 자기 자신 채우는 경우는 아예 없는 걸로 플로이드 워셜
         }
 
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < ArrayLength; i++) {
 
             int from = original[i] - 'a';
             int to = changed[i] - 'a';
@@ -67,7 +68,7 @@ public class MinimumCosttoConvertStringI {
             }
         }
 
-        int totalCost = 0;
+        long totalCost = 0; // int형 최대 범위 초과로 틀림
         for (int i = 0; i < length; i++) {
             int from = source.charAt(i) - 'a';
             int to = target.charAt(i) - 'a';
