@@ -30,6 +30,8 @@ public class SortanArray {
 
         mergeSort();
 
+        return answer;
+
 
 
     }
