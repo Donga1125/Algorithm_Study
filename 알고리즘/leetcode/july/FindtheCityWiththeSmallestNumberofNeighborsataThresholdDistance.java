@@ -7,5 +7,7 @@ public class FindtheCityWiththeSmallestNumberofNeighborsataThresholdDistance {
 
     public int findTheCity(int n, int[][] edges, int distanceThreshold) {
 
+        return 1;
+
     }
 }
