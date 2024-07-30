@@ -50,6 +50,9 @@ public class MinimumDeletionstoMakeStringBalanced {
                 bCount++;
         }
 
+        // a를 삭제하게 된다면 이떄까지 나온 b들을 다 삭제해야한다.
+        // 그래서 현재까지의 쌓인 b갯수를 삭제할 지, a를 삭제할 경우(삭제+1) 둘 중 작은 값을 삭제
+
         return deletions;
 
     }
