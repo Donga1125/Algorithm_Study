@@ -18,6 +18,8 @@ public class NumberofSeniorCitizens {
 
         for (int i = 0; i < length; i++) {
 
+            // subString으로 나이 부분만 짤라서 숫자로 바꾼 후 확인
+
            int age = Integer.parseInt(details[i].substring(11, 13));
             if (age > 60) {
                 count++;
