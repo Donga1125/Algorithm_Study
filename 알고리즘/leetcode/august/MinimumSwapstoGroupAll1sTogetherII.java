@@ -1,5 +1,7 @@
 package 알고리즘.leetcode.august;
 
+import java.util.LinkedList;
+
 public class MinimumSwapstoGroupAll1sTogetherII {
 
     // 2134. Minimum Swaps to Group All 1's Together II
@@ -12,10 +14,42 @@ public class MinimumSwapstoGroupAll1sTogetherII {
 
     public static void main(String[] args) {
 
+        int arr[] = new int[]{0, 1, 0, 1, 1, 0, 0};
+        MinimumSwapstoGroupAll1sTogetherII sol = new MinimumSwapstoGroupAll1sTogetherII();
+        sol.minSwaps(arr);
+
 
     }
 
     public int minSwaps(int[] nums) {
+
+        int length = nums.length;
+        int countOne = 0;
+        LinkedList<Integer> list = new LinkedList<>();
+
+
+        for (int i = 0; i < length; i++) { // 6개 중 3개
+            list.add(nums[i]);
+
+            if (nums[i] == 1) {
+                countOne++;
+            }
+        }
+        //[0, 1, 0, 1, 1, 0, 0] // 어떤 기준으로 슬라이딩 ?
+
+
+
+
+
+        int right = 0;
+        int left = 0;
+
+        while (true) {
+            if (list.get(right) == 0) {
+
+            }
+
+        }
 
     }
 }
