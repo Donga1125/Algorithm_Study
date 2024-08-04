@@ -1,7 +1,6 @@
 package 알고리즘.leetcode.august;
 
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class MakeTwoArraysEqualbyReversingSubarrays {
 
@@ -28,13 +27,33 @@ public class MakeTwoArraysEqualbyReversingSubarrays {
 
         int sum = 0;
         // sum쓰면 좋아보이지만 끝까지 돌아야한다.. 그래도 나쁘지 않을듯?
-        // set은 실패했고 sum으로 곤리
+        // set은 실패했고 sum으로 관리
+
+        // sum도 숫자는 다르지만 sum이 같을 수 있어서 실패
+
+        // 둘 다 정렬하면 될듯?
+
+        Arrays.sort(arr);
+        Arrays.sort(target);
 
         for (int i = 0; i < arr.length; i++) {
-//            set.add(arr[i]);
-            sum += arr[i];
+
+            if (arr[i] != target[i]) {
+                return false;
+            }
 
         }
+        return true;
+
+
+
+//        for (int i = 0; i < arr.length; i++) {
+////            set.add(arr[i]);
+////            sum += arr[i];
+//
+//
+//
+//        }
 
 //        for (int i : target) {
 //            if(!set.contains(i)) {
@@ -42,17 +61,20 @@ public class MakeTwoArraysEqualbyReversingSubarrays {
 //                return false;
 //            }
 //        }
-        int check = 0;
-        for (int i = 0; i < target.length; i++) {
 
-            check += target[i];
+//        int check = 0;
+//        for (int i = 0; i < target.length; i++) {
+//
+//            check += target[i];
+//
+//        }
+//
+//        if (sum == check) {
+//            return true;
+//        }
 
-        }
 
-        if (sum == check) {
-            return true;
-        }
-        return false;
+//        return false;
 
     }
 }
