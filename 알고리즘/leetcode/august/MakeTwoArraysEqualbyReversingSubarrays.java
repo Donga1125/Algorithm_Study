@@ -1,6 +1,14 @@
 package 알고리즘.leetcode.august;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class MakeTwoArraysEqualbyReversingSubarrays {
+
+    //1460. Make Two Arrays Equal by Reversing Subarrays
+
+    //아무거나 뒤집을 수 있는데 몇번이나 상관 x
+    //그랬을 때 target을 만들 수 있냐 ?
 
     public static void main(String[] args) {
 
@@ -9,13 +17,41 @@ public class MakeTwoArraysEqualbyReversingSubarrays {
 
 
         MakeTwoArraysEqualbyReversingSubarrays sol = new MakeTwoArraysEqualbyReversingSubarrays();
-        sol.canBeEqual(target,arr);
+        System.out.println(sol.canBeEqual(target,arr));
     }
 
 
     public boolean canBeEqual(int[] target, int[] arr) {
 
-        return true;
+//        HashSet<Integer> set = new HashSet<>();
+        // set으로 관리하면 안됨 같은 수가 들어올 수 있음
+
+        int sum = 0;
+        // sum쓰면 좋아보이지만 끝까지 돌아야한다.. 그래도 나쁘지 않을듯?
+
+        for (int i = 0; i < arr.length; i++) {
+//            set.add(arr[i]);
+            sum += arr[i];
+
+        }
+
+//        for (int i : target) {
+//            if(!set.contains(i)) {
+//
+//                return false;
+//            }
+//        }
+        int check = 0;
+        for (int i = 0; i < target.length; i++) {
+
+            check += target[i];
+
+        }
+
+        if (sum == check) {
+            return true;
+        }
+        return false;
 
     }
 }
