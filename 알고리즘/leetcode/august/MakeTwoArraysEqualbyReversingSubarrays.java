@@ -28,6 +28,7 @@ public class MakeTwoArraysEqualbyReversingSubarrays {
 
         int sum = 0;
         // sum쓰면 좋아보이지만 끝까지 돌아야한다.. 그래도 나쁘지 않을듯?
+        // set은 실패했고 sum으로 곤리
 
         for (int i = 0; i < arr.length; i++) {
 //            set.add(arr[i]);
