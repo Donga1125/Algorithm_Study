@@ -23,6 +23,9 @@ public class KthDistinctStringinanArray {
 
         // 1 map으로 넣고, 넣은 후 찾는 걸 배열 순서대로 찾으면 될 듯 ?k 만족 시 반환
 
+
+        // map에 넣고 찾기 처음에 142ms 나오길래 이새ㅏㅇ했는데 다시하니 6~7ms
+
         HashMap<String, Integer> map = new HashMap<>();
 
         int length = arr.length;
