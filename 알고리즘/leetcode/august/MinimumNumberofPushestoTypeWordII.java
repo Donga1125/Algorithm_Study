@@ -1,8 +1,6 @@
 package 알고리즘.leetcode.august;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MinimumNumberofPushestoTypeWordII {
 
@@ -20,9 +18,10 @@ public class MinimumNumberofPushestoTypeWordII {
     public static void main(String[] args) {
 
         String word = "aabbccddeeffgghhiiiiii";
+        String word1 = "avghdcyinjmbopwtrfslzkuxeq";
 
         MinimumNumberofPushestoTypeWordII sol = new MinimumNumberofPushestoTypeWordII();
-        sol.minimumPushes(word);
+        sol.minimumPushes(word1);
 
 
 
@@ -37,18 +36,60 @@ public class MinimumNumberofPushestoTypeWordII {
         // 최고 효율의 기준은 8 8 8 2로 구성하는 것
 
         HashMap<Character, Integer> map = new HashMap<>();
+        int length = word.length();
+        Integer[] alphabet = new Integer[26];
+        Arrays.fill(alphabet, 0);
 
-        for (int i = 0; i < word.length(); i++) {
-            map.put(word.charAt(i), map.getOrDefault(word.charAt(i), 0) + 1);
+
+        for (int i = 0; i < length; i++) {
+
+            char ch = word.charAt(i);
+
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+            alphabet[ch - 97]++;
+
+        }
+        Arrays.sort(alphabet, (a, b) -> b - a);
+
+        int index = 0;
+        int answer = 0;
+
+
+        int alphLength = alphabet.length;
+
+        for (int i = 0; i < alphLength; i++) {
+
+
+            if (alphabet[i] == 0) {
+                break;
+            }
+
+            if (index <= 7) {
+
+                answer = answer + alphabet[index] * 1;
+
+            } else if (index <= 15) {
+
+                answer = answer + alphabet[index] * 2;
+
+            } else if (index <= 23) {
+
+                answer = answer + alphabet[index] * 3;
+            } else {
+                answer = answer + alphabet[index] * 4;
+            }
+
+            index++;
 
         }
 
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+//        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+//
+//
+//
+//        }
 
-
-        }
-
-        return 1;
+        return answer;
 
     }
 }
