@@ -83,6 +83,25 @@ public class MinimumNumberofPushestoTypeWordII {
 
         }
 
+        int ind=1,sum=0,count=1;
+        // 다른 사람 방식
+        // 설명하자면 오름차순 정렬 후 역순
+        //ind가 8이하면 1번씩(count)로, sum에 누적
+        // 8이상이면 다시 inx를 초기화해주고 곱해주는 count 값을 증가
+
+        // idx는 계쏙 8번 반복8넘는 순간만 초기화후 count ++ 후 다시 if문 반복
+
+        for (int i = 25; i >= 0; i--) {
+
+            if (ind <= 8) {
+                ind++;
+            } else {
+                ind = 2;
+                count++;
+            }
+//            sum = sum + (a[i] * count);
+        }
+
 //        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
 //
 //
