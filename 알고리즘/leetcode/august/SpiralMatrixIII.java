@@ -29,7 +29,29 @@ public class SpiralMatrixIII {
         // 2칸을 왼쪽으로 가야하는데 이걸 기억해야함
 
         // 배열의 크기를 초과할 경우 저장되는 수는 카운트 x
-        // 배열 초과를 이동 범위에 따라 행 열의 숫자 자체를 올려주고
+        // 배열 초과를 이동 범위에 따라 행 열의 숫자 자체를 올려주
+        //처음 배열이 초과하면?
+
+        //  max 4, 5
+
+        int nowR = rStart;
+        int nowC = cStart;
+
+        int count = 0;
+
+        while (true) {
+            // 1 왼 증가부터 시작
+
+            rStart++;
+
+            if (rStart > rows) {
+
+            }
+
+
+
+
+        }
 
     }
 }
