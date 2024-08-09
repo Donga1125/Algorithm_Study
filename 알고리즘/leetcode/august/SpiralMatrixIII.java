@@ -24,7 +24,7 @@ public class SpiralMatrixIII {
 
     public int[][] spiralMatrixIII(int rows, int cols, int rStart, int cStart) {
 
-        int[][] matrix = new int[rows][cols];
+//        int[][] matrix = new int[rows][cols];
 
         // 움직임이 나선형이 오 아래 왼 위
         // 그러면 전 움직임에 대한 사각형 배열의 크기를 기억하고 있어야 나선형으로 움직일 때
@@ -40,23 +40,27 @@ public class SpiralMatrixIII {
         int nowR = rStart;
         int nowC = cStart;
 
-        int count = 0;
-        List<int[]> result = new ArrayList<>();
+
+        int[][] matrix = new int[rows][cols];
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; // 동, 남, 서, 북
         int d = 0; // 시작 방향은 동쪽
         int steps = 1; // 한 방향으로의 초기 이동 횟수
+        int count = 1; // 현재 숫자 (1부터 시작)
 
-        result.add(new int[]{rStart, cStart});
-        int totalCells = rows * cols;
+        matrix[rStart][cStart] = count++; // 시작점에 첫 번째 숫자 할당
 
-        while (result.size() < totalCells) {
-            for (int i = 0; i < 2; i++) {  // 각 방향으로 두 번씩 이동함
+        while (count <= rows * cols) {
+            for (int i = 0; i < 2; i++) {  // 각 방향으로 두 번씩 이동
                 for (int j = 0; j < steps; j++) {
                     rStart += directions[d][0];
                     cStart += directions[d][1];
 
                     if (rStart >= 0 && rStart < rows && cStart >= 0 && cStart < cols) {
-                        result.add(new int[]{rStart, cStart});
+                        matrix[rStart][cStart] = count++;
+                    }
+
+                    if (count > rows * cols) {
+                        break; // 모든 위치에 숫자를 다 채우면 루프 종료
                     }
                 }
                 d = (d + 1) % 4; // 방향 전환
@@ -64,7 +68,6 @@ public class SpiralMatrixIII {
             steps++; // 이동 횟수 증가
         }
 
-
-        return result;
+        return matrix;
     }
 }
