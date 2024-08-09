@@ -12,10 +12,10 @@ public class SpiralMatrixIII {
 
     public static void main(String[] args) {
 
-        int row = 5;
-        int cols = 6;
+        int row = 3;
+        int cols = 3;
         int rStart = 1;
-        int cStart = 4;
+        int cStart = 1;
         SpiralMatrixIII sol = new SpiralMatrixIII();
         sol.spiralMatrixIII(row, cols, rStart, cStart);
 
@@ -41,26 +41,26 @@ public class SpiralMatrixIII {
         int nowC = cStart;
 
 
-        int[][] matrix = new int[rows][cols];
+        int[][] result = new int[rows * cols][2]; // 결과를 담을 2차원 배열
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; // 동, 남, 서, 북
         int d = 0; // 시작 방향은 동쪽
         int steps = 1; // 한 방향으로의 초기 이동 횟수
-        int count = 1; // 현재 숫자 (1부터 시작)
+        int index = 0; // result 배열에 추가할 위치 인덱스
 
-        matrix[rStart][cStart] = count++; // 시작점에 첫 번째 숫자 할당
+        result[index++] = new int[]{rStart, cStart}; // 초기 위치를 배열에 추가
 
-        while (count <= rows * cols) {
-            for (int i = 0; i < 2; i++) {  // 각 방향으로 두 번씩 이동
+        while (index < rows * cols) {
+            for (int i = 0; i < 2; i++) {  // 각 방향으로 두 번씩 이동함
                 for (int j = 0; j < steps; j++) {
                     rStart += directions[d][0];
                     cStart += directions[d][1];
 
                     if (rStart >= 0 && rStart < rows && cStart >= 0 && cStart < cols) {
-                        matrix[rStart][cStart] = count++;
+                        result[index++] = new int[]{rStart, cStart};
                     }
 
-                    if (count > rows * cols) {
-                        break; // 모든 위치에 숫자를 다 채우면 루프 종료
+                    if (index == rows * cols) {
+                        break; // 모든 위치를 다 채우면 루프 종료
                     }
                 }
                 d = (d + 1) % 4; // 방향 전환
@@ -68,6 +68,6 @@ public class SpiralMatrixIII {
             steps++; // 이동 횟수 증가
         }
 
-        return matrix;
+        return result;
     }
 }
