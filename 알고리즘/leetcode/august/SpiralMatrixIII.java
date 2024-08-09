@@ -52,16 +52,16 @@ public class SpiralMatrixIII {
 
         while (index < rows * cols) {
             for (int i = 0; i < 2; i++) {  // 각 움직임마다으 두 번씩 이동하고 +1됨
-                for (int j = 0; j < steps; j++) {
+                for (int j = 0; j < steps; j++) { // 1, 2, 3, 4, 5번씩 움직임이 각 2번
                     rStart += directions[d][0];
                     cStart += directions[d][1];
 
-                    if (rStart >= 0 && rStart < rows && cStart >= 0 && cStart < cols) {
-                        result[index++] = new int[]{rStart, cStart};
+                    if (rStart >= 0 && rStart < rows && cStart >= 0 && cStart < cols) { // 배열 범위 안에 들어올 경우 추가
+                        result[index++] = new int[]{rStart, cStart}; // 인덱스가 배열에 추가될 경우에만 늘어야 맞음
                     }
 
                     if (index == rows * cols) {
-                        return result; // 모든 위치를 다 채우면 루프 종료인데 step에 따른 움직임만 종료
+                        return result; // 모든 위치를 다 채우면 루프 종료인데 step에 따른 움직임만 종료해서 오류남
                     }
                 }
                 // step만큼 쭉 이동 후 방향 전환
