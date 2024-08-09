@@ -49,8 +49,9 @@ public class SpiralMatrixIII {
 
         result[index++] = new int[]{rStart, cStart}; // 초기 위치를 배열에 추가
 
+
         while (index < rows * cols) {
-            for (int i = 0; i < 2; i++) {  // 각 방향으로 두 번씩 이동함
+            for (int i = 0; i < 2; i++) {  // 각 움직임마다으 두 번씩 이동하고 +1됨
                 for (int j = 0; j < steps; j++) {
                     rStart += directions[d][0];
                     cStart += directions[d][1];
@@ -60,9 +61,10 @@ public class SpiralMatrixIII {
                     }
 
                     if (index == rows * cols) {
-                        break; // 모든 위치를 다 채우면 루프 종료
+                        return result; // 모든 위치를 다 채우면 루프 종료인데 step에 따른 움직임만 종료
                     }
                 }
+                // step만큼 쭉 이동 후 방향 전환
                 d = (d + 1) % 4; // 방향 전환
             }
             steps++; // 이동 횟수 증가
