@@ -1,5 +1,8 @@
 package 알고리즘.leetcode.august;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SpiralMatrixIII {
 
    // 885. Spiral Matrix III
@@ -38,20 +41,30 @@ public class SpiralMatrixIII {
         int nowC = cStart;
 
         int count = 0;
+        List<int[]> result = new ArrayList<>();
+        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; // 동, 남, 서, 북
+        int d = 0; // 시작 방향은 동쪽
+        int steps = 1; // 한 방향으로의 초기 이동 횟수
 
-        while (true) {
-            // 1 왼 증가부터 시작
+        result.add(new int[]{rStart, cStart});
+        int totalCells = rows * cols;
 
-            rStart++;
+        while (result.size() < totalCells) {
+            for (int i = 0; i < 2; i++) {  // 각 방향으로 두 번씩 이동함
+                for (int j = 0; j < steps; j++) {
+                    rStart += directions[d][0];
+                    cStart += directions[d][1];
 
-            if (rStart > rows) {
-
+                    if (rStart >= 0 && rStart < rows && cStart >= 0 && cStart < cols) {
+                        result.add(new int[]{rStart, cStart});
+                    }
+                }
+                d = (d + 1) % 4; // 방향 전환
             }
-
-
-
-
+            steps++; // 이동 횟수 증가
         }
 
+
+        return result;
     }
 }
