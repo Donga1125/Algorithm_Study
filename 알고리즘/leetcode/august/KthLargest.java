@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class KthLargest {
 
-    int k = 0;
+    int k;
     Integer[] tempNums;
     ArrayList<Integer> list;
 
@@ -16,7 +16,11 @@ public class KthLargest {
 
     public KthLargest(int k, int[] nums) {
 
+        // 초기화 시 0일수가 있다. 빈배열 들어올 경우 생각
+
         this.k = k;
+
+
         tempNums = Arrays.stream(nums).boxed().toArray(Integer[]::new);
 
 
@@ -33,6 +37,10 @@ public class KthLargest {
 
     public int add(int val) {
 
+        if (length == 0) {
+            list.add(val);
+        } else {
+
         for (int i = 0; i < length; i++) {
             if (list.get(i) < val) {
                 list.add(i, val);
@@ -40,14 +48,7 @@ public class KthLargest {
 
 
             }
-        }
-        System.out.print("[");
-        for (Integer i : list) {
-
-            System.out.print(i + " ");
-        }
-        System.out.print("]");
-        System.out.println();
+        }}
 
 
         return list.get(k -1);
