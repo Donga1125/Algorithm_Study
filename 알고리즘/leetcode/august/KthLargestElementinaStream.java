@@ -9,12 +9,18 @@ public class KthLargestElementinaStream {
 
     public static void main(String[] args) {
 
-        KthLargest sol = new KthLargest(3, new int[]{4, 5, 8, 2});
+        KthLargest sol = new KthLargest(1, new int[]{});
         System.out.println(sol.add(3));
         System.out.println(sol.add(5));
         System.out.println(sol.add(10));
         System.out.println(sol.add(9));
         System.out.println(sol.add(4));
+
+//        System.out.println(sol.add(-3));
+//        System.out.println(sol.add(-2));
+//        System.out.println(sol.add(-4));
+//        System.out.println(sol.add(0));
+//        System.out.println(sol.add(4));
 
 
 

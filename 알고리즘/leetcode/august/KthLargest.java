@@ -2,6 +2,7 @@ package 알고리즘.leetcode.august;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class KthLargest {
 
@@ -37,18 +38,36 @@ public class KthLargest {
 
     public int add(int val) {
 
-        if (length == 0) {
-            list.add(val);
-        } else {
+//        if (length == 0) {
+//            list.add(val);
+//        } else {
+//
+//        for (int i = 0; i < length; i++) {
+//            if (list.get(i) < val) {
+//                list.add(i, val);
+//                break;
+//            }
+//        }
+//        }
 
-        for (int i = 0; i < length; i++) {
-            if (list.get(i) < val) {
-                list.add(i, val);
-                break;
 
 
-            }
-        }}
+        list.add(val);
+
+        Collections.sort(list);
+        Collections.reverse(list);
+//        Collections.reverseOrder(list);
+
+        // reverseOrder는 어레이 리스트는 못쓴다..
+
+
+//
+//        System.out.print("[");
+//        for (Integer i : list) {
+//            System.out.print(i+ " ");
+//        }
+//        System.out.print("]");
+//        System.out.println();
 
 
         return list.get(k -1);
