@@ -22,7 +22,7 @@ public class CombinationSumII {
     // backtracking을 사용해야한다고 한다
     static int target;
     static int[] candidates;
-    static List<List<Integer>> answer = new ArrayList<>();
+
 
 
     public static void main(String[] args) {
@@ -38,12 +38,13 @@ public class CombinationSumII {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         this.target = target;
 
-        List<Integer> Combi = new ArrayList<>();
+
         this.candidates = candidates;
 
         Arrays.sort(candidates);
+        List<List<Integer>> answer = new ArrayList<>();
 
-        backTracking(0, new ArrayList<>(), 0);
+        backTracking(answer, 0, new ArrayList<>(), 0);
 
 
 
@@ -51,10 +52,11 @@ public class CombinationSumII {
 
     }
 
-    private void backTracking(int idx, List<Integer> list, int sum) {
+    private void backTracking(List<List<Integer>> answer, int idx, List<Integer> list, int sum) {
 
         if (sum == target) {
-            answer.add(list);
+            answer.add(new ArrayList<>(list));
+            // 객체 참조로 원본 combinationSum2에 있는 answer이 값이 변경됨 static으로 안띄어도 됨
 
             return;
 
@@ -69,13 +71,17 @@ public class CombinationSumII {
 
         for (int i = idx; i < candidates.length; i++) {
 
-            list.add(candidates[i]);
-            backTracking(i, list, sum + candidates[i]);
+            if (i > idx && candidates[i] == candidates[i - 1]) {
+                continue;  // 중복된 요소를 건너뜀
+            }
+
+            list.add(candidates[i]); // 리스트에 먼저 추가하고, 그다음에 제거해주는 방식의 백트랙킹의 핵심을 놓침
+
+            backTracking(answer,i + 1, list, sum + candidates[i]);
 
             list.remove(list.size() - 1); // 제거
 
         }
-
 
 
     }
