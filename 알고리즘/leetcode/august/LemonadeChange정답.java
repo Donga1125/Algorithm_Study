@@ -12,7 +12,7 @@ public class LemonadeChange정답 {
 
     public static void main(String[] args) {
 
-        int bills[] = new int[]{5, 5, 10, 10, 20};
+        int bills[] = new int[]{5, 5, 5, 10, 20};
         LemonadeChange정답 sol = new LemonadeChange정답();
         System.out.println(sol.lemonadeChange(bills));
 
@@ -36,7 +36,8 @@ public class LemonadeChange정답 {
 
             } else if (bill == 10) {
                 if (map.containsKey(bill - 5) && map.get(bill - 5) >= 1) {
-                    map.remove(bill - 1, 1);
+
+                    map.replace(bill - 5, map.get(bill - 5) - 1);
                     map.put(bill, map.getOrDefault(bill, 0) + 1);
 
                 } else {
@@ -46,12 +47,15 @@ public class LemonadeChange정답 {
             } else if (bill == 20) {
                 if (map.containsKey(bill - 10)) { // 5는 3개이거나, 10은 1개 이상
                     if (map.get(bill - 10) >= 3) {
-                        map.remove(bill - 10, 3);
+
+                        map.replace(bill - 10, map.get(bill - 5) - 3);
                     } else if (map.containsKey(bill - 5)) {
 
                         if (map.get(bill - 10) >= 2 && map.get(bill - 5) >= 1) {
-                            map.remove(bill - 10, 2);
-                            map.remove(bill - 5, 1);
+
+                            map.replace(bill - 10, map.get(bill - 5) - 2);
+
+                            map.replace(bill - 5, map.get(bill - 5) - 1);
 
                         }
 
