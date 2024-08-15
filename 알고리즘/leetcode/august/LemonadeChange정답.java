@@ -50,21 +50,15 @@ public class LemonadeChange정답 {
 
             } else if (bill == 20) {
                 // 5는 3개이거나, 10은 1개 이상
-                    if (map.get(bill - 15) >= 3) {
-
-                        map.replace(bill - 15, map.get(bill - 15) - 3);
-
-
-
-
-                    } else if (map.get(bill - 10) >= 1 && map.get(bill - 15) >= 1) {
-
-                        map.replace(bill - 10, map.get(bill - 10) - 1);
-
-                        map.replace(bill - 15, map.get(bill - 15) - 1);
-
-                        } else
-                            return false;
+                if (map.get(10) >= 1 && map.get(5) >= 1) {
+                    // 10달러 1장과 5달러 1장을 줄 수 있는 경우
+                    map.put(10, map.get(10) - 1);
+                    map.put(5, map.get(5) - 1);
+                } else if (map.get(5) >= 3) {
+                    // 5달러 3장을 줄 수 있는 경우
+                    map.put(5, map.get(5) - 3);
+                } else {
+                            return false;}
 
                     } else
                         return false;
