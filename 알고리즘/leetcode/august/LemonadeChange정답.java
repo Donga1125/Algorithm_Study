@@ -12,7 +12,7 @@ public class LemonadeChange정답 {
 
     public static void main(String[] args) {
 
-        int bills[] = new int[]{5, 5, 5, 10, 20};
+        int bills[] = new int[]{5, 5, 5, 10, 5, 5, 10, 20, 20, 20};
         LemonadeChange정답 sol = new LemonadeChange정답();
         System.out.println(sol.lemonadeChange(bills));
 
@@ -26,6 +26,10 @@ public class LemonadeChange정답 {
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
+        map.put(5, 0);
+        map.put(10, 0);
+        map.put(20, 0);
+
         int length = bills.length;
 
         for (int i = 0; i < length; i++) {
@@ -35,7 +39,7 @@ public class LemonadeChange정답 {
                 map.put(bill, map.getOrDefault(bill, 0) + 1);
 
             } else if (bill == 10) {
-                if (map.containsKey(bill - 5) && map.get(bill - 5) >= 1) {
+                if (map.get(bill - 5) >= 1) {
 
                     map.replace(bill - 5, map.get(bill - 5) - 1);
                     map.put(bill, map.getOrDefault(bill, 0) + 1);
@@ -45,28 +49,30 @@ public class LemonadeChange정답 {
                 }
 
             } else if (bill == 20) {
-                if (map.containsKey(bill - 10)) { // 5는 3개이거나, 10은 1개 이상
-                    if (map.get(bill - 10) >= 3) {
+                // 5는 3개이거나, 10은 1개 이상
+                    if (map.get(bill - 15) >= 3) {
 
-                        map.replace(bill - 10, map.get(bill - 5) - 3);
-                    } else if (map.containsKey(bill - 5)) {
+                        map.replace(bill - 15, map.get(bill - 15) - 3);
 
-                        if (map.get(bill - 10) >= 2 && map.get(bill - 5) >= 1) {
 
-                            map.replace(bill - 10, map.get(bill - 5) - 2);
 
-                            map.replace(bill - 5, map.get(bill - 5) - 1);
 
-                        }
+                    } else if (map.get(bill - 10) >= 1 && map.get(bill - 15) >= 1) {
+
+                        map.replace(bill - 10, map.get(bill - 10) - 1);
+
+                        map.replace(bill - 15, map.get(bill - 15) - 1);
+
+                        } else
+                            return false;
 
                     } else
                         return false;
-                } else
-                    return false;
+
 
             }
 
-            }
+
 
         return true; // 어디가 틀렸을까.. ㅠ
 
