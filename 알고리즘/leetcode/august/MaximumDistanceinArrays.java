@@ -27,13 +27,37 @@ public class MaximumDistanceinArrays {
 
     public int maxDistance(List<List<Integer>> arrays) {
 
-        int distance = 0;
+
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
 
         for (List<Integer> array : arrays) {
+            // 같은 배열이라면 최소 or 최대 값만 적어줘야 한다
             min = Math.min(min, array.get(0));
             max = Math.max(max, array.get(array.size()-1));
+        }
+        int outArrays = arrays.size();
+
+//        for (int i = 0; i < outArrays; i++) {
+//            List<Integer> now = arrays.get(i);
+//
+//
+//            min = Math.min(min, now.get(0));
+//            max = Math.max(max, now.get(now.size() - 1));
+//
+//            }
+
+
+        for (int i = 0; i < outArrays-1; i++) {
+            List<Integer> now = arrays.get(i);
+
+            for (int j = i+1; j < outArrays; j++) {
+                List<Integer> next = arrays.get(j);
+
+                min = Math.min(Math.min(now.get(0), next.get(0)),min);
+                max = Math.max(Math.max(now.get(now.size() - 1), next.get(next.size() - 1)), max);
+
+            }
         }
 
         return max - min;
