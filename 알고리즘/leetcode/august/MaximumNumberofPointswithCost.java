@@ -19,6 +19,27 @@ public class MaximumNumberofPointswithCost {
     }
 
     public long maxPoints(int[][] points) {
+        int col = points.length;
+        int row = points[0].length;
+
+        long dp[][] = new long[col + 1][row + 1];
+
+        dp[0][0] = 0;
+
+
+        for (int i = 1; i <col ; i++) {
+
+            for (int j = 1; j < row; j++) {
+
+                dp[i][1] = dp[i - 1][1] + dp[i][0];
+
+                dp[i][0] = dp[i-1][0] +dp[i-1][0];  // 미완
+                        // dp[i] + max (dp[i][j],point[i][j] )인데 가장 큰 값
+                // 그럼 max를 계산하기 위해선 point[i-1][1] 저장된 수의 인덱스 abs- 현재 point[i][j]해서 큰 수를 dp[i][1]에 저장
+
+            }
+
+        }
 
     }
 }
