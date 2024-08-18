@@ -40,6 +40,7 @@ public class MaximumNumberofPointswithCost {
             }
 
         }
+        return 1;
 
     }
 }
