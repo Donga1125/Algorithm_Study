@@ -2,6 +2,7 @@ package 알고리즘.leetcode.august;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class UglyNumberII {
@@ -28,61 +29,96 @@ public class UglyNumberII {
 
         // 10이라고 하면 index라는 수를 활용해 배수를 저장할 때 마다, ++해서 세어보자
         // 막 추가하고 정렬해서 반환?
+        //7은 곱해도 안되네
+        // 1,2,3,4,5,6,8,9,10,12,15,16,18,
         int index = 1;
         int x = 1;
 
         TreeSet<Integer> set = new TreeSet<>();
+        TreeSet<Integer> set1 = new TreeSet<>();
+        set1.add(1);
 
+        for (int i = 1; i <= n; i++) {
+            set1.add(2 * i);
 
-        set.add(1);
-        if (index == n) {
-            return 1;
         }
 
+        for (int i = 1; i <= n; i++) {
+            set1.add(3 * i);
 
-        while (true) {
+        }
+        for (int i = 1; i <= n; i++) {
+            set1.add(5 * i);
 
+        }
+        Iterator<Integer> it = set1.iterator();
 
+        Integer current = 0;
+        int csaddd = 1;
+        while(it.hasNext()) {
+            current = it.next();
 
-            set.add(2 * x);
-
-            if (index == set.size()-1) {
-                index++;
-
-            }
-            if (index == n) {
-                break;
-            }
-
-            set.add(3 * x);
-            if (index == set.size()-1) {
-                index++;
-
-            }
-            if (index == n) {
-                break;
-            }
-
-            set.add(5 * x);
-
-            if (index == set.size()-1) {
-                index++;
-
-            }
-            if (index == n) {
-                break;
-            }
-
-            x++;
-
-
+            if (csaddd == n) {
+                return current;
 
             }
 
-        System.out.println(set.last());
+            csaddd++;
+
+        }
+        return 0;
 
 
-        return set.first();
+
+//        set.add(1);
+//        if (index == n) {
+//            return 1;
+//        }
+//
+//
+//        while (true) {
+//
+//
+//
+//            set.add(2 * x);
+//
+//            if (index == set.size()-1) {
+//                index++;
+//
+//            }
+//            if (index == n) {
+//                break;
+//            }
+//
+//            set.add(3 * x);
+//            if (index == set.size()-1) {
+//                index++;
+//
+//            }
+//            if (index == n) {
+//                break;
+//            }
+//
+//            set.add(5 * x);
+//
+//            if (index == set.size()-1) {
+//                index++;
+//
+//            }
+//            if (index == n) {
+//                break;
+//            }
+//
+//            x++;
+//
+//
+//
+//            }
+//
+//        System.out.println(set.last());
+//
+//
+//        return set.first();
 
 
 
