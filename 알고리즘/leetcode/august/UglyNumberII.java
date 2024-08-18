@@ -16,10 +16,11 @@ public class UglyNumberII {
 
     public static void main(String[] args) {
 
-        int uglyNumber = 10;
+        int uglyNumber = 10  ;
 
         UglyNumberII sol = new UglyNumberII();
         System.out.println(sol.nthUglyNumber(uglyNumber));
+//        sol.nthUglyNumber(uglyNumber);
 
     }
 
@@ -29,33 +30,59 @@ public class UglyNumberII {
         // 막 추가하고 정렬해서 반환?
         int index = 1;
         int x = 1;
-        ArrayList<Integer> list = new ArrayList<>();
+
         TreeSet<Integer> set = new TreeSet<>();
-        list.add(1);
+
+
         set.add(1);
+        if (index == n) {
+            return 1;
+        }
 
-        while (index < n + 1) {
+
+        while (true) {
 
 
-            list.add(2 * x);
+
             set.add(2 * x);
 
-            list.add(3 * x);
-            set.add(3 * x);
+            if (index == set.size()-1) {
+                index++;
 
-            list.add(5 * x);
-            set.add(5 * x);;
-            index += 3; // 중간에 인덱스를 넘을 수 있지만 상관 x
+            }
+            if (index == n) {
+                break;
+            }
+
+            set.add(3 * x);
+            if (index == set.size()-1) {
+                index++;
+
+            }
+            if (index == n) {
+                break;
+            }
+
+            set.add(5 * x);
+
+            if (index == set.size()-1) {
+                index++;
+
+            }
+            if (index == n) {
+                break;
+            }
+
             x++;
 
-        }
 
-        Collections.sort(list);
-        for (Integer i : set) {
 
-        }
+            }
 
-        return list.get(n);
+        System.out.println(set.last());
+
+
+        return set.first();
 
 
 
