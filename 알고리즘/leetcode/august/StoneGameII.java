@@ -13,6 +13,9 @@ public class StoneGameII {
 
     public int stoneGameII(int[] piles) {
 
+        int[] wr = new int[2];
+        return 1;
+
 
     }
 
