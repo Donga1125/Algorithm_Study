@@ -32,11 +32,16 @@ public class MostStonesRemovedwithSameRoworColumn {
 
 
         }
+
         for (int i = 0; i < length; i++) {
-            for (int j = 0; j < length; j++) {
-                System.out.print(space[i][j] + " ");
+
+
+            for (int j = 0; j <length; j++) {
+                if (space[i][j] == 1) {
+
+                }
+
             }
-            System.out.println();
         }
 
 
