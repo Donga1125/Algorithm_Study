@@ -12,20 +12,37 @@ public class MostStonesRemovedwithSameRoworColumn {
                                      {1, 2}, // 1{-
                                      {2, 1},
                                      {2, 2}}; // 1 {1,1]
+        MostStonesRemovedwithSameRoworColumn sol = new MostStonesRemovedwithSameRoworColumn();
+
+        System.out.println(sol.removeStones(stones));
 
     }
 
     public int removeStones(int[][] stones) {
+        int length = stones.length;
 
-        int[][] space = new int[10000][10000];
+        int[][] space = new int[length][length];
 
 
-        for (int i = 0; i < stones.length; i++) {
-            for (int j = 0; j < 2; j++) {
-                space[stones[i][0]][stones[i][1]] = stones[i][j];
 
+
+        for (int i = 0; i < length; i++) {
+
+                space[stones[i][0]][stones[i][1]] = 1;
+
+
+        }
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
+                System.out.print(space[i][j] + " ");
             }
+            System.out.println();
         }
 
+
+        return 1;
+
     }
+
+
 }
