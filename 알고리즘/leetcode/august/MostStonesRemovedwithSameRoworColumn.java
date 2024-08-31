@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MostStonesRemovedwithSameRoworColumn {
+    // 유니온 파인드
 
     //[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]
     private int[] parent;
