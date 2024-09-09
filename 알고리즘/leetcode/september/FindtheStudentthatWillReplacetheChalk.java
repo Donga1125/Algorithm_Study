@@ -10,5 +10,7 @@ public class FindtheStudentthatWillReplacetheChalk {
 
     public int chalkReplacer(int[] chalk, int k) {
 
+        return 1;
+
     }
 }
