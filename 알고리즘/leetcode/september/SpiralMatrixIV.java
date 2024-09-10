@@ -42,17 +42,16 @@ public class SpiralMatrixIV {
         }
 
 
-
         int top = 0;
         int left = 0;
-        int bottom = n - 1;
-        int right = m - 1;
+        int bottom = m - 1; // 2
+        int right = n - 1; // 4
         ListNode current = head;
         while (top <= bottom && left <= right && current != null) {
 
             //오른쪽 무빙
             for (int i = left; i <= right && current != null; i++) {
-                answer[top][left] = current.val;
+                answer[top][i] = current.val;
                 current = current.next;
             }
             top++;
@@ -62,19 +61,30 @@ public class SpiralMatrixIV {
                 answer[i][right] = current.val; // 라이트 넣은 이유는 레프트끝까지 안갈수도 있음
                 current = current.next;
             }
+            right--;
 
+        //왼쪽 무빙
+            for (int i = right; i >= left && current != null; i--) {
 
-            // j가 4(N) 도착하면  i를 늘려주고,
-            // i가 2(m) 도착하면
+                answer[bottom][i] = current.val;
+                current = current.next;
 
+            }
+            bottom--;
+            for (int i = bottom; i >= top && current != null; i--) {
+
+                answer[i][left] = current.val;
+                current = current.next;
+
+            }
+            left++;
 
         }
+
+
+
         return answer;
-
-
-
-        }
-
-
     }
+
+}
 
