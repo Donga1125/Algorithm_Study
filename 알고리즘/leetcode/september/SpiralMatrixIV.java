@@ -59,8 +59,10 @@ public class SpiralMatrixIV {
 
             // 아래 무빙
             for (int i = top; i <= bottom && current != null; i++) {
-                answer[i][right] = current.val; // 라이트 넣은 이유는 레프프프
+                answer[i][right] = current.val; // 라이트 넣은 이유는 레프트끝까지 안갈수도 있음
+                current = current.next;
             }
+
 
             // j가 4(N) 도착하면  i를 늘려주고,
             // i가 2(m) 도착하면
