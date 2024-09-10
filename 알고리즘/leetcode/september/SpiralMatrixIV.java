@@ -34,26 +34,45 @@ public class SpiralMatrixIV {
     public int[][] spiralMatrix(int m, int n, ListNode head) {
 
         int answer[][] = new int[m][n];
-        ArrayList<Integer> arr = new ArrayList<>();
-        while (head.next == null) {
-
-
-            int now = 0;
-}
 
         for (int i = 0; i < m; i++) {
-
             for (int j = 0; j < n; j++) {
-                answer[i][j] = head.val;
+                answer[i][j] = -1;
+            }
+        }
 
 
+
+        int top = 0;
+        int left = 0;
+        int bottom = n - 1;
+        int right = m - 1;
+        ListNode current = head;
+        while (top <= bottom && left <= right && current != null) {
+
+            //오른쪽 무빙
+            for (int i = left; i <= right && current != null; i++) {
+                answer[top][left] = current.val;
+                current = current.next;
+            }
+            top++;
+
+            // 아래 무빙
+            for (int i = top; i <= bottom && current != null; i++) {
+                answer[i][right] = current.val; // 라이트 넣은 이유는 레프프프
             }
 
+            // j가 4(N) 도착하면  i를 늘려주고,
+            // i가 2(m) 도착하면
+
+
         }
+        return answer;
+
 
 
         }
 
 
     }
-}
+
