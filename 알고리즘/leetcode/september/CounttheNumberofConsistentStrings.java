@@ -13,8 +13,14 @@ public class CounttheNumberofConsistentStrings {
     public static void main(String[] args) {
 
         String allowed = "ab";
+        String allowed1 = "abc";
 
         String[] arr = new String[]{"ad", "bd", "aaab", "baa", "badab"};
+        String[] arr1 = new String[]{"a","b","c","ab","ac","bc","abc"};
+
+        CounttheNumberofConsistentStrings sol = new CounttheNumberofConsistentStrings();
+//        System.out.println(sol.countConsistentStrings(allowed,arr));
+        System.out.println(sol.countConsistentStrings(allowed1,arr1));
 
     }
 
@@ -32,6 +38,7 @@ public class CounttheNumberofConsistentStrings {
 
         for (int i = 0; i < words.length; i++) {
             String now = words[i];
+
             int match = 0;
             int length = now.length();
 
@@ -41,8 +48,20 @@ public class CounttheNumberofConsistentStrings {
                     break;
 
                 }
+//                if (!set.contains(now.charAt(j))) {
+//                   break;
+//                }
+                match++;
             }
+
+
+            if (match == length) {
+                count++;
+            }
+
         }
+
+        return count;
 
 
 
