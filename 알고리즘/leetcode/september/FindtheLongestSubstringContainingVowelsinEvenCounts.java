@@ -8,5 +8,6 @@ public class FindtheLongestSubstringContainingVowelsinEvenCounts {
 
     public int findTheLongestSubstring(String s) {
 
+        return 1;
     }
 }

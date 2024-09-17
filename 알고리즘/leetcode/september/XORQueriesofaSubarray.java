@@ -9,6 +9,7 @@ public class XORQueriesofaSubarray {
     }
 
     public int[] xorQueries(int[] arr, int[][] queries) {
+        return new int[]{1, 1};
 
     }
 
