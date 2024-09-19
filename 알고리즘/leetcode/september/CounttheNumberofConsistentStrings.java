@@ -61,7 +61,7 @@ public class CounttheNumberofConsistentStrings {
 
         }
 
-        return count;ㅎ
+        return count;
 
 
 
