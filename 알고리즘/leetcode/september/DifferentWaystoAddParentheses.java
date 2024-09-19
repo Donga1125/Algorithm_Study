@@ -1,7 +1,10 @@
 package 알고리즘.leetcode.september;
 
+import javax.security.auth.callback.CallbackHandler;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DifferentWaystoAddParentheses {
 
@@ -20,7 +23,35 @@ public class DifferentWaystoAddParentheses {
     }
 
     public List<Integer> diffWaysToCompute(String expression) {
+
         List<Integer> answerList = new ArrayList<>();
+        int length = expression.length();
+
+        int[] operatorsCount = new int[length/2 +1];
+        HashMap<Character, Integer> map = new HashMap<>();
+        int count = 0;
+
+        for (int i = 0; i < length; i++) { // 1,3,5,7
+            Character now = expression.charAt(i);
+
+            if (i % 2 == 1) {
+                map.put(now, map.getOrDefault(now, 0) + 1);
+
+            } else
+                operatorsCount[count++] = now - '0';
+
+
+
+        }
+
+        for (int i : operatorsCount) {
+            System.out.println(i);
+
+        }
+
+        return answerList;
+
+
 
     }
 }
