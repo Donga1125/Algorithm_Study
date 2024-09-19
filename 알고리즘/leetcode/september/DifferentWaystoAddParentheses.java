@@ -27,26 +27,29 @@ public class DifferentWaystoAddParentheses {
         List<Integer> answerList = new ArrayList<>();
         int length = expression.length();
 
-        int[] operatorsCount = new int[length/2 +1];
+        int[] numCount = new int[length/2 +1];
+        char[] operatorsCount = new char[length / 2];
         HashMap<Character, Integer> map = new HashMap<>();
-        int count = 0;
+        ArrayList<Character> list = new ArrayList<>();
+        int acount = 0;
+        int bcount = 0;
 
         for (int i = 0; i < length; i++) { // 1,3,5,7
             Character now = expression.charAt(i);
+            list.add(now);
 
             if (i % 2 == 1) {
                 map.put(now, map.getOrDefault(now, 0) + 1);
+                operatorsCount[acount++] = now;
+
 
             } else
-                operatorsCount[count++] = now - '0';
-
-
+                numCount[bcount++] = now - '0';
 
         }
 
-        for (int i : operatorsCount) {
-            System.out.println(i);
-
+        for (Character c : list) {
+            System.out.println(c);
         }
 
         return answerList;
