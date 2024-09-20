@@ -16,6 +16,9 @@ public class DifferentWaystoAddParentheses정답 {
         String expression = "2-1-1";
         DifferentWaystoAddParentheses정답 sol = new DifferentWaystoAddParentheses정답();
         System.out.println(sol.diffWaysToCompute(expression));
+        System.out.printf("값은 :%f", 3.26);
+
+
 
 
     }
@@ -23,6 +26,7 @@ public class DifferentWaystoAddParentheses정답 {
     public List<Integer> diffWaysToCompute(String expression) {
 
         List<Integer> result = new ArrayList<>();
+
 
         for (int i = 0; i < expression.length(); i++) {
             char now = expression.charAt(i);
@@ -58,7 +62,11 @@ public class DifferentWaystoAddParentheses정답 {
         }
 
 
+
+
         return result;
+
+
 
 
 
