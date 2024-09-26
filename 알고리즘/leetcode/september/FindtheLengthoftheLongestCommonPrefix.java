@@ -5,6 +5,9 @@ public class FindtheLengthoftheLongestCommonPrefix {
 
     public static void main(String[] args) {
 
+        int[] arr1 = new int[]{1, 10, 100};
+        int[] arr2 = new int[]{1000};
+
     }
 
     public int longestCommonPrefix(int[] arr1, int[] arr2) {
