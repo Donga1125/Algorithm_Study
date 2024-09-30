@@ -35,7 +35,7 @@ public class CustomStack {
         if (stack.size() == 0) {
             return -1;
         }
-        return stack.removeLast();
+        return stack.removeFirst();
 
     }
 
@@ -52,16 +52,16 @@ public class CustomStack {
 
         for (int i = 0; i < size; i++) {
 
-            int now = stack.removeFirst() + val;
+            int now = stack.removeLast() + val;
 
             temp[i] = now;
 
         }
         // [101, 102]
         // 3
-        for (int i = size - 1; size > 0; i--) { // 1,0
+        for (int i = size - 1; i >= 0; i--) { // 1,0
 
-            stack.addFirst(temp[i-1]);
+            stack.addFirst(temp[i]);
         }
 
 
