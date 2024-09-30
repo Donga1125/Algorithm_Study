@@ -1,16 +1,20 @@
 package 알고리즘.leetcode.september;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 public class CustomStack {
 
     int maxSize;
-    Stack<Integer> stack;
+
+    Deque<Integer> stack;
 
     public CustomStack(int maxSize) {
         this.maxSize = maxSize;
 
-        this.stack = new Stack<Integer>();
+        this.stack = new ArrayDeque<>();
+
 
 
     }
@@ -31,11 +35,37 @@ public class CustomStack {
         if (stack.size() == 0) {
             return -1;
         }
-       return stack.pop();
+        return stack.removeLast();
 
     }
 
     public void increment(int k, int val) {
+
+        int[] temp;
+
+        if (k > stack.size()) {
+            temp = new int[stack.size()];
+
+        } else {
+        temp = new int[k];}
+        int size = temp.length;
+
+        for (int i = 0; i < size; i++) {
+
+            int now = stack.removeFirst() + val;
+
+            temp[i] = now;
+
+        }
+        // [101, 102]
+        // 3
+        for (int i = size - 1; size > 0; i--) { // 1,0
+
+            stack.addFirst(temp[i-1]);
+        }
+
+
+
 
         // 현재 stack의 요소가 k보다 작으면 다val 증가시키고
         // 아니라면 bottom부터 k개까지 val 증가
