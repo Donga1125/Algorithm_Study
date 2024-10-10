@@ -9,6 +9,9 @@ public class MaximumWidthRamp {
     }
 
     public int maxWidthRamp(int[] nums) {
+        int[] arr = new int[3];
+
+        return 3;
 
     }
 }
