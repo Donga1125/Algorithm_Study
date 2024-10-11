@@ -10,5 +10,7 @@ public class ExtraCharactersinaString {
 
     public int minExtraChar(String s, String[] dictionary) {
 
+        return 1;
+
     }
 }
