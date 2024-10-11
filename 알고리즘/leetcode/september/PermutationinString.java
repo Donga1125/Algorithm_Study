@@ -6,11 +6,13 @@ public class PermutationinString {
 
         PermutationinString ar = new PermutationinString();
         int s = 0;
-        for (int i = 1; i <= 100; i++) {
-            if (ar.complete(i) == 1) {
-                s += i;
-            }
-        }
+//        for (int i = 1; i <= 100; i++) {
+//            if (ar.complete(i) == 1) {
+//                s += i;
+//            }
+//        }
+
+
         System.out.printf("%d", s);
         ar.checkInclusion("sad", "asd");
 

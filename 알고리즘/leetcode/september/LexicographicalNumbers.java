@@ -1,5 +1,6 @@
 package 알고리즘.leetcode.september;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LexicographicalNumbers {
@@ -12,6 +13,10 @@ public class LexicographicalNumbers {
 
 
     public List<Integer> lexicalOrder(int n) {
+
+        List<Integer> arr = new ArrayList<>();
+
+        return arr;
 
     }
 }
