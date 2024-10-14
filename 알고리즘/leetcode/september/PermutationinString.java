@@ -2,6 +2,8 @@ package 알고리즘.leetcode.september;
 
 public class PermutationinString {
 
+    static int a;
+
     public static void main(String[] args) {
 
         PermutationinString ar = new PermutationinString();
@@ -11,6 +13,7 @@ public class PermutationinString {
 //                s += i;
 //            }
 //        }
+        System.out.println(a); // 0
 
 
         System.out.printf("%d", s);
@@ -44,4 +47,6 @@ public class PermutationinString {
         } else
             return 0;
     }
+
+
 }
