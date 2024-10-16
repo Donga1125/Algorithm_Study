@@ -10,9 +10,32 @@ public class ppi_ipp_frint테스트 {
 //        System.out.print(calculFn(str, str.length()-1, seen));
         String st1r = "ITISTESTSTRING";
         String[] result = st1r.split("T");
-        for (String s : result) {
-            System.out.println(s);
+//        for (String s : result) {
+//            System.out.println(s);
+//        }
+
+        int v1 = 0, v2 = 35, v3 = 29;
+        if (v1 > v2 ? true : false) {
+
+        } else
+            v3 = v3 << 2;
+//        System.out.println(v3);
+//
+//        System.out.println(v3 + v2);
+
+        int i1 = 0, sun = 0;
+
+        while (i1 < 10) {
+            i1 = i1 + 1;
+            if (i1 % 3 == 0) {
+                sun -= i1;
+            } else if (i1 % 3 == 1) {
+                sun += i1;
+            } else
+                sun *= i1;
         }
+
+        System.out.println(sun);
 
 
 
