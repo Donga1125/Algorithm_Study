@@ -35,7 +35,8 @@ public class ppi_ipp_frint테스트 {
                 sun *= i1;
         }
 
-        System.out.println(sun);
+//        System.out.println(sun);
+
 
 
 
