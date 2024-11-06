@@ -4,7 +4,11 @@ public class 생성자테스트 {
 
     public static void main(String[] args) {
 
-        Parent a = new Parent();
+        Parent a = new Child();
+
+        if (0 < 0) {
+
+        }
 
     }
 
