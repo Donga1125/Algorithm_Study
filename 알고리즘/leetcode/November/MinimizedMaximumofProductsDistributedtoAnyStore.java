@@ -1,5 +1,7 @@
 package 알고리즘.leetcode.November;
 
+import java.util.Arrays;
+
 public class MinimizedMaximumofProductsDistributedtoAnyStore {
 
     //2064. Minimized Maximum of Products Distributed to Any Store
@@ -26,31 +28,70 @@ public class MinimizedMaximumofProductsDistributedtoAnyStore {
 
         MinimizedMaximumofProductsDistributedtoAnyStore sol = new MinimizedMaximumofProductsDistributedtoAnyStore();
 
-        int[] arr = new int[]{11, 6};
-        sol.minimizedMaximum(6, arr);
+//        int[] arr = new int[]{11, 6};
+        int[] arr1 = new int[]{9, 6,5};
+//        System.out.println(sol.minimizedMaximum(6, arr));
+        System.out.println(sol.minimizedMaximum(3, arr1));
     }
+
+
+//    public int minimizedMaximum(int n, int[] quantities) {
+//        int max = 0;
+//        int capa[] = new int[n];
+//
+//        for (int i = 0; i < quantities.length; i++) {
+//            int now = quantities[i];
+//
+//            while (now != 0) {
+//
+//
+//
+//                now = now % n;
+//
+//            }
+//            }
+//
+//
+//
+//        return 1;
+//
 
 
     public int minimizedMaximum(int n, int[] quantities) {
-        int max = 0;
-        int capa[] = new int[n];
 
-        for (int i = 0; i < quantities.length; i++) {
-            int now = quantities[i];
+            int left = 1;
+            int right = Arrays.stream(quantities).max().getAsInt();
 
-            while (now != 0) {
+            // 이진 탐색으로 최소 최대값을 찾습니다.
+            while (left < right) {
+                int mid = left + (right - left) / 2;
 
-
-
-                now = now % n;
-
+                // 현재 mid 값으로 각 제품을 배분할 수 있는지 확인합니다.
+                if (canDistribute(n, quantities, mid)) {
+                    right = mid;
+                } else {
+                    left = mid + 1;
+                }
             }
+
+            return left;
+        }
+
+        // 주어진 maxProductsPerStore(= mid 값)로 각 소매점에 제품을 나눌 수 있는지 체크합니다.
+        private boolean canDistribute(int stores, int[] quantities, int maxProductsPerStore) {
+            int requiredStores = 0;
+
+            for (int quantity : quantities) {
+                // 각 제품의 수량을 maxProductsPerStore 값으로 나누어 필요한 소매점 수를 구합니다.
+                requiredStores += (quantity + maxProductsPerStore - 1) / maxProductsPerStore;
+
+                if (requiredStores > stores) {
+                    return false;
+                }
             }
 
+            return requiredStores <= stores;
+        }
 
-
-        return 1;
-
-    }
 }
 
