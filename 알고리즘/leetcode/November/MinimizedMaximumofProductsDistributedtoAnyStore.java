@@ -24,6 +24,8 @@ public class MinimizedMaximumofProductsDistributedtoAnyStore {
 
     // 먼저 첫번째를 다 나눠서 쓰기, 나머지 활용
 
+    // 이진탐색으로 수를 찾고 분배 가능하지 계속 다 돌면서 탐색
+
     public static void main(String[] args) {
 
         MinimizedMaximumofProductsDistributedtoAnyStore sol = new MinimizedMaximumofProductsDistributedtoAnyStore();
