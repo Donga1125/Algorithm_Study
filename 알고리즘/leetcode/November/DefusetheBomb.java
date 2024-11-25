@@ -45,9 +45,9 @@ public class DefusetheBomb {
             k = Math.abs(k);
 
 
+            return answer;
+
+
+        }
         return answer;
-
-
-
-    }
-}
+    }}
