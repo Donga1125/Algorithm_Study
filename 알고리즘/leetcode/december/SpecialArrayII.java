@@ -1,9 +1,12 @@
 package 알고리즘.leetcode.december;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class SpecialArrayII {
+
+    private Map<Integer, Boolean> cache = new HashMap<>();
 
     //3152. Special Array II
 
@@ -25,38 +28,42 @@ public class SpecialArrayII {
     }
 
     public boolean[] isArraySpecial(int[] nums, int[][] queries) {
-        boolean[] check = new boolean[nums.length - 1];
-        int[] check1 = new int[nums.length - 1];
-        Arrays.fill(check1, -1);
+
+        boolean[] check = new boolean[queries.length];
+
+
 
         for (int i = 0; i < queries.length; i++) {
             int from = queries[i][0];
             int to = queries[i][1];
-        }
 
+            check[i] = checkSpecial(nums, from, to);}
+
+        return check;}
+
+
+    private boolean checkSpecial(int[] nums, int from, int to) {
+
+        for (int i = from; i < to; i++) {
+            Integer key = i;
+
+            if (!cache.containsKey(key)) {
+                // 없다면 계산부터 있음 넘어가
+
+                Boolean isSpecial = Math.abs(nums[i] - nums[i + 1]) % 2 != 0;
+                cache.put(key, isSpecial);
+
+            }
+            if (!cache.get(key)) {
+                // 넘어갔을 때 key값을 판별
+                return false;
+            }
+        }
+            return true;
     }
 
-    public int checkSpecial(int[] check, int index,int end, int[] num) {
-
-        if (check[index] == 1) { // 초기값이 true라면
-
-            return 1;
-
-        } else if (check[index] == 0) {
-            return 0;
-
-        } else {
-
-            int now = num[index];
-            int next = num[index + 1];
-
-            if (Math.abs(now - next) % 2 == 0) {
-                return 0;
-            } else
-                return 1;
 
 
-        }
 
-    }
+
 }
