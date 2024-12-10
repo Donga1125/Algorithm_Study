@@ -2,7 +2,7 @@ package 알고리즘.leetcode.december;
 
 import java.util.HashMap;
 
-public class FindLongestSpecialSubstringThatOccursThriceI {
+public class FindLongestSpecialSubstringThatOccursThriceI더효율 {
 
     //2981. Find Longest Special Substring That Occurs Thrice I
 
@@ -20,7 +20,7 @@ public class FindLongestSpecialSubstringThatOccursThriceI {
         // 1예의 경우 3번 이상 반복되는 특수문자는 a 하나로 1임
         // 2의 예는 aa, aa, aa 세개로 되고 2임 a,a,a도 되는데 가장 길지 않음
 
-        FindLongestSpecialSubstringThatOccursThriceI main = new FindLongestSpecialSubstringThatOccursThriceI();
+        FindLongestSpecialSubstringThatOccursThriceI더효율 main = new FindLongestSpecialSubstringThatOccursThriceI더효율();
         System.out.println( main.maximumLength(s1));
 
     }
@@ -32,30 +32,32 @@ public class FindLongestSpecialSubstringThatOccursThriceI {
     public int maximumLength(String s) {
 
         int n = s.length(); // 문자열의 길이
-        int maxLen = -1;    // 가장 긴 특수 부분 문자열의 길이를 저장 (-1로 초기화)
+        HashMap<String, Integer> frequencyMap = new HashMap<>();
+        int maxLen = -1; // 결과로 반환할 가장 긴 특수 부분 문자열의 길이
 
-        // 가능한 모든 특수 부분 문자열의 길이를 순회
-        for (int i = 1; i <= n; i++) {
-            HashMap<String, Integer> frequencyMap = new HashMap<>();
-
-            // 현재 길이(i)의 모든 부분 문자열을 확인
-            for (int j = 0; j <= n - i; j++) {
-                String substring = s.substring(j, j + i); // 길이 len의 부분 문자열 추출
-
-                // 해당 부분 문자열이 "특수"인지 확인
+        // 모든 특수 부분 문자열의 빈도를 한 번에 계산
+        for (int i = 0; i < n; i++) {
+            StringBuilder sb = new StringBuilder();
+            for (int j = i; j < n; j++) {
+                sb.append(s.charAt(j));
+                String substring = sb.toString();
+                // 특수 부분 문자열인지 확인
                 if (isSpecial(substring)) {
-                    // 특수 문자열의 빈도를 업데이트
                     frequencyMap.put(substring, frequencyMap.getOrDefault(substring, 0) + 1);
-                }
-            }
-
-            // 현재 길이(len)에 대해, 3번 이상 등장한 특수 부분 문자열이 있는지 확인
-            for (int freq : frequencyMap.values()) {
-                if (freq >= 3) {
-                    maxLen = i; // 조건을 만족하면 maxLen 업데이트
+                } else {
+                    // 특수하지 않으면 더 긴 문자열을 만들 필요 없음
+                    break;
                 }
             }
         }
+
+        // 조건을 만족하는 가장 긴 특수 부분 문자열의 길이를 확인
+        for (String key : frequencyMap.keySet()) {
+            if (frequencyMap.get(key) >= 3) { // 3번 이상 등장하는 경우
+                maxLen = Math.max(maxLen, key.length());
+            }
+        }
+
         return maxLen; // 결과 반환
     }
 
@@ -70,7 +72,6 @@ public class FindLongestSpecialSubstringThatOccursThriceI {
         }
         return true; // 모든 문자가 같으면 특수 문자열
     }
-
         //
 
     }
