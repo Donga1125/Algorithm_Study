@@ -1,10 +1,8 @@
 package 알고리즘.leetcode.december;
 
-import 알고리즘.단계별백준.이차원배열.최댓값;
-
 import java.util.*;
 
-public class MaximumBeautyofanArrayAfterApplyingOperation {
+public class MaximumBeautyofanArrayAfterApplyingOperation효율정답 {
 
     // 2779. Maximum Beauty of an Array After Applying Operation
 
@@ -21,7 +19,7 @@ public class MaximumBeautyofanArrayAfterApplyingOperation {
     public static void main(String[] args) {
         int nums[] = new int[]{4, 6, 1, 2};
         int k = 2;
-        MaximumBeautyofanArrayAfterApplyingOperation main = new MaximumBeautyofanArrayAfterApplyingOperation();
+        MaximumBeautyofanArrayAfterApplyingOperation효율정답 main = new MaximumBeautyofanArrayAfterApplyingOperation효율정답();
         System.out.println(main.maximumBeauty(nums, k));
     }
 
@@ -29,8 +27,11 @@ public class MaximumBeautyofanArrayAfterApplyingOperation {
 
         int length = nums.length;
 
-        HashMap<Integer, List<Integer>> map = new HashMap<>();
+
         List<Integer> acc = new ArrayList<>();
+        int size = length * ((k + 1) *2);
+        int[] all = new int[size];
+        int current = 0;
 
         for (int i = 0; i < length; i++) {
 
@@ -38,45 +39,29 @@ public class MaximumBeautyofanArrayAfterApplyingOperation {
 
             for (int j = now - k; j <= now +k  ; j++) {
                 acc.add(j);
+                all[current++] = j;
 
-                if (!map.containsKey(i)) {
-                    List<Integer> list =new ArrayList<>();
-                    list.add(j);
-                    map.put(i, list);
-                } else
-                    map.get(i).add(j); // get으로 가져와서 계속 추가하는 경우는 list처럼 여러 개를 쓸 때
 
             }
         }
-        System.out.println(acc);
-
-        for (Map.Entry<Integer, List<Integer>> integerListEntry : map.entrySet()) {
-            System.out.println(integerListEntry);
-        }
-
-        List<Integer> all = new ArrayList<>();
-        for (List<Integer> value : map.values()) {
-
-            for (Integer i : value) {
-                all.add(i);
-
-            }
-        }
-        System.out.println(all);
-
+        Arrays.toString(all);
 
 
         int count = 1;
 
 
-        for (int i = 0; i < all.size() -1; i++) {
-            if (all.get(i).equals(all.add(i + 1))) {
+
+
+
+
+        for (int i = 0; i < acc.size() -1; i++) {
+            if (acc.get(i).equals(acc.add(i + 1))) {
                 count++;
             }
         }
 
         return count;
-//        return 1;
+//
 
     }
 }
