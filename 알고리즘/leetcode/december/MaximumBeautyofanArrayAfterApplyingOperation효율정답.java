@@ -25,43 +25,31 @@ public class MaximumBeautyofanArrayAfterApplyingOperation효율정답 {
 
     public int maximumBeauty(int[] nums, int k) {
 
-        int length = nums.length;
-
-
-        List<Integer> acc = new ArrayList<>();
-        int size = length * ((k + 1) *2);
-        int[] all = new int[size];
-        int current = 0;
-
-        for (int i = 0; i < length; i++) {
-
-            int now = nums[i];
-
-            for (int j = now - k; j <= now +k  ; j++) {
-                acc.add(j);
-                all[current++] = j;
-
-
-            }
-        }
-        Arrays.toString(all);
-
-
-        int count = 1;
-
-
-
-
-
-
-        for (int i = 0; i < acc.size() -1; i++) {
-            if (acc.get(i).equals(acc.add(i + 1))) {
-                count++;
-            }
+        // 각 숫자에 대해 [num - k, num + k] 범위로 변환
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] -= k; // 최소값
         }
 
-        return count;
-//
+        System.out.println(Arrays.toString(nums));
 
+        // 정렬
+        Arrays.sort(nums);
+
+        int maxBeauty = 0;
+        int left = 0;
+
+        // 슬라이딩 윈도우로 범위 내 숫자 계산
+        for (int right = 0; right < nums.length; right++) {
+            // 오른쪽 포인터가 범위를 벗어나면 왼쪽 포인터 이동
+            while (nums[right] > nums[left] + 2 * k) {
+
+                left++;
+            }
+            // 현재 윈도우 크기 계산
+            maxBeauty = Math.max(maxBeauty, right - left + 1);
+        }
+
+        return maxBeauty;
     }
 }
+
