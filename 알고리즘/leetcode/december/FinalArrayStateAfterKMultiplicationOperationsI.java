@@ -17,6 +17,8 @@ public class FinalArrayStateAfterKMultiplicationOperationsI {
         int nums[] = new int[]{2, 1, 3, 5, 6};
         int k = 5;
         int multi = 2;
+        FinalArrayStateAfterKMultiplicationOperationsI main = new FinalArrayStateAfterKMultiplicationOperationsI();
+        main.getFinalState(nums, k, multi);
 
     }
 
@@ -26,12 +28,26 @@ public class FinalArrayStateAfterKMultiplicationOperationsI {
 
 
     public int[] getFinalState(int[] nums, int k, int multiplier) {
+        int rank[] = new int[]{};
 
 
 
         for (int i = 0; i < k; i++) {
-            Arrays.sort(nums);
-            nums[0] *= multiplier;
+            int count = 0;
+
+            int min = Integer.MAX_VALUE;
+
+            for (int j = 0; j < nums.length; j++) {
+                if (min > nums[j]) {
+                    min = nums[j];
+                    count = j;
+
+                }
+            }
+
+            nums[count] = nums[count] * multiplier;
+
+
         }
 
         return nums;
