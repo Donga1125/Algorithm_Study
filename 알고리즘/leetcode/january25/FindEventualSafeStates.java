@@ -21,7 +21,7 @@ public class FindEventualSafeStates {
 
 
         FindEventualSafeStates main = new FindEventualSafeStates();
-        main.eventualSafeNodes(graph);
+        System.out.println(main.eventualSafeNodes(graph));
 
     }
 
@@ -39,16 +39,29 @@ public class FindEventualSafeStates {
             }
         }
 
+        return result;
+
 
     }
 
     private Boolean dfs(int[][] graph, int[] dp, int n) {
 
         // 기저
-        if (dp[n] != 0)
+        if (dp[n] != 0){
             return dp[n] == 2;
+        }
+
+        dp[n] = 1;
+
+        for (int neighbor : graph[n]) {
+            if (!dfs(graph, dp, neighbor)) {
+                return false; // 이웃 노드가 안전하지 않으면 현재 노드도 안전하지 않음
+            }
+        }
+        dp[n] = 2; // 모든 경로가 안전하다면 안전한 노드로 표시
+        return true;
         }
 
     }
 
-}
+
