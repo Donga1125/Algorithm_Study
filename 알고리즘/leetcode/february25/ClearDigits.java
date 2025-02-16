@@ -1,5 +1,7 @@
 package 알고리즘.leetcode.february25;
 
+import java.util.Stack;
+
 public class ClearDigits {
 
     //3174. Clear Digits
@@ -17,27 +19,28 @@ public class ClearDigits {
 
     public String clearDigits(String s) {
 
-        StringBuilder sb = new StringBuilder();
-        // sb에 쌓아두는 형식
+        Stack<Character> stack = new Stack<>();
 
         for (char c : s.toCharArray()) {
-            // 현재 c를 판별
 
-            if (Character.isDigit(c)) {
-                // 숫자면 정답에 담겨있는 sb의 길이를 확인해준 후
-                int length = sb.length();
-                while (length > 0 && Character.isDigit(sb.charAt(length - 1))) {
+            if (Character.isDigit(c)) { // 숫자는 무조건 지워지니 스택엔 문자만 담기
 
-                    length--;
+
+                if (!stack.isEmpty()) {
+                    stack.pop();
                 }
-                if (length > 0) {
-                    sb.deleteCharAt(length - 1);
-                } else {
-                    sb.append(c);
-                }
+
+        } else {
+                stack.push(c);
             }
         }
-        return sb.toString();}
+        String answer = "";
+        for (Character c : stack) {
+            answer = answer + c;
+
+        }
+        return answer;
+        }
 
 }
 
