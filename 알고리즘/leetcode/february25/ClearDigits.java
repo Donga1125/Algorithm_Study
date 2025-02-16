@@ -11,17 +11,40 @@ public class ClearDigits {
 
         String s = "cb34";
         ClearDigits main = new ClearDigits();
-        main.clearDigits(s);
+
+        System.out.println( main.clearDigits(s));
     }
 
     public String clearDigits(String s) {
-        int now = 0;
-        // 80 ~89
 
-        while (s.charAt(now) != "80") {
+        StringBuilder sb = new StringBuilder();
+        // sb에 쌓아두는 형식
 
+        for (char c : s.toCharArray()) {
+            // 현재 c를 판별
+
+            if (Character.isDigit(c)) {
+                // 숫자면 정답에 담겨있는 sb의 길이를 확인해준 후
+                int length = sb.length();
+                while (length > 0 && Character.isDigit(sb.charAt(length - 1))) {
+
+                    length--;
+                }
+                if (length > 0) {
+                    sb.deleteCharAt(length - 1);
+                } else {
+                    sb.append(c);
+                }
+            }
         }
+        return sb.toString();}
 
-    }
 }
-}
+
+
+
+
+
+
+
+
