@@ -52,6 +52,21 @@ public class FindUniqueBinaryString {
 
         return answer;
 
+
+
+
+
+        //StringBuilder sb = new StringBuilder();
+        //        int n = nums.length;
+        //
+        //        for (int i = 0; i < n; i++) {
+        //            // 각 문자열의 i번째 비트를 반전
+        //            sb.append(nums[i].charAt(i) == '0' ? '1' : '0');
+        //        }
+        //
+        //        return sb.toString();
+        //    }// 효율적인 대각선
+
     }
 
     private void makeBinary(String binary, HashMap<String, Integer> map, int[] oneZero) {
