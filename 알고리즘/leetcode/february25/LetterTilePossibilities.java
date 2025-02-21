@@ -2,7 +2,12 @@ package 알고리즘.leetcode.february25;
 
 import 알고리즘.개발자취업하기.체스판다시칠하기.main;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LetterTilePossibilities {
+
+     static int size;
 
     //1079. Letter Tile Possibilities
 
@@ -15,7 +20,7 @@ public class LetterTilePossibilities {
         String tiles = "AAB";
 
         LetterTilePossibilities main = new LetterTilePossibilities();
-        main.numTilePossibilities(tiles);
+        System.out.println(main.numTilePossibilities(tiles));
 
     }
 
@@ -25,10 +30,42 @@ public class LetterTilePossibilities {
 
     public int numTilePossibilities(String tiles) {
 
+        size = tiles.length();
+
+        boolean[] isVisited = new boolean[size];
+
+        Set<String> set = new HashSet<>();
+
+        backTracking(tiles, "", set, isVisited);
+
+
+
+        return set.size();
+
     }
 
 
-    private void backTracking() {
+    // 넘겼을 때 방문 여부까지 함께 확인해야할듯?
+    private void backTracking(String tiles,String now,Set<String>set, boolean[] isVisited) {
+
+
+        if (!now.isEmpty()) {
+            set.add(now);
+            
+        }
+
+        for (int i = 0; i < size; i++) {
+
+            if (!isVisited[i]) {
+
+                isVisited[i] = true;
+                backTracking(tiles, now + tiles.charAt(i), set, isVisited);
+                // 백트래킹 - 방문 해제
+                isVisited[i] = false;
+
+            }
+            
+        }
 
     }
 }
