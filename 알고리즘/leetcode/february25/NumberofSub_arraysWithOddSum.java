@@ -17,36 +17,54 @@ public class NumberofSub_arraysWithOddSum {
 
     public int numOfSubarrays(int[] arr) {
 
-        int size = arr.length;
-        ArrayList<Integer> arrList = new ArrayList<>();
+//        int size = arr.length;
+//        ArrayList<Integer> arrList = new ArrayList<>();
+//        int MOD = 1_000_000_007;
+//        int count = 0;
+//
+//
+//        for (int i = 0; i < size; i++) {
+//
+//            int now = arr[i];
+//            if (now % 2 != 0) {
+//                count = (count + 1) % MOD;
+//            }
+//            arrList.add(now);
+//
+//
+//            for (int j = i + 1; j < size; j++) {
+//
+//                now = now + arr[j];
+//                if (now % 2 != 0) {
+//
+//                    count = (count + 1) % MOD;
+//
+//
+//                }
+//
+//            }
+//        }
+//
+//
+//
+//        return count;
+//    }
+
         int MOD = 1_000_000_007;
-        int count = 0;
+        int count = 0, prefixSum = 0;
+        int evenCount = 1, oddCount = 0;  // 초기 상태: 0은 짝수이므로 evenCount = 1
 
+        for (int num : arr) {
+            prefixSum += num;
 
-        for (int i = 0; i < size; i++) {
-
-            int now = arr[i];
-            if (now % 2 != 0) {
-                count = (count + 1) % MOD;
-            }
-            arrList.add(now);
-
-
-            for (int j = i + 1; j < size; j++) {
-
-                now = now + arr[j];
-                if (now % 2 != 0) {
-
-                    count = (count + 1) % MOD;
-
-
-                }
-
+            if (prefixSum % 2 == 0) { // 누적합이 짝수
+                count = (count + oddCount) % MOD;  // 이전에 나온 홀수 개수만큼 홀수 부분 배열 추가
+                evenCount++; // 짝수 개수 증가
+            } else { // 누적합이 홀수
+                count = (count + evenCount) % MOD;  // 이전에 나온 짝수 개수만큼 홀수 부분 배열 추가
+                oddCount++; // 홀수 개수 증가
             }
         }
 
-
-
-        return count;
-    }
+        return count;}
 }
