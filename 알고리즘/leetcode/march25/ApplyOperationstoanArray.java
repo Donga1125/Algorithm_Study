@@ -28,11 +28,36 @@ public class ApplyOperationstoanArray {
 
             }
         }
-        for (int num : nums) {
-            System.out.println("num = " + num);
-        }
+        swap(nums,length);
+
 
         return nums;
+
+    }
+
+    private void swap(int[] nums, int size) {
+        // 투포인터
+        int left = 0;
+
+        for (int i = 0; i <size; i++) {
+            //현재 수가 일반 숫자라면 그 자리에 원래 수를 넣고 left를 +1
+            if (nums[i] != 0) {
+                nums[left] = nums[i];
+                left += 1;
+
+            }
+            // 0이 나온다면 left는 그대로고 i는 늘어나기에
+            // 0인 자리에 뒤에 오는 i를 넣을 수 있음
+
+        }
+
+
+        for (int i = left; i <size ; i++) {
+            nums[i] = 0;
+            // 그후 마지막 수는 0이여야 하는데 위 동작대로는 아니니까 바꿔주기 위해
+            // left부터 끝까지 0으로 밀기
+
+        }
 
     }
 }
