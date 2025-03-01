@@ -32,6 +32,7 @@ public class LengthofLongestFibonacciSubsequence {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < i; j++) {
+
                 int prev = arr[i] - arr[j];
                 if (prev < arr[j] && indexMap.containsKey(prev)) {
                     int k = indexMap.get(prev);
