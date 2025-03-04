@@ -15,6 +15,8 @@ public class CheckifNumberisaSumofPowersofThree {
     public boolean checkPowersOfThree(int n) {
 
         while (n > 0) {
+            // 3으로 계속 나누다가, 나머지가 2가 된다면 그 수를 두번 써야지만 만들 수 있다는 뜻
+            // 그러면 3으로만 만들 수 있느 게 아님
             int remainder = n % 3;
             if (remainder > 1) {
                 return false;
