@@ -9,6 +9,9 @@ public class 게임맵내최단거리 {
 
     // 동남서북로 움직이는 게 효율적으로보임 1,1에 서있으니까
 
+    //dfs와 bfs 중 dfs를 사용했는데 사실 최단거리는 bfs를 사용하면 처음 만나는 게 최단거리라서 bfs를 써야함
+    // dfs는 모두 다 탐색해야해서 별로
+
 
     public static void main(String[] args) {
 
@@ -42,8 +45,10 @@ public class 게임맵내최단거리 {
         boolean[][] isVisited = new boolean[n][m];
         // 0.동,  1.남,  2.서,  3. 북
 
+        dfs(maps, isVisited, 1, 0, 0); // 시작점 (0,0), 거리 1
+        return minDist == Integer.MAX_VALUE ? -1 : minDist;
 
-        return answer;
+
 
 
     }
